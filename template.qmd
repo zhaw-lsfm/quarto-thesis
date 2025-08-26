@@ -137,7 +137,8 @@ Die hohe Korrelation (R² = 0.96) zeigt, dass das Körpergewicht ein starker Pr�
 
 # Literaturverzeichnis {#sec-refs}
 
-
+:::{#refs}
+:::
 
 # Verzeichnis der Abbildungen {.unnumbered .unlisted}
 
