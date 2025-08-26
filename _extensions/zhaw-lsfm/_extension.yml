@@ -6,6 +6,8 @@ contributes:
   formats:
     typst:
       citeproc: true
+      filters:
+        - pagebreak-filter.lua
       template-partials:
         - typst-template.typ
         - typst-show.typ

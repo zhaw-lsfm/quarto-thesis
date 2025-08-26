@@ -59,10 +59,8 @@
            font: font,
            size: fontsize)
   set heading(numbering: sectionnumbering)
-  show heading.where(level: 1): it => {
-    pagebreak(weak: true)
-    it
-  }
+  // Remove automatic pagebreaks due to container issues
+  // Users can add {{< pagebreak >}} before headings if needed
   
   // Title page
   if title != none or authors != none {
