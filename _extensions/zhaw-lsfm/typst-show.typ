@@ -39,6 +39,9 @@ $endif$
 $if(confidential)$
   confidential: $confidential$,
 $endif$
+$if(thesis-type)$
+  thesis-type: [$thesis-type$],
+$endif$
 $if(lang)$
   lang: "$lang$",
 $endif$

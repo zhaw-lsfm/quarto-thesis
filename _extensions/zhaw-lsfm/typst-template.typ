@@ -18,6 +18,7 @@
   date: none,
   institut: none,
   confidential: false,
+  thesis-type: none,
   abstract: none,
   abstract-title: none,
   cols: 1,
@@ -89,6 +90,10 @@
                 text(size: subtitle-size)[VERTRAULICH]
               ]
             }
+            if thesis-type != none {
+              v(1.5cm)
+              text(size: subtitle-size)[#thesis-type]
+            }
           } else {
             text(weight: "bold", size: title-size)[#title]
             if subtitle != none {
@@ -102,6 +107,10 @@
               ] else [
                 text(weight: "bold", size: subtitle-size)[VERTRAULICH]
               ]
+            }
+            if thesis-type != none {
+              v(1.5cm)
+              text(weight: "bold", size: subtitle-size)[#thesis-type]
             }
           }
         ]]
