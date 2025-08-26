@@ -51,47 +51,60 @@
            font: font,
            size: fontsize)
   set heading(numbering: sectionnumbering)
-  if title != none {
-    align(center)[#block(inset: 2em)[
-      #set par(leading: heading-line-height)
-      #if (heading-family != none or heading-weight != "bold" or heading-style != "normal"
-           or heading-color != black) {
-        set text(font: heading-family, weight: heading-weight, style: heading-style, fill: heading-color)
-        text(size: title-size)[#title]
-        if subtitle != none {
-          parbreak()
-          text(size: subtitle-size)[#subtitle]
-        }
-      } else {
-        text(weight: "bold", size: title-size)[#title]
-        if subtitle != none {
-          parbreak()
-          text(weight: "bold", size: subtitle-size)[#subtitle]
-        }
+  
+  // Title page
+  if title != none or authors != none or date != none {
+    page()[
+      #v(1fr)
+      #if title != none {
+        align(center)[#block(inset: 2em)[
+          #set par(leading: heading-line-height)
+          #if (heading-family != none or heading-weight != "bold" or heading-style != "normal"
+               or heading-color != black) {
+            set text(font: heading-family, weight: heading-weight, style: heading-style, fill: heading-color)
+            text(size: title-size)[#title]
+            if subtitle != none {
+              parbreak()
+              text(size: subtitle-size)[#subtitle]
+            }
+          } else {
+            text(weight: "bold", size: title-size)[#title]
+            if subtitle != none {
+              parbreak()
+              text(weight: "bold", size: subtitle-size)[#subtitle]
+            }
+          }
+        ]]
       }
-    ]]
-  }
 
-  if authors != none {
-    let count = authors.len()
-    let ncols = calc.min(count, 3)
-    grid(
-      columns: (1fr,) * ncols,
-      row-gutter: 1.5em,
-      ..authors.map(author =>
-          align(center)[
-            #author.name \
-            #author.affiliation \
-            #author.email
-          ]
-      )
-    )
-  }
+      #v(2em)
 
-  if date != none {
-    align(center)[#block(inset: 1em)[
-      #date
-    ]]
+      #if authors != none {
+        let count = authors.len()
+        let ncols = calc.min(count, 3)
+        grid(
+          columns: (1fr,) * ncols,
+          row-gutter: 1.5em,
+          ..authors.map(author =>
+              align(center)[
+                #author.name \
+                #author.affiliation \
+                #author.email
+              ]
+          )
+        )
+      }
+
+      #v(2em)
+
+      #if date != none {
+        align(center)[#block(inset: 1em)[
+          #date
+        ]]
+      }
+      
+      #v(1fr)
+    ]
   }
 
   if abstract != none {
