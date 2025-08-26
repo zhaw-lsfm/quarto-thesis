@@ -3,6 +3,7 @@ title: "Robust Regression and Outlier Detection"
 subtitle: "Chapter 2: Simple Regression"
 institut: "umwelt und natürliche ressourcen"
 lang: de
+thesis-type: "Projektarbeit 2"
 bibliography: references.bib
 author: 
   - Peter J. Rousseeuw

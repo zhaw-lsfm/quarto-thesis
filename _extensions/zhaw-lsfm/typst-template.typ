@@ -116,22 +116,19 @@
         ]]
       }
 
-      #v(2em)
+      #v(1.5cm)
 
       #if authors != none {
-        let count = authors.len()
-        let ncols = calc.min(count, 3)
-        grid(
-          columns: (1fr,) * ncols,
-          row-gutter: 1.5em,
-          ..authors.map(author =>
-              align(center)[
-                #author.name \
-                #author.affiliation \
-                #author.email
-              ]
-          )
-        )
+        align(center)[
+          #if lang == "en" [
+            by \
+          ] else [
+            von \
+          ]
+          #for author in authors [
+            #author.name \
+          ]
+        ]
       }
 
       #v(2em)
