@@ -122,7 +122,23 @@ coef_table <- data.frame(
   )
 )
 
-kable(coef_table, caption = "Regressionsparameter für log(Gehirngewicht) ~ log(Körpergewicht)")
+kable(coef_table)
+```
+
+```{r}
+#| label: tbl-summary
+#| tbl-cap: "Deskriptive Statistik der MASS::Animals Daten"
+
+library(knitr)
+summary_table <- data.frame(
+  Variable = c("Körpergewicht (kg)", "Gehirngewicht (g)"),
+  Minimum = c(min(Animals$body), min(Animals$brain)),
+  Mittelwert = c(round(mean(Animals$body), 1), round(mean(Animals$brain), 1)),
+  Maximum = c(max(Animals$body), max(Animals$brain)),
+  N = c(nrow(Animals), nrow(Animals))
+)
+
+kable(summary_table)
 ```
 
 Die Analyse zeigt eine starke positive Korrelation (R² = 0.96) zwischen logarithmiertem Körper- und Gehirngewicht. Der Steigungsparameter von 0.75 entspricht den Erwartungen aus der allometrischen Theorie.
@@ -142,9 +158,15 @@ Die hohe Korrelation (R² = 0.96) zeigt, dass das Körpergewicht ein starker Pr�
 
 # Verzeichnis der Abbildungen {.unnumbered .unlisted}
 
+```{=typst}
+#outline(title: none, target: figure.where(supplement: [Abbildung]))
+```
 
 # Verzeichnis der Tabellen {.unnumbered .unlisted}
 
+```{=typst}
+#outline(title: none, target: figure.where(supplement: [Tabelle]))
+```
 
 # Anhang {.unnumbered}
 
