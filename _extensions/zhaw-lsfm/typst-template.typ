@@ -59,6 +59,10 @@
            font: font,
            size: fontsize)
   set heading(numbering: sectionnumbering)
+  show heading.where(level: 1): it => {
+    pagebreak(weak: true)
+    it
+  }
   
   // Title page
   if title != none or authors != none {
