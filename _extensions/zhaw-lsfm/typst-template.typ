@@ -154,7 +154,7 @@
       #if correctors != none {
         align(left)[
           #if lang == "en" [
-            *Academic Reviewers:* \
+            *Supervisors:* \
           ] else [
             *Fachkorrektoren/Fachkorrektorinnen:* \
           ]
