@@ -8,6 +8,13 @@ degree-type: "Bachelorstudiengang"
 study-year: "2009"
 submission-date: "2024-12-15"
 study-direction: "Umweltingenieurwesen"
+correctors:
+  - title: "Prof. Dr."
+    name: "Max Mustermann"
+    affiliation: "ZHAW Life Sciences und Facility Management, Wädenswil"
+  - title: "Dr."
+    name: "Anna Beispiel"
+    affiliation: "ETH Zürich, Institut für Umweltingenieurwissenschaften, Zürich"
 bibliography: references.bib
 author: 
   - Peter J. Rousseeuw

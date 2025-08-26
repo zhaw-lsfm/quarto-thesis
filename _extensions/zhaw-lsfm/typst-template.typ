@@ -23,6 +23,7 @@
   study-year: none,
   submission-date: none,
   study-direction: none,
+  correctors: none,
   abstract: none,
   abstract-title: none,
   cols: 1,
@@ -60,7 +61,7 @@
   set heading(numbering: sectionnumbering)
   
   // Title page
-  if title != none or authors != none or date != none {
+  if title != none or authors != none {
     page()[
       #align(center)[
         #if lang == "en" [
@@ -148,15 +149,22 @@
         ]
       }
 
-      #v(2em)
-
-      #if date != none {
-        align(center)[#block(inset: 1em)[
-          #date
-        ]]
-      }
-      
       #v(1fr)
+      
+      #if correctors != none {
+        align(left)[
+          #if lang == "en" [
+            *Academic Reviewers:* \
+          ] else [
+            *Fachkorrektoren/Fachkorrektorinnen:* \
+          ]
+          #for corrector in correctors [
+            #if corrector.title != none [#corrector.title] #corrector.name \
+            #corrector.affiliation \
+            \
+          ]
+        ]
+      }
     ]
   }
 

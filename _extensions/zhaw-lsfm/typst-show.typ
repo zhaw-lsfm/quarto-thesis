@@ -54,6 +54,17 @@ $endif$
 $if(study-direction)$
   study-direction: [$study-direction$],
 $endif$
+$if(correctors)$
+  correctors: (
+$for(correctors)$
+    (
+      title: [$correctors.title$],
+      name: [$correctors.name$],
+      affiliation: [$correctors.affiliation$],
+    ),
+$endfor$
+  ),
+$endif$
 $if(lang)$
   lang: "$lang$",
 $endif$
