@@ -36,6 +36,9 @@ $endif$
 $if(institut)$
   institut: [$institut$],
 $endif$
+$if(confidential)$
+  confidential: $confidential$,
+$endif$
 $if(lang)$
   lang: "$lang$",
 $endif$

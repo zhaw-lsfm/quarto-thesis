@@ -17,6 +17,7 @@
   authors: none,
   date: none,
   institut: none,
+  confidential: false,
   abstract: none,
   abstract-title: none,
   cols: 1,
@@ -67,12 +68,6 @@
         #if institut != none [
           \ #upper(institut)
         ]
-        
-        #v(2cm)
-        
-        #if title != none [
-          #text(weight: "bold")[#title]
-        ]
       ]
       #v(1fr)
       #if title != none {
@@ -86,11 +81,27 @@
               parbreak()
               text(size: subtitle-size)[#subtitle]
             }
+            if confidential {
+              parbreak()
+              if lang == "en" [
+                text(size: subtitle-size)[CONFIDENTIAL]
+              ] else [
+                text(size: subtitle-size)[VERTRAULICH]
+              ]
+            }
           } else {
             text(weight: "bold", size: title-size)[#title]
             if subtitle != none {
               parbreak()
               text(weight: "bold", size: subtitle-size)[#subtitle]
+            }
+            if confidential {
+              parbreak()
+              if lang == "en" [
+                text(weight: "bold", size: subtitle-size)[CONFIDENTIAL]
+              ] else [
+                text(weight: "bold", size: subtitle-size)[VERTRAULICH]
+              ]
             }
           }
         ]]
