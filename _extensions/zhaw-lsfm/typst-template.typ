@@ -67,6 +67,12 @@
         #if institut != none [
           \ #upper(institut)
         ]
+        
+        #v(2cm)
+        
+        #if title != none [
+          #text(weight: "bold")[#title]
+        ]
       ]
       #v(1fr)
       #if title != none {
