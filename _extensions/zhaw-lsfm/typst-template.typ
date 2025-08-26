@@ -55,6 +55,13 @@
   // Title page
   if title != none or authors != none or date != none {
     page()[
+      #align(center)[
+        #if lang == "en" [
+          ZURICH UNIVERSITY OF APPLIED SCIENCES
+        ] else [
+          ZÜRCHER HOCHSCHULE FÜR ANGEWANDTE WISSENSCHAFTEN
+        ]
+      ]
       #v(1fr)
       #if title != none {
         align(center)[#block(inset: 2em)[
