@@ -1,0 +1,66 @@
+---
+title: "Robust Regression and Outlier Detection" 
+subtitle: "Chapter 2: Simple Regression"
+bibliography: references.bib
+author: 
+  - Peter J. Rousseeuw
+  - Annick M. Leroy
+date: "1987-10-19"
+format: 
+  zhaw-lsfm-typst: default
+execute:
+  echo: false
+---
+
+
+
+# Example 4: Brain and Weight Data
+
+Table 7 presents the brain weight (in grams) and the body weight (in
+kilograms) of 28 animals. (This sample was taken from larger data sets in
+@weisberg1980 and @jerison1973.) It is to be investigated whether a larger
+brain is required to govern a heavier body. 
+
+A clear picture of the relationship between the logarithms (to the base
+10) of these measurements is shown in Figure 7. This logarithmic 
+transformation was necessary because plotting the original measurements
+would fail to represent either the smaller or the larger measurements.
+Indeed, both original variables range over several orders of magnitude. A
+linear fit to this transformed data would be equivalent to a relationship of
+the form
+
+
+$$ \hat{y} =\hat{\theta}_2^{\prime} x^{\hat{\theta}_1}  $$
+
+
+```{r}
+#| tbl-cap: "Table 7: Brain and body weights of 28 animals."
+#| label: tbl-animals
+
+library(MASS)
+
+Animals <- MASS::Animals
+
+knitr::kable(Animals)
+
+```
+
+
+```{r}
+#| label: fig-brain-body
+#| fig-cap: "Logarithmic brain weight versus logarithmic body weight for 28 animals with LS (dashed line) and RLS fit (solid line)."
+
+
+plot(log10(brain) ~ log10(body), data = Animals, 
+     xlab = "Logarithmic body weight (kg)", 
+     ylab = "Logarithmic brain weight (g)", 
+     pch = 19, col = "blue", cex = 1.5)
+
+
+```
+
+
+
+
+
+
