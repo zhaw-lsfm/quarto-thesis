@@ -33,6 +33,9 @@ $endif$
 $if(date)$
   date: [$date$],
 $endif$
+$if(institut)$
+  institut: [$institut$],
+$endif$
 $if(lang)$
   lang: "$lang$",
 $endif$

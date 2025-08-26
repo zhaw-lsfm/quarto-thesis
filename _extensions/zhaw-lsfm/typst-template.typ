@@ -16,6 +16,7 @@
   subtitle: none,
   authors: none,
   date: none,
+  institut: none,
   abstract: none,
   abstract-title: none,
   cols: 1,
@@ -62,6 +63,9 @@
         ] else [
           ZÜRCHER HOCHSCHULE FÜR ANGEWANDTE WISSENSCHAFTEN \
           DEPARTEMENT LIFE SCIENCES UND FACILITY MANAGEMENT
+        ]
+        #if institut != none [
+          \ #upper(institut)
         ]
       ]
       #v(1fr)
