@@ -4,11 +4,14 @@ subtitle: "Chapter 2: Simple Regression"
 institut: "umwelt und natürliche ressourcen"
 lang: de
 thesis-type: "Projektarbeit 2"
+degree-type: "Bachelorstudiengang"
+study-year: "2009"
+submission-date: "2024-12-15"
+study-direction: "Umweltingenieurwesen"
 bibliography: references.bib
 author: 
   - Peter J. Rousseeuw
   - Annick M. Leroy
-date: "1987-10-19"
 format: 
   zhaw-lsfm-typst: default
 execute:

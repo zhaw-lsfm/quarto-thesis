@@ -19,6 +19,10 @@
   institut: none,
   confidential: false,
   thesis-type: none,
+  degree-type: none,
+  study-year: none,
+  submission-date: none,
+  study-direction: none,
   abstract: none,
   abstract-title: none,
   cols: 1,
@@ -127,6 +131,19 @@
           ]
           #for author in authors [
             #author.name \
+          ]
+          #if degree-type != none and study-year != none [
+            \ #degree-type #study-year
+          ]
+          #if submission-date != none [
+            \ #if lang == "en" [
+              Submission date #submission-date
+            ] else [
+              Abgabedatum #submission-date
+            ]
+          ]
+          #if study-direction != none [
+            \ Studienrichtung #study-direction
           ]
         ]
       }

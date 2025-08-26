@@ -42,6 +42,18 @@ $endif$
 $if(thesis-type)$
   thesis-type: [$thesis-type$],
 $endif$
+$if(degree-type)$
+  degree-type: [$degree-type$],
+$endif$
+$if(study-year)$
+  study-year: [$study-year$],
+$endif$
+$if(submission-date)$
+  submission-date: [$submission-date$],
+$endif$
+$if(study-direction)$
+  study-direction: [$study-direction$],
+$endif$
 $if(lang)$
   lang: "$lang$",
 $endif$
