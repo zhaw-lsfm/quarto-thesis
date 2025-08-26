@@ -159,13 +159,13 @@ Die hohe Korrelation (R² = 0.96) zeigt, dass das Körpergewicht ein starker Pr�
 # Verzeichnis der Abbildungen {.unnumbered .unlisted}
 
 ```{=typst}
-#outline(title: none, target: figure.where(supplement: [Abbildung]))
+#outline(title: none, target: figure.where(kind: "quarto-float-fig"))
 ```
 
 # Verzeichnis der Tabellen {.unnumbered .unlisted}
 
 ```{=typst}
-#outline(title: none, target: figure.where(supplement: [Tabelle]))
+#outline(title: none, target: figure.where(kind: "quarto-float-tbl"))
 ```
 
 # Anhang {.unnumbered}
