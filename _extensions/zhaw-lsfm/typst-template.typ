@@ -59,8 +59,7 @@
            font: font,
            size: fontsize)
   set heading(numbering: sectionnumbering)
-  // Remove automatic pagebreaks due to container issues
-  // Users can add {{< pagebreak >}} before headings if needed
+  // Pagebreaks are handled by Lua filter to avoid container conflicts
   
   // Title page
   if title != none or authors != none {
