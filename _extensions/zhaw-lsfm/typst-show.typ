@@ -36,6 +36,9 @@ $endif$
 $if(institut)$
   institut: [$institut$],
 $endif$
+$if(keywords)$
+  keywords: [$keywords$],
+$endif$
 $if(confidential)$
   confidential: $confidential$,
 $endif$

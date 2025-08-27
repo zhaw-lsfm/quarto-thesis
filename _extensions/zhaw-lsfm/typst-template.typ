@@ -17,6 +17,7 @@
   authors: none,
   date: none,
   institut: none,
+  keywords: none,
   confidential: false,
   thesis-type: none,
   degree-type: none,
@@ -166,6 +167,73 @@
           ]
         ]
       }
+    ]
+  }
+
+  // Imprint page (second page)
+  if title != none or authors != none {
+    page()[
+      #v(1fr)
+      
+      // Citation section
+      #if authors != none and title != none {
+        align(left)[
+          #if lang == "en" [
+            *Recommended Citation:*
+          ] else [
+            *Zitiervorschlag:*
+          ]
+        ]
+        
+        align(left)[
+          #text(size: 10pt)[
+            #for author in authors [
+              #author.name
+              #if author != authors.last() [, ]
+            ]
+            #if date != none [(#date). ] else [(n.d.). ]
+            #emph[#title#if subtitle != none [: #subtitle]]. 
+            #if institut != none {
+              if lang == "en" [
+                Zurich University of Applied Sciences, Department Life Sciences and Facility Management, #upper(institut).
+              ] else [
+                Zürcher Hochschule für Angewandte Wissenschaften, Departement Life Sciences und Facility Management, #upper(institut).
+              ]
+            }
+          ]
+        ]
+        
+        v(2em)
+      }
+      
+      // Keywords
+      #if keywords != none {
+        align(left)[
+          #if lang == "en" [
+            *Keywords:* #keywords
+          ] else [
+            *Schlagworte:* #keywords
+          ]
+        ]
+        v(2em)
+      }
+      
+      // Institute
+      #if institut != none {
+        align(left)[
+          #if lang == "en" [
+            *Institute:* #upper(institut) \
+            Department Life Sciences and Facility Management \
+            Zurich University of Applied Sciences
+          ] else [
+            *Institut:* #upper(institut) \
+            Departement Life Sciences und Facility Management \
+            Zürcher Hochschule für Angewandte Wissenschaften
+          ]
+        ]
+      }
+      
+      #v(1fr)
     ]
   }
 

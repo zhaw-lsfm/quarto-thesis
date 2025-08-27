@@ -1,7 +1,8 @@
 ---
 title: "Robust Regression and Outlier Detection" 
 subtitle: "Chapter 2: Simple Regression"
-institut: "umwelt und natürliche ressourcen"
+institut: "Umwelt und Natürliche Ressourcen"
+keywords: "Robuste Regression, Ausreisser, Allometrie, Säugetiere, Gehirngrösse, Statistik"
 lang: de
 thesis-type: "Projektarbeit 2"
 degree-type: "Bachelorstudiengang"
@@ -22,8 +23,10 @@ author:
 format: 
   zhaw-lsfm-typst: 
     toc: false
+    number-sections: true
 execute:
   echo: false
+  warning: false
 ---
 
 # Zusammenfassung {.unnumbered .unlisted}
