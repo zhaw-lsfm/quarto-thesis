@@ -52,7 +52,7 @@
   set page(
     paper: paper,
     margin: margin,
-    numbering: pagenumbering,
+    numbering: none,
   )
   set par(justify: true)
   set text(lang: lang,
@@ -64,7 +64,7 @@
   
   // Title page
   if title != none or authors != none {
-    page()[
+    page(numbering: none)[
       #align(center)[
         #if lang == "en" [
           ZURICH UNIVERSITY OF APPLIED SCIENCES \
@@ -172,7 +172,7 @@
 
   // Imprint page (second page)
   if title != none or authors != none {
-    page()[
+    page(numbering: none)[
       #v(1fr)
       
       #align(left)[
@@ -244,6 +244,10 @@
       }
     ]
   }
+
+  // Start page numbering for main content
+  set page(numbering: pagenumbering)
+  counter(page).update(1)
 
   if abstract != none {
     block(inset: 2em)[
