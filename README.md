@@ -112,8 +112,48 @@ The template has been customized with the following ZHAW requirements:
 
 ### 4. Enhanced Features
 - **Figure/table lists**: Shortcode support for automated generation
+- **Table of contents**: Manual placement with shortcode control
 - **Bibliography integration**: Proper page breaks and citation handling
 - **Institut display**: Automatic uppercase conversion of institute names
+
+## Shortcodes
+
+The template provides user-friendly shortcodes for manual placement of document elements:
+
+### Available Shortcodes
+
+| Shortcode | Description | Usage |
+|-----------|-------------|-------|
+| `{{< table-of-contents >}}` | Generate table of contents | Place anywhere in document |
+| `{{< list-of-figures >}}` | Generate list of figures | Place anywhere in document |
+| `{{< list-of-tables >}}` | Generate list of tables | Place anywhere in document |
+| `{{< references >}}` | Generate bibliography | Place anywhere in document |
+
+### Example Usage
+
+```markdown
+# Table of Contents {.unnumbered .unlisted}
+
+{{< table-of-contents >}}
+
+# Bibliography {.unnumbered .unlisted}
+
+{{< references >}}
+
+# List of Figures {.unnumbered .unlisted}
+
+{{< list-of-figures >}}
+
+# List of Tables {.unnumbered .unlisted}
+
+{{< list-of-tables >}}
+```
+
+**Benefits:**
+- Full control over placement and formatting
+- Custom section titles with proper styling
+- Works with `toc: false` to disable automatic generation
+- Consistent with ZHAW document structure requirements
 
 ## Usage Example
 

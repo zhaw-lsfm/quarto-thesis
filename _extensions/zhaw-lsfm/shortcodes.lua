@@ -16,5 +16,10 @@ return {
     -- Generate typst code for table of contents
     local typst_code = '#outline(title: none)'
     return pandoc.RawBlock('typst', typst_code)
+  end,
+  
+  ['references'] = function(args, kwargs, meta)
+    -- Generate references div for bibliography
+    return pandoc.Div({}, pandoc.Attr("refs"))
   end
 }
