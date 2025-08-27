@@ -132,19 +132,19 @@ The template provides user-friendly shortcodes for manual placement of document 
 ### Example Usage
 
 ```markdown
-# Table of Contents {.unnumbered .unlisted}
+# Table of Contents {.hidden}
 
 {{< table-of-contents >}}
 
-# Bibliography {.unnumbered .unlisted}
+# Bibliography {.hidden}
 
 {{< references >}}
 
-# List of Figures {.unnumbered .unlisted}
+# List of Figures {.hidden}
 
 {{< list-of-figures >}}
 
-# List of Tables {.unnumbered .unlisted}
+# List of Tables {.hidden}
 
 {{< list-of-tables >}}
 ```
@@ -154,6 +154,17 @@ The template provides user-friendly shortcodes for manual placement of document 
 - Custom section titles with proper styling
 - Works with `toc: false` to disable automatic generation
 - Consistent with ZHAW document structure requirements
+- Simplified syntax with `.hidden` class (combines `.unnumbered .unlisted`)
+
+## Class Shortcuts
+
+The template provides convenient class shortcuts for common heading attributes:
+
+| Class | Equivalent | Description |
+|-------|------------|-------------|
+| `.hidden` | `.unnumbered .unlisted` | Section not numbered and not shown in TOC |
+
+Use `.hidden` for sections like abstracts, table of contents, figure lists, and appendices that should not appear in the main document structure.
 
 ## Usage Example
 
