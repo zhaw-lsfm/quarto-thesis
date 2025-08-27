@@ -10,5 +10,11 @@ return {
     -- Generate typst code for table list  
     local typst_code = '#outline(title: none, target: figure.where(kind: "quarto-float-tbl"))'
     return pandoc.RawBlock('typst', typst_code)
+  end,
+  
+  ['table-of-contents'] = function(args, kwargs, meta)
+    -- Generate typst code for table of contents
+    local typst_code = '#outline(title: none)'
+    return pandoc.RawBlock('typst', typst_code)
   end
 }

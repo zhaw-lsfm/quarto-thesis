@@ -23,7 +23,6 @@ author:
 format: 
   zhaw-lsfm-typst: 
     toc: false
-    number-depth: 3
 execute:
   echo: false
   warning: false
@@ -35,6 +34,7 @@ Diese Arbeit untersucht die Beziehung zwischen Gehirngröße und Körpergewicht 
 
 # Inhaltsverzeichnis {.unnumbered .unlisted}
 
+{{< table-of-contents >}}
 
 
 # Liste der Abkürzungen {.unnumbered}
