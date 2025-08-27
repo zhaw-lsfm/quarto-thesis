@@ -74,7 +74,7 @@
           DEPARTEMENT LIFE SCIENCES UND FACILITY MANAGEMENT
         ]
         #if institut != none [
-          \ #upper(institut)
+          \ #institut
         ]
       ]
       #v(1fr)
@@ -175,6 +175,16 @@
     page()[
       #v(1fr)
       
+      #align(left)[
+        #if lang == "en" [
+          *Imprint*
+        ] else [
+          *Impressum*
+        ]
+      ]
+      
+      #v(2em)
+      
       // Citation section
       #if authors != none and title != none {
         align(left)[
@@ -195,9 +205,9 @@
             #emph[#title#if subtitle != none [: #subtitle]]. 
             #if institut != none {
               if lang == "en" [
-                Zurich University of Applied Sciences, Department Life Sciences and Facility Management, #upper(institut).
+                Zurich University of Applied Sciences, Department Life Sciences and Facility Management, #institut.
               ] else [
-                Zürcher Hochschule für Angewandte Wissenschaften, Departement Life Sciences und Facility Management, #upper(institut).
+                Zürcher Hochschule für Angewandte Wissenschaften, Departement Life Sciences und Facility Management, #institut.
               ]
             }
           ]
@@ -222,18 +232,16 @@
       #if institut != none {
         align(left)[
           #if lang == "en" [
-            *Institute:* #upper(institut) \
+            #institut \
             Department Life Sciences and Facility Management \
             Zurich University of Applied Sciences
           ] else [
-            *Institut:* #upper(institut) \
+            #institut \
             Departement Life Sciences und Facility Management \
             Zürcher Hochschule für Angewandte Wissenschaften
           ]
         ]
       }
-      
-      #v(1fr)
     ]
   }
 
