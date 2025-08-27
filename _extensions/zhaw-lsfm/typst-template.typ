@@ -74,7 +74,7 @@
           DEPARTEMENT LIFE SCIENCES UND FACILITY MANAGEMENT
         ]
         #if institut != none [
-          \ #institut
+          \ #upper(institut)
         ]
       ]
       #v(1fr)
