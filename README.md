@@ -132,21 +132,33 @@ The template provides user-friendly shortcodes for manual placement of document 
 ### Example Usage
 
 ```markdown
-# Table of Contents {.hidden}
+# Abstract {.hidden}
+
+This is the document abstract...
+
+# Table of Contents {.unnumbered}
 
 {{< table-of-contents >}}
 
-# Bibliography {.hidden}
+# List of Abbreviations {.unnumbered}
 
-{{< references >}}
+**API** - Application Programming Interface
 
-# List of Figures {.hidden}
+# List of Figures {.unnumbered}
 
 {{< list-of-figures >}}
 
-# List of Tables {.hidden}
+# List of Tables {.unnumbered}
 
 {{< list-of-tables >}}
+
+# Bibliography {.unnumbered}
+
+{{< references >}}
+
+# Appendices {.unnumbered}
+
+Additional materials...
 ```
 
 **Benefits:**
@@ -164,7 +176,7 @@ The template provides convenient class shortcuts for common heading attributes:
 |-------|------------|-------------|
 | `.hidden` | `.unnumbered .unlisted` | Section not numbered and not shown in TOC |
 
-Use `.hidden` for sections like abstracts, table of contents, figure lists, and appendices that should not appear in the main document structure.
+Use `.hidden` for sections like abstracts that should not appear in the main document structure. Use `.unnumbered` for structural sections like table of contents, figure lists, and appendices that should appear in the TOC but without section numbers.
 
 ## Usage Example
 
