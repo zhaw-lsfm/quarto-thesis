@@ -21,8 +21,7 @@ author:
   - Peter J. Rousseeuw
   - Annick M. Leroy
 format: 
-  zhaw-lsfm-typst: 
-    toc: false
+  zhaw-lsfm-typst: default
 execute:
   echo: false
   warning: false

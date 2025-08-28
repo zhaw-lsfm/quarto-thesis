@@ -1,0 +1,177 @@
+---
+title: "ZHAW LSFM Thesis Template"
+subtitle: "A Quarto template for ZHAW LSFM Students"
+bibliography: references.bib
+format:
+  html:
+    toc: true
+---
+
+
+This quarto template implements the guidelines and requirements for student theses at ZHAW LSFM as described in @zhaw2024de (german) and @zhaw2024en (english). These guidelines are summarized in @sec-requirements.
+
+It is uses the Typst typesetting system for high-quality and fast rendering of PDF output.
+The template tries to be minimalistic. You won't miss out on any features natively supported by quarto and typst, it simply adds the features required by ZHAW LSFM.
+
+Features: 
+
+- The ability to enter all the required metadata in the YAML header of your quarto document. This metadata is used in various places throughout the document (see @sec-metadata)
+- The creation of the title page and imprint page according to ZHAW guidelines (this uses the metadata mentioned above)
+- Settings the default values to match the ZHAW requirements (numbering type, font size, margins, etc.)
+- Shortcodes to manually place the table of contents, list of figures, list of tables, and bibliography in the document
+- Class shortcuts for removing a header numbering and removing it from the table of contents
+- The template also serves as a boilerplate for your thesis document, so you can get started quickly (bibtex included and a scaffold of the document structure)
+
+:::{.callout-note}
+## Todo
+
+- Add the possibility to add callout todos, that can be hidden
+- text the html version
+- write about how quarto projects are not supported
+
+:::
+
+## Installation 
+
+```bash
+quarto use template zhaw-lsfm/quarto-thesis
+```
+
+
+
+This will install the format extension and create an example qmd file that you can use as a starting place for your document.
+
+## Manual
+
+### Metadata {#sec-metadata}
+
+Here is a list of the metadata fields than can (and should) be used in the YAML header of your quarto document to make use of the features of this template.
+
+Existing fields from quarto than need to be provided:
+
+- title
+- subtitle
+- keywords
+- lang (only `en` or `de` supported)
+- bibliography
+- author (multiple authors supported)
+
+Note that switching the `lang` field will also change the language of some of the automatically generated text. For example, ZHAW will dieplayed as follows depending on the `lang` field:
+
+- German (default): "ZÜRCHER HOCHSCHULE FÜR ANGEWANDTE WISSENSCHAFTEN"
+- English: "ZURICH UNIVERSITY OF APPLIED SCIENCES"
+
+
+Additional fields provided by this template:
+
+- institut (in titlecase, e.g. "Institut für Umwelt und Natürliche Ressourcen")
+- thesis-type (e.g "Projektarbeit 2")
+- degree-type (e.g. "Bachelorstudiengang")
+- study-year (e.g. "2009")
+- submission-date (e.g. "2024-12-15")
+- study-direction (e.g. "Umweltingenieurwesen")
+- correctors with title, name and affiliation (see example template.qmd)
+- confidential (default `false`. Set to true to mark the thesis as confidential)
+
+
+### Shortcodes {#sec-shortcodes}
+
+- To insert a list of figures: `{{{< list-of-figures >}}}`
+- To insert a list of tables: `{{{< list-of-tables >}}}`
+- To insert a bibliography: `{{{< references >}}}`
+- To insert a table of contents: `{{{< table-of-contents >}}}`
+
+### Extra heading class
+
+A number of chapters in the thesis should not be numbered and should not appear in the table of contents (see @sec-chapter-numbering). In quarto, you would add the classes `.unnumbered .unlisted` to the chapter heading, which is somewhat verbose. 
+
+For your convenience, this template provides a shortcut class `.hidden` that combines both. Example:
+
+```{.markdown}
+# Abstract {.hidden}
+
+This is the abstract...
+
+```
+
+
+
+## ZHAW LSFM Requirements {#sec-requirements}
+
+Here is a summary of the requirements [from @zhaw2024de]:
+
+### Text
+
+> Der Text soll einheitlich formatiert werden und vorzugsweise mit einer Schrift wie z.B. Arial 11pt und mit Zeilenabstand max. 1.5. abgefasst werden.
+
+:::{.callout-note}
+## Todo: not yet implemented
+:::
+
+### Titlepage and imprint 
+ 
+> Die Titelseite ist gemäss Muster auszuführen (siehe Anhang 2). 
+
+Anhang 2 ist in @fig-titlepage ersichtlich
+
+![Titelseite (ohne ZHAW-logo)](titlepage.png){#fig-titlepage}
+
+
+> Auf der Rückseite des Titelblatts soll ein Impressum mit folgendem Inhalt eingefügt werden: Schlagworte (keywords), Zitiervorschlag, Name des Instituts.
+
+### Header / Footer
+
+> In der Kopfzeile können die folgenden Angaben gemacht werden: ZHAW LSFM, Art der Arbeit,
+Autor/in; in der Fusszeile wird die Seitenzahl angegeben.
+
+:::{.callout-note}
+## Todo: not yet implemented
+:::
+
+### Figure / Table numbering and captions
+
+> Alle Abbildungen (Grafiken, Diagramme, Fotografien usw.) und Tabellen werden fortlaufend nummeriert und müssen eine erklärende Anschrift (Bildlegende) haben. Abbildungen werden dabei unten, Tabellen oben beschriftet, die Bezeichnung lautet Abbildung (Abb.) bzw. Tabelle
+(Tab.).
+
+:::{.callout-note}
+## Todo: not yet implemented
+
+Abb / Tab
+:::
+
+
+> Folgende Gliederung für wissenschaftliche Arbeiten hat sich bewährt und soll grundsätzlich eingehalten werden. Je nach Art oder Thema der Arbeit (z.B. Literaturarbeit, betriebswirtschaftliche Themen u.a.) sind nach Absprache mit den Fachkorrigierenden Abweichungen von dieser Gliederung sinnvoll.
+
+(siehe @fig-gliederung) 
+
+### Chapter numbering {#sec-chapter-numbering}
+
+> Für die nummerierten Kapitel und Unterkapitel ist die Dezimalnummerierung anzuwenden (Beispiel: 3, 3.1, 3.2, 3.2.1, 3.2.2 usw.). Mehr als 3 Gliederungsebenen pro Hauptkapitel sind unübersichtlich.
+
+
+![](gliederung.png){#fig-gliederung}
+
+
+### Appendix
+
+> Normalerweise werden Seiten- und Kapitelnummerierung im Anhang nicht fortgesetzt. Besteht ein Anhang aus mehreren
+Teilen, so werden diese mit Anhang A, Anhang B etc. oder mit Anhang 1, Anhang 2 etc. bezeichnet. Auf die Anhänge soll im Text verwiesen werden. Zu Beginn des Anhangs muss ein Anhangsverzeichnis eingeordnet werden.
+
+:::{.callout-note}
+## Todo: not yet implemented
+:::
+
+### References
+
+> APA (7th ed.) 
+
+
+
+
+## References
+
+::: {#refs}
+:::
+
+
+

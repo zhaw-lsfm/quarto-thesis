@@ -111,7 +111,8 @@ $if(brand.typography.headings.line-height)$
   heading-line-height: $brand.typography.headings.line-height$,
 $endif$
 $endif$
-  sectionnumbering: $if(section-numbering)$"$section-numbering$"$else$"1.1."$endif$,
+  sectionnumbering: "$section-numbering$",
+  number-depth: $number-depth$,
   pagenumbering: $if(page-numbering)$"$page-numbering$"$else$none$endif$,
 $if(toc)$
   toc: $toc$,

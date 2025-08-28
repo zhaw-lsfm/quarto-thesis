@@ -42,6 +42,7 @@
   heading-color: black,
   heading-line-height: 0.65em,
   sectionnumbering: none,
+  number-depth: none,
   pagenumbering: "1",
   toc: false,
   toc_title: none,
@@ -59,7 +60,13 @@
            region: region,
            font: font,
            size: fontsize)
-  set heading(numbering: sectionnumbering)
+  set heading(
+    numbering: if sectionnumbering != none {
+      (..nums) => if nums.pos().len() <= number-depth {
+        numbering(sectionnumbering, ..nums)
+      }
+    } else { none }
+  )
   // Pagebreaks are handled by Lua filter to avoid container conflicts
   
   // Title page
