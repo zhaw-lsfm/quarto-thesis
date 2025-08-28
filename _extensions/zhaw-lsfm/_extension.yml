@@ -15,6 +15,10 @@ contributes:
       template-partials:
         - typst-template.typ
         - typst-show.typ
+      execute:
+        echo: false
+        warning: false
+        error: true
   shortcodes:
     - shortcodes.lua
 

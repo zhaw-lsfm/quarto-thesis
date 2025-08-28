@@ -17,9 +17,9 @@ Features:
 
 - The ability to enter all the required metadata in the YAML header of your quarto document. This metadata is used in various places throughout the document (see @sec-metadata)
 - The creation of the title page and imprint page according to ZHAW guidelines (this uses the metadata mentioned above)
-- Settings the default values to match the ZHAW requirements (numbering type, font size, margins, etc.)
-- Shortcodes to manually place the table of contents, list of figures, list of tables, and bibliography in the document
-- Class shortcuts for removing a header numbering and removing it from the table of contents
+- Settings the default values to match the ZHAW requirements: numbering type, font size, margins, etc. (see @sec-defaults)
+- Shortcodes to manually place the table of contents, list of figures, list of tables, and bibliography in the document (see @sec-shortcodes)
+- Class shortcuts for removing a header numbering and removing it from the table of contents (see @sec-chapter-numbering)
 - The template also serves as a boilerplate for your thesis document, so you can get started quickly (bibtex included and a scaffold of the document structure)
 
 :::{.callout-note}
@@ -74,6 +74,22 @@ Additional fields provided by this template:
 - confidential (default `false`. Set to true to mark the thesis as confidential)
 
 
+### Default settings {#sec-defaults}
+
+The template sets a number of default settings to match the ZHAW requirements (see @sec-requirements). These include:
+
+```
+execute:
+  echo: false
+  warning: false
+``` 
+
+:::{.callout-note}
+Todo: expand on this
+
+:::
+
+
 ### Shortcodes {#sec-shortcodes}
 
 - To insert a list of figures: `{{{< list-of-figures >}}}`
@@ -81,7 +97,14 @@ Additional fields provided by this template:
 - To insert a bibliography: `{{{< references >}}}`
 - To insert a table of contents: `{{{< table-of-contents >}}}`
 
-### Extra heading class
+### Extra heading class {#sec-chapter-numbering}
+
+:::{.callout-note}
+## Todo
+
+Remove this feature. We only need it for two chapters. Also ".hidden" has a special meaning in html
+
+:::
 
 A number of chapters in the thesis should not be numbered and should not appear in the table of contents (see @sec-chapter-numbering). In quarto, you would add the classes `.unnumbered .unlisted` to the chapter heading, which is somewhat verbose. 
 

@@ -22,9 +22,6 @@ author:
   - Annick M. Leroy
 format: 
   zhaw-lsfm-typst: default
-execute:
-  echo: false
-  warning: false
 ---
 
 # Zusammenfassung {.hidden}
