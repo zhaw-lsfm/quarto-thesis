@@ -50,11 +50,12 @@ Here is a list of the metadata fields than can (and should) be used in the YAML 
 Existing fields from quarto than need to be provided:
 
 - title
-- subtitle
+- subtitle  
 - keywords
 - lang (only `en` or `de` supported)
 - bibliography
 - author (multiple authors supported)
+
 
 Note that switching the `lang` field will also change the language of some of the automatically generated text. For example, ZHAW will dieplayed as follows depending on the `lang` field:
 
@@ -82,12 +83,21 @@ The template sets a number of default settings to match the ZHAW requirements (s
 execute:
   echo: false
   warning: false
+
+- mainfont (optional, defaults to Arial with fallbacks)
+- fontsize (optional, defaults to 11pt)
 ``` 
 
-:::{.callout-note}
-Todo: expand on this
-
-:::
+**Font Configuration:**
+- **Default:** Arial 11pt (meets ZHAW requirements)
+- **Built-in fallbacks:** Arial → Helvetica Neue → Helvetica → Liberation Sans → DejaVu Sans → Noto Sans
+- **Easy override:** Set `mainfont` and `fontsize` in your YAML frontmatter
+- **Example override:**
+  ```yaml
+  mainfont: "Times New Roman"
+  fontsize: 12pt
+  ```
+- **Local fonts:** Place font files (.ttf/.otf) in `_extensions/zhaw-lsfm/fonts/` directory for guaranteed availability
 
 
 ### Shortcodes {#sec-shortcodes}
@@ -108,9 +118,7 @@ Here is a summary of the requirements [from @zhaw2024de]:
 
 > Der Text soll einheitlich formatiert werden und vorzugsweise mit einer Schrift wie z.B. Arial 11pt und mit Zeilenabstand max. 1.5. abgefasst werden.
 
-:::{.callout-note}
-## Todo: not yet implemented
-:::
+
 
 ### Titlepage and imprint 
  
