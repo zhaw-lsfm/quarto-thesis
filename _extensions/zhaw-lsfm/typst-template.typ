@@ -67,6 +67,10 @@
       }
     } else { none }
   )
+  show heading: it => {
+    it
+    v(0.5em)
+  }
   // Pagebreaks are handled by Lua filter to avoid container conflicts
   
   // Title page
@@ -271,6 +275,7 @@
           ]]
         )
       ]
+      #v(0.3em)
       #line(length: 100%, stroke: 0.5pt)
     ],
     footer: [
