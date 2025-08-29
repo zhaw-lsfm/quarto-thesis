@@ -272,6 +272,13 @@
         )
       ]
       #line(length: 100%, stroke: 0.5pt)
+    ],
+    footer: [
+      #text(size: 0.8em)[
+        #align(center)[
+          #context counter(page).display()
+        ]
+      ]
     ]
   )
   counter(page).update(1)
