@@ -97,25 +97,6 @@ Todo: expand on this
 - To insert a bibliography: `{{{< references >}}}`
 - To insert a table of contents: `{{{< table-of-contents >}}}`
 
-### Extra heading class {#sec-chapter-numbering}
-
-:::{.callout-note}
-## Todo
-
-Remove this feature. We only need it for two chapters. Also ".hidden" has a special meaning in html
-
-:::
-
-A number of chapters in the thesis should not be numbered and should not appear in the table of contents (see @sec-chapter-numbering). In quarto, you would add the classes `.unnumbered .unlisted` to the chapter heading, which is somewhat verbose. 
-
-For your convenience, this template provides a shortcut class `.hidden` that combines both. Example:
-
-```{.markdown}
-# Abstract {.hidden}
-
-This is the abstract...
-
-```
 
 
 
