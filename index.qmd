@@ -133,12 +133,14 @@ Anhang 2 ist in @fig-titlepage ersichtlich
 
 ### Header / Footer
 
-> In der Kopfzeile können die folgenden Angaben gemacht werden: ZHAW LSFM, Art der Arbeit,
-Autor/in; in der Fusszeile wird die Seitenzahl angegeben.
+> In der Kopfzeile können die folgenden Angaben gemacht werden: ZHAW LSFM, Art der Arbeit, Autor/in; in der Fusszeile wird die Seitenzahl angegeben.
 
-:::{.callout-note}
-## Todo: not yet implemented
-:::
+✅ **Implemented:** The header appears on all content pages (after imprint) with three columns:
+- Left: "ZHAW LSFM"
+- Center: thesis-type (from YAML metadata)  
+- Right: author(s) (from YAML metadata)
+
+The footer contains page numbers as required.
 
 ### Figure / Table numbering and captions
 

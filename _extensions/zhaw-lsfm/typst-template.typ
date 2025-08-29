@@ -252,8 +252,28 @@
     ]
   }
 
-  // Start page numbering for main content
-  set page(numbering: pagenumbering)
+  // Start page numbering for main content with header
+  set page(
+    numbering: pagenumbering,
+    header: [
+      #text(size: 0.8em)[
+        #grid(
+          columns: (1fr, 1fr, 1fr),
+          align: (left, center, right),
+          gutter: 1em,
+          [ZHAW LSFM],
+          [#if thesis-type != none [#thesis-type]],
+          [#if authors != none [
+            #for author in authors [
+              #author.name
+              #if author != authors.last() [, ]
+            ]
+          ]]
+        )
+      ]
+      #line(length: 100%, stroke: 0.5pt)
+    ]
+  )
   counter(page).update(1)
 
   if abstract != none {
