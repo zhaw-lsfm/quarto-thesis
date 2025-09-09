@@ -68,6 +68,25 @@ $for(correctors)$
 $endfor$
   ),
 $endif$
+$if(cover-image)$
+  cover-image: (
+$if(cover-image.src)$
+    src: "$cover-image.src$",
+$else$
+    src: "$cover-image$",
+$endif$
+$if(cover-image.max-width)$
+    max-width: "$cover-image.max-width$",
+$else$
+    max-width: "100%",
+$endif$
+$if(cover-image.max-height)$
+    max-height: "$cover-image.max-height$",
+$else$
+    max-height: "5cm",
+$endif$
+  ),
+$endif$
 $if(lang)$
   lang: "$lang$",
 $endif$

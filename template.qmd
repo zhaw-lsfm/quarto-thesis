@@ -4,6 +4,10 @@ subtitle: "Chapter 2: Simple Regression"
 institut: "Institut für Umwelt und Natürliche Ressourcen"
 keywords: "Robuste Regression, Ausreisser, Allometrie, Säugetiere, Gehirngrösse, Statistik"
 lang: de
+cover-image:
+  src: cover.png
+  max-width: 100%
+  max-height: 5cm
 thesis-type: "Projektarbeit 2"
 degree-type: "Bachelorstudiengang"
 study-year: "2009"

@@ -25,10 +25,11 @@
   submission-date: none,
   study-direction: none,
   correctors: none,
+  cover-image: none,
   abstract: none,
   abstract-title: none,
   cols: 1,
-  margin: (x: 1.25in, y: 1.25in),
+  margin: (x: 1.25in, y: 2cm),
   paper: "us-letter",
   lang: "en",
   region: "US",
@@ -103,6 +104,11 @@
               parbreak()
               text(size: subtitle-size)[#subtitle]
             }
+            if cover-image != none {
+              v(0.5cm)
+              image(cover-image.src, width: eval(cover-image.max-width), height: eval(cover-image.max-height), fit: "contain")
+              v(0.3cm)
+            }
             if confidential {
               parbreak()
               if lang == "en" [
@@ -121,6 +127,11 @@
               parbreak()
               text(weight: "bold", size: subtitle-size)[#subtitle]
             }
+            if cover-image != none {
+              v(0.5cm)
+              image(cover-image.src, width: eval(cover-image.max-width), height: eval(cover-image.max-height), fit: "contain")
+              v(0.3cm)
+            }
             if confidential {
               parbreak()
               if lang == "en" [
@@ -137,7 +148,7 @@
         ]]
       }
 
-      #v(1.5cm)
+      #v(0.5cm)
 
       #if authors != none {
         align(center)[
@@ -172,7 +183,7 @@
           #if lang == "en" [
             *Supervisors:* \
           ] else [
-            *Fachkorrektoren/Fachkorrektorinnen:* \
+            *Fachkorrektoren / Fachkorrektorinnen:* \
           ]
           #for corrector in correctors [
             #if corrector.title != none [#corrector.title] #corrector.name \

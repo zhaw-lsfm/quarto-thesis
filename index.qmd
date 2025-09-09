@@ -37,11 +37,16 @@ Features:
 quarto use template zhaw-lsfm/quarto-thesis
 ```
 
-
-
 This will install the format extension and create an example qmd file that you can use as a starting place for your document.
 
+
+## Getting started
+
+We've prepared a guide to getting started with Quarto, Typst and this template here: <https://zhaw-adls.github.io/PA2-Quarto-Typst>
+
+
 ## Manual
+
 
 ### Metadata {#sec-metadata}
 
@@ -83,12 +88,10 @@ The template sets a number of default settings to match the ZHAW requirements (s
 execute:
   echo: false
   warning: false
-
-- mainfont (optional, defaults to Arial with fallbacks)
-- fontsize (optional, defaults to 11pt)
 ``` 
 
 **Font Configuration:**
+
 - **Default:** Arial 11pt (meets ZHAW requirements)
 - **Built-in fallbacks:** Arial → Helvetica Neue → Helvetica → Liberation Sans → DejaVu Sans → Noto Sans
 - **Easy override:** Set `mainfont` and `fontsize` in your YAML frontmatter
@@ -112,7 +115,7 @@ execute:
 
 ## ZHAW LSFM Requirements {#sec-requirements}
 
-Here is a summary of the requirements [from @zhaw2024de]:
+Here is a summary of the requirements [from @zhaw2024de] in German:
 
 ### Text
 
