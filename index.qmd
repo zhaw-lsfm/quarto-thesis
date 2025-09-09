@@ -91,7 +91,7 @@ execute:
   warning: false
 ``` 
 
-**Font Configuration:**
+Font Configuration:
 
 - **Default:** Arial 11pt (meets ZHAW requirements)
 - **Built-in fallbacks:** Arial → Helvetica Neue → Helvetica → Liberation Sans → DejaVu Sans → Noto Sans
@@ -107,7 +107,7 @@ execute:
 
 The template supports adding a cover image to the title page, positioned between the subtitle and thesis type. The cover image feature offers flexible sizing options:
 
-**Basic usage:**
+Basic usage:
 ```yaml
 cover-image:
   src: cover.png
@@ -115,18 +115,20 @@ cover-image:
   max-height: 5cm
 ```
 
-**Configuration options:**
-- **src:** Path to the image file (required)
-- **max-width:** Maximum width constraint (default: "100%")
-- **max-height:** Maximum height constraint (default: "5cm")
+Configuration options:
 
-**Image behavior:**
+- src: Path to the image file (required)
+- max-width: Maximum width constraint (default: "100%")
+- max-height: Maximum height constraint (default: "5cm")
+
+Image behavior:
+
 - Images scale proportionally using `fit: "contain"` to maintain aspect ratio
 - Both constraints are applied simultaneously - the image will fit within both limits
 - Supports common formats: PNG, JPG, SVG, etc.
 - Recommended dimensions: Images should be landscape oriented for best results
 
-**Spacing:** The cover image is positioned with 0.5cm spacing above and minimal spacing below for a clean layout.
+Spacing: The cover image is positioned with 0.5cm spacing above and minimal spacing below for a clean layout.
 
 ### Shortcodes {#sec-shortcodes}
 

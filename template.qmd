@@ -42,11 +42,17 @@ Diese Arbeit untersucht die Beziehung zwischen Gehirngröße und Körpergewicht 
 
 # Liste der Abkürzungen {.unnumbered}
 
-**MASS** - Modern Applied Statistics with S  
-**log** - natürlicher Logarithmus  
-**R²** - Bestimmtheitsmass  
-**kg** - Kilogramm  
-**g** - Gramm  
++---------+----------------------------------+
+| MASS    | Modern Applied Statistics with S |
++---------+----------------------------------+
+| log     | natürlicher Logarithmus          |
++---------+----------------------------------+
+| R²      | Bestimmtheitsmass                |
++---------+----------------------------------+
+| kg      | Kilogramm                        |
++---------+----------------------------------+
+| g       | Gramm                            |
++---------+----------------------------------+  
 
 # Einleitung
 
