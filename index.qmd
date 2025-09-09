@@ -78,6 +78,7 @@ Additional fields provided by this template:
 - study-direction (e.g. "Umweltingenieurwesen")
 - correctors with title, name and affiliation (see example template.qmd)
 - confidential (default `false`. Set to true to mark the thesis as confidential)
+- cover-image with configurable sizing options (see example below)
 
 
 ### Default settings {#sec-defaults}
@@ -102,6 +103,30 @@ execute:
   ```
 - **Local fonts:** Place font files (.ttf/.otf) in `_extensions/zhaw-lsfm/fonts/` directory for guaranteed availability
 
+### Cover Image Configuration
+
+The template supports adding a cover image to the title page, positioned between the subtitle and thesis type. The cover image feature offers flexible sizing options:
+
+**Basic usage:**
+```yaml
+cover-image:
+  src: cover.png
+  max-width: 100%
+  max-height: 5cm
+```
+
+**Configuration options:**
+- **src:** Path to the image file (required)
+- **max-width:** Maximum width constraint (default: "100%")
+- **max-height:** Maximum height constraint (default: "5cm")
+
+**Image behavior:**
+- Images scale proportionally using `fit: "contain"` to maintain aspect ratio
+- Both constraints are applied simultaneously - the image will fit within both limits
+- Supports common formats: PNG, JPG, SVG, etc.
+- Recommended dimensions: Images should be landscape oriented for best results
+
+**Spacing:** The cover image is positioned with 0.5cm spacing above and minimal spacing below for a clean layout.
 
 ### Shortcodes {#sec-shortcodes}
 

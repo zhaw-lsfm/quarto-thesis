@@ -96,54 +96,27 @@
       #if title != none {
         align(center)[#block(inset: 2em)[
           #set par(leading: heading-line-height)
-          #if (heading-family != none or heading-weight != "bold" or heading-style != "normal"
-               or heading-color != black) {
-            set text(font: heading-family, weight: heading-weight, style: heading-style, fill: heading-color)
-            text(size: title-size)[#title]
-            if subtitle != none {
-              parbreak()
-              text(size: subtitle-size)[#subtitle]
-            }
-            if cover-image != none {
-              v(0.5cm)
-              image(cover-image.src, width: eval(cover-image.max-width), height: eval(cover-image.max-height), fit: "contain")
-              v(0.1cm)
-            }
-            if confidential {
-              parbreak()
-              if lang == "en" [
-                #text(size: subtitle-size)[CONFIDENTIAL]
-              ] else [
-                #text(size: subtitle-size)[VERTRAULICH]
-              ]
-            }
-            if thesis-type != none {
-              v(0.2cm)
-              text(size: subtitle-size)[#thesis-type]
-            }
-          } else {
-            text(weight: "bold", size: title-size)[#title]
-            if subtitle != none {
-              parbreak()
-              text(weight: "bold", size: subtitle-size)[#subtitle]
-            }
-            if cover-image != none {
-              v(0.5cm)
-              image(cover-image.src, width: eval(cover-image.max-width), height: eval(cover-image.max-height), fit: "contain")
-              v(0.1cm)
-            }
-            if confidential {
-              parbreak()
-              if lang == "en" [
-                text(weight: "bold", size: subtitle-size)[CONFIDENTIAL]
-              ] else [
-                text(weight: "bold", size: subtitle-size)[VERTRAULICH]
-              ]
-            }
-            if thesis-type != none {
-              v(0.2cm)
-              text(weight: "bold", size: subtitle-size)[#thesis-type]
-            }
+          #text(weight: "bold", size: title-size)[#title]
+          #if subtitle != none {
+            parbreak()
+            text(weight: "bold", size: subtitle-size)[#subtitle]
+          }
+          #if cover-image != none {
+            v(0.5cm)
+            image(cover-image.src, width: eval(cover-image.max-width), height: eval(cover-image.max-height), fit: "contain")
+            v(0.1cm)
+          }
+          #if confidential {
+            parbreak()
+            if lang == "en" [
+              #text(weight: "bold", size: subtitle-size)[confidential]
+            ] else [
+              #text(weight: "bold", size: subtitle-size)[vertraulich]
+            ]
+          }
+          #if thesis-type != none {
+            v(0.2cm)
+            text(weight: "bold", size: subtitle-size)[#thesis-type]
           }
         ]]
       }
