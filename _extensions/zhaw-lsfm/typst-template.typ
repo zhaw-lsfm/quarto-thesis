@@ -107,18 +107,18 @@
             if cover-image != none {
               v(0.5cm)
               image(cover-image.src, width: eval(cover-image.max-width), height: eval(cover-image.max-height), fit: "contain")
-              v(0.3cm)
+              v(0.1cm)
             }
             if confidential {
               parbreak()
               if lang == "en" [
-                text(size: subtitle-size)[CONFIDENTIAL]
+                #text(size: subtitle-size)[CONFIDENTIAL]
               ] else [
-                text(size: subtitle-size)[VERTRAULICH]
+                #text(size: subtitle-size)[VERTRAULICH]
               ]
             }
             if thesis-type != none {
-              v(1.5cm)
+              v(0.2cm)
               text(size: subtitle-size)[#thesis-type]
             }
           } else {
@@ -130,7 +130,7 @@
             if cover-image != none {
               v(0.5cm)
               image(cover-image.src, width: eval(cover-image.max-width), height: eval(cover-image.max-height), fit: "contain")
-              v(0.3cm)
+              v(0.1cm)
             }
             if confidential {
               parbreak()
@@ -141,7 +141,7 @@
               ]
             }
             if thesis-type != none {
-              v(1.5cm)
+              v(0.2cm)
               text(weight: "bold", size: subtitle-size)[#thesis-type]
             }
           }
@@ -226,7 +226,11 @@
               #author.name
               #if author != authors.last() [, ]
             ]
-            #if date != none [(#date). ] else [(n.d.). ]
+            #if date != none [(#date). ] else if submission-date != none [(#{
+              let date-str = repr(submission-date).trim("[").trim("]")
+              let year = date-str.split("-").at(0)
+              year
+            }). ] else [(n.d.). ]
             #emph[#title#if subtitle != none [: #subtitle]]. 
             #if institut != none {
               if lang == "en" [

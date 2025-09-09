@@ -1,9 +1,10 @@
 ---
 title: "Robust Regression and Outlier Detection" 
-subtitle: "Chapter 2: Simple Regression"
+subtitle: "Simple Regression"
 institut: "Institut für Umwelt und Natürliche Ressourcen"
 keywords: "Robuste Regression, Ausreisser, Allometrie, Säugetiere, Gehirngrösse, Statistik"
 lang: de
+confidential: true
 cover-image:
   src: cover.png
   max-width: 100%
@@ -20,6 +21,9 @@ correctors:
   - title: "Dr."
     name: "Anna Beispiel"
     affiliation: "ETH Zürich, Institut für Umweltingenieurwissenschaften, Zürich"
+  - title: "Prof. Dr."
+    name: "Susanne Müller"
+    affiliation: "Universität Zürich, Institut für Evolutionsbiologie und Umweltwissenschaften, Zürich"
 bibliography: references.bib
 author: 
   - Peter Rousseeuw
