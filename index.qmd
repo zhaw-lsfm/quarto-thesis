@@ -135,7 +135,7 @@ Anhang 2 ist in @fig-titlepage ersichtlich
 
 > In der Kopfzeile können die folgenden Angaben gemacht werden: ZHAW LSFM, Art der Arbeit, Autor/in; in der Fusszeile wird die Seitenzahl angegeben.
 
-✅ **Implemented:** The header appears on all content pages (after imprint) with three columns:
+The header appears on all content pages (after imprint) with three columns:
 - Left: "ZHAW LSFM"
 - Center: thesis-type (from YAML metadata)  
 - Right: author(s) (from YAML metadata)
@@ -147,11 +147,7 @@ The footer contains page numbers as required.
 > Alle Abbildungen (Grafiken, Diagramme, Fotografien usw.) und Tabellen werden fortlaufend nummeriert und müssen eine erklärende Anschrift (Bildlegende) haben. Abbildungen werden dabei unten, Tabellen oben beschriftet, die Bezeichnung lautet Abbildung (Abb.) bzw. Tabelle
 (Tab.).
 
-:::{.callout-note}
-## Todo: not yet implemented
 
-Abb / Tab
-:::
 
 
 > Folgende Gliederung für wissenschaftliche Arbeiten hat sich bewährt und soll grundsätzlich eingehalten werden. Je nach Art oder Thema der Arbeit (z.B. Literaturarbeit, betriebswirtschaftliche Themen u.a.) sind nach Absprache mit den Fachkorrigierenden Abweichungen von dieser Gliederung sinnvoll.
@@ -168,17 +164,27 @@ Abb / Tab
 
 ### Appendix
 
-> Normalerweise werden Seiten- und Kapitelnummerierung im Anhang nicht fortgesetzt. Besteht ein Anhang aus mehreren
-Teilen, so werden diese mit Anhang A, Anhang B etc. oder mit Anhang 1, Anhang 2 etc. bezeichnet. Auf die Anhänge soll im Text verwiesen werden. Zu Beginn des Anhangs muss ein Anhangsverzeichnis eingeordnet werden.
+> Normalerweise werden Seiten- und Kapitelnummerierung im Anhang nicht fortgesetzt. 
+> 
+> Besteht ein Anhang aus mehreren Teilen, so werden diese mit Anhang A, Anhang B etc. oder mit Anhang 1, Anhang 2 etc. bezeichnet. Auf die Anhänge soll im Text verwiesen werden. Zu Beginn des Anhangs muss ein Anhangsverzeichnis eingeordnet werden.
 
 :::{.callout-note}
 ## Todo: not yet implemented
+
+I would like to implement #sec-appendix, and similarly #sec-abstract which all use the default values (unnumbered unlisted for abstract, unnumbered for appendix with automatic removal of page nubmering)
+
 :::
 
 ### References
 
 > APA (7th ed.) 
 
+:::{.callout-note}
+## Todo:
+
+Either implement numerical citatations or highight this drawback (if there is one) in the documentation
+
+:::
 
 
 

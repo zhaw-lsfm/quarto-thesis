@@ -5,3 +5,4 @@ _claude.md
 .quarto
 .claude/
 *_files
+*.html

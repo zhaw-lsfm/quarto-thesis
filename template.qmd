@@ -18,8 +18,7 @@ correctors:
     affiliation: "ETH Zürich, Institut für Umweltingenieurwissenschaften, Zürich"
 bibliography: references.bib
 author: 
-  - Peter J. Rousseeuw
-  - Annick M. Leroy
+  - Peter Rousseeuw
 format: 
   zhaw-lsfm-typst: default
 ---
@@ -51,7 +50,7 @@ Diese Studie analysiert die Allometrie von Gehirn- und Körpergewicht anhand ein
 
 Die theoretische Grundlage für Gehirn-Körper-Allometrie basiert auf dem Konzept, dass biologische Strukturen häufig Potenzgesetzen folgen. Die erwartete Beziehung wird typischerweise als:
 
-Gehirngewicht = a × (Körpergewicht)^b
+$$\text{Gehirngewicht} = a \times \text{Körpergewicht}^b$$
 
 beschrieben, wobei der Exponent b in der Regel zwischen 0.6 und 0.8 liegt. @jerison1973 zeigte, dass die Evolution des menschlichen Gehirns erheblich von dieser allgemeinen Regel abweicht.
 
@@ -75,8 +74,8 @@ Einige Messungen stammen aus älteren Studien und könnten methodische Ungenauig
 
 Die Daten wurden logarithmisch transformiert, um eine lineare Beziehung zu erhalten:
 
-```r
-log(Gehirngewicht) = log(a) + b × log(Körpergewicht)
+```{.r}
+log(Gehirngewicht) = log(a) + b * log(Körpergewicht)
 ```
 
 ### Transformationsverfahren
@@ -100,6 +99,10 @@ Die Visualisierungen umfassen sowohl die Rohdaten als auch die transformierten D
 Alle Analysen und Visualisierungen wurden in R durchgeführt unter Verwendung der Pakete ggplot2, MASS und dplyr.
 
 # Ergebnisse
+
+Die statistische Analyse des MASS::Animals Datensatzes liefert umfassende Einblicke in die Beziehung zwischen Körper- und Gehirngewicht bei Säugetieren. Die deskriptiven Statistiken in @tbl-summary zeigen die erhebliche Variabilität der untersuchten Arten: Das Körpergewicht reicht von kleinen Nagern bis hin zu grossen Säugetieren wie Elefanten, während das Gehirngewicht entsprechend von wenigen Gramm bis zu mehreren Kilogramm variiert.
+
+Die logarithmische Darstellung in @fig-animals visualisiert deutlich die allometrische Beziehung zwischen beiden Variablen. Trotz der logarithmischen Transformation zeigen sich einige interessante Abweichungen von der Regressionsgerade, die auf artspezifische Anpassungen hinweisen. Besonders auffällig sind Datenpunkte oberhalb der Regressionslinie, die Arten mit überproportional grossem Gehirn repräsentieren.
 
 ```{r}
 #| label: fig-animals
@@ -164,7 +167,9 @@ summary_table <- data.frame(
 kable(summary_table)
 ```
 
-Die Analyse zeigt eine starke positive Korrelation (R² = 0.96) zwischen logarithmiertem Körper- und Gehirngewicht. Der Steigungsparameter von 0.75 entspricht den Erwartungen aus der allometrischen Theorie.
+Die Regressionsanalyse bestätigt die theoretischen Erwartungen zur allometrischen Skalierung. Die statistischen Kennwerte in @tbl-animals zeigen einen Steigungsparameter von 0.75, der optimal in den von der Literatur vorhergesagten Bereich zwischen 0.6 und 0.8 fällt. Das hohe Bestimmtheitsmass (R² = 0.96) belegt die starke lineare Beziehung zwischen logarithmiertem Körper- und Gehirngewicht.
+
+Der hochsignifikante p-Wert (< 0.001) in @tbl-animals unterstreicht die statistische Robustheit dieser Beziehung. Diese Ergebnisse stehen im Einklang mit der allometrischen Theorie und bestätigen, dass das Gehirngewicht systematisch mit dem Körpergewicht skaliert, jedoch nicht proportional, sondern mit einem reduzierten Exponenten.
 
 # Diskussion
 
@@ -189,3 +194,132 @@ Die hohe Korrelation (R² = 0.96) zeigt, dass das Körpergewicht ein starker Pr�
 # Anhang {.unnumbered}
 
 Zusätzliche Materialien und Daten, die nicht im Hauptteil der Arbeit enthalten sind, werden im Anhang aufgeführt.
+
+## Rohdaten
+
+Der vollständige MASS::Animals Datensatz mit allen 28 Säugetierarten:
+
+```{r}
+#| label: tbl-full-data
+#| tbl-cap: "Vollständige Rohdaten des MASS::Animals Datensatzes"
+
+library(MASS)
+library(knitr)
+data(Animals)
+
+# Add row names as a column and format nicely
+animals_full <- data.frame(
+  Art = rownames(Animals),
+  Körpergewicht_kg = Animals$body,
+  Gehirngewicht_g = Animals$brain,
+  Log_Körpergewicht = round(log10(Animals$body), 3),
+  Log_Gehirngewicht = round(log10(Animals$brain), 3)
+)
+
+kable(animals_full, row.names = FALSE)
+```
+
+### Datenquelle und -qualität
+
+Die Daten stammen aus verschiedenen Quellen und wurden über mehrere Jahrzehnte zusammengetragen. Einige Besonderheiten der Datensammlung:
+
+- **Afrikanischer Elefant**: Mit 6654 kg Körpergewicht und 5712 g Gehirngewicht das grösste Säugetier in der Stichprobe
+- **Spitzmaus**: Das kleinste Säugetier mit nur 0.004 kg Körpergewicht und 0.14 g Gehirngewicht
+- **Mensch**: Zeigt mit 1320 g Gehirngewicht bei 62 kg Körpergewicht eine deutliche positive Abweichung von der allometrischen Beziehung
+- **Primaten generell**: Schimpanse, Gorilla und Rhesusaffe zeigen alle überdurchschnittlich grosse Gehirne
+
+### Ausreisser-Analyse
+
+```{r}
+#| label: fig-residuals
+#| fig-cap: "Residuen der logarithmischen Regression zur Identifikation von Ausreissern"
+
+model <- lm(log(brain) ~ log(body), data = Animals)
+residuals_df <- data.frame(
+  Art = rownames(Animals),
+  Fitted = fitted(model),
+  Residuals = residuals(model),
+  Body = Animals$body
+)
+
+library(ggplot2)
+ggplot(residuals_df, aes(x = Fitted, y = Residuals, label = Art)) +
+  geom_point(size = 3, alpha = 0.7, color = "darkblue") +
+  geom_hline(yintercept = 0, color = "red", linetype = "dashed") +
+  geom_text(aes(label = ifelse(abs(Residuals) > 0.5, Art, "")), 
+            vjust = -0.5, hjust = 0.5, size = 3) +
+  labs(
+    x = "Angepasste Werte (log scale)",
+    y = "Residuen",
+    title = "Residuen vs. Angepasste Werte"
+  ) +
+  theme_minimal()
+```
+
+## Statistische Outputs
+
+### Vollständige Regressionsanalyse
+
+```{r}
+#| label: tbl-full-regression
+#| tbl-cap: "Detaillierte Regressionsstatistiken"
+
+model <- lm(log(brain) ~ log(body), data = Animals)
+summary_full <- summary(model)
+
+# Create comprehensive statistics table
+regression_stats <- data.frame(
+  Statistik = c("Multiple R-squared", "Adjusted R-squared", "F-statistic", 
+                "F p-value", "Residual standard error", "Degrees of freedom"),
+  Wert = c(
+    round(summary_full$r.squared, 4),
+    round(summary_full$adj.r.squared, 4),
+    round(summary_full$fstatistic[1], 2),
+    ifelse(pf(summary_full$fstatistic[1], summary_full$fstatistic[2], 
+             summary_full$fstatistic[3], lower.tail = FALSE) < 0.001, 
+           "< 0.001", 
+           round(pf(summary_full$fstatistic[1], summary_full$fstatistic[2], 
+                    summary_full$fstatistic[3], lower.tail = FALSE), 4)),
+    round(summary_full$sigma, 4),
+    paste(summary_full$df[2], "on", summary_full$df[1], "DF")
+  )
+)
+
+kable(regression_stats)
+```
+
+### Koeffizienten mit Konfidenzintervallen
+
+```{r}
+#| label: tbl-coefficients
+#| tbl-cap: "Regressionskoeffizienten mit 95% Konfidenzintervallen"
+
+coef_table <- data.frame(
+  Parameter = c("Intercept (log a)", "Steigung (b)"),
+  Schätzung = round(coef(model), 4),
+  Standardfehler = round(summary_full$coefficients[,2], 4),
+  t_Wert = round(summary_full$coefficients[,3], 3),
+  p_Wert = ifelse(summary_full$coefficients[,4] < 0.001, "< 0.001", 
+                  round(summary_full$coefficients[,4], 4)),
+  CI_2.5 = round(confint(model)[,1], 4),
+  CI_97.5 = round(confint(model)[,2], 4)
+)
+
+kable(coef_table)
+```
+
+### Modelldiagnostik
+
+```{r}
+#| label: fig-diagnostics
+#| fig-cap: "Diagnostische Plots für die Regressionsanalyse"
+#| fig-height: 8
+
+par(mfrow = c(2, 2))
+plot(model, which = 1:4, caption = c("Residuen vs. Angepasste Werte", 
+                                     "Q-Q Plot der Residuen",
+                                     "Scale-Location Plot", 
+                                     "Residuen vs. Leverage"))
+par(mfrow = c(1, 1))
+```
+

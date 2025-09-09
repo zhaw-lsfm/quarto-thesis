@@ -67,6 +67,9 @@
       }
     } else { none }
   )
+  // State to track if we're in appendix mode
+  let appendix-mode = state("appendix-mode", false)
+  
   show heading: it => {
     it
     v(0.5em)
