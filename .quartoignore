@@ -1,4 +1,6 @@
 *.pdf
+_book
+_site
 titlepage.png
 gliederung.png
 *.Rproj
