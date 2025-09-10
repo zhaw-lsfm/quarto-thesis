@@ -35,6 +35,13 @@
     "text": "_extensions/zhaw-lsfm/\n├── typst-template.typ     # Main Typst template with ZHAW formatting\n├── typst-show.typ         # YAML metadata mapping to Typst\n├── _extension.yml         # Extension configuration\n├── shortcodes.lua         # Document structure shortcodes\n├── class-filter.lua       # .hidden class expansion\n├── pagebreak-filter.lua   # Automatic page breaks\n└── fonts/                 # Custom font directory\n\n\n\n\nInstitutional branding: Automatic ZHAW headers, title page, and imprint generation\nDocument structure: Shortcodes for TOC, figure/table lists, references\nMetadata-driven: Extensive YAML frontmatter support for thesis information\nLanguage support: German/English automatic text generation\nFont handling: Arial default with fallback cascade and local font support\n\n\n\n\n\ntemplate.qmd: Example thesis document with full YAML metadata\nindex.qmd: Documentation and feature demonstration\n_extension.yml: Extension configuration with format settings and filters\n\n\n\n\nThe template uses a filter pipeline: 1. class-filter.lua: Expands .hidden to .unnumbered .unlisted 2. pagebreak-filter.lua: Adds page breaks before major sections 3. Quarto’s built-in Typst processing\n\n\n\nUnified `"
   },
   {
+    "objectID": "Readme.html",
+    "href": "Readme.html",
+    "title": "ZHAW LSFM Thesis Template",
+    "section": "",
+    "text": "# To render the template's website:\nquarto render\n\n# to publish the the template's website:\nquarto publish gh-pages --no-prompt\n\n# to preview the template.qmd (starter template for useres)\nquarto preview template.qmd\n\n# to use this template\n# (will install the template, rename template.qmd, and copy references.bib)\nquarto use template zhaw-lsfm/quarto-thesis\n\n# To update changes to the template\ngit add / commit / push"
+  },
+  {
     "objectID": "zhaw-requirements.html",
     "href": "zhaw-requirements.html",
     "title": "ZHAW Requirements",
