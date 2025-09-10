@@ -84,6 +84,7 @@ The template supports 20+ metadata fields including:
 - Default: Arial 11pt with extensive fallback cascade
 - Custom fonts: Place .ttf/.otf files in `_extensions/zhaw-lsfm/fonts/`
 - Override: Use `mainfont` and `fontsize` in YAML frontmatter
+- **Known Issue**: Template rendering shows font warnings for Arial, Helvetica Neue, and Helvetica when these fonts are not installed on the system. Document still renders successfully using system fallback fonts.
 
 ### Class Usage Patterns
 - `.hidden`: For abstracts (unnumbered, not in TOC)
