@@ -1,0 +1,212 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ZHAW LSFM Thesis Template",
+    "section": "",
+    "text": "0.1 Installation\nThis quarto template implements the guidelines and requirements for student theses at ZHAW LSFM as described in Abfassung Studentischer Arbeiten (2024) (german) and Writing Student Assignments (2024) (english). These guidelines are summarized in Chapter 3.\nIt is uses the Typst typesetting system for high-quality and fast rendering of PDF output. The template tries to be minimalistic. You won’t miss out on any features natively supported by quarto and typst, it simply adds the features required by ZHAW LSFM.\nFeatures:\nThis will install the format extension and create an example qmd file that you can use as a starting place for your document.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>ZHAW LSFM Thesis Template</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#installation",
+    "href": "index.html#installation",
+    "title": "ZHAW LSFM Thesis Template",
+    "section": "",
+    "text": "quarto use template zhaw-lsfm/quarto-thesis",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>ZHAW LSFM Thesis Template</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#getting-started",
+    "href": "index.html#getting-started",
+    "title": "ZHAW LSFM Thesis Template",
+    "section": "0.2 Getting started",
+    "text": "0.2 Getting started\nWe’ve prepared a guide to getting started with Quarto, Typst and this template here: https://zhaw-adls.github.io/PA2-Quarto-Typst\n\n\n\n\nAbfassung Studentischer Arbeiten. 2024. 5.1.1 ed. Life Sciences und Facility Management Stabsbereich Bildung.\n\n\nWriting Student Assignments. 2024. 5.1.1 ed. Life Sciences und Facility Management Stabsbereich Bildung.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>ZHAW LSFM Thesis Template</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#manual",
+    "href": "index.html#manual",
+    "title": "ZHAW LSFM Thesis Template",
+    "section": "0.3 Manual",
+    "text": "0.3 Manual\n\n0.3.1 Metadata\nHere is a list of the metadata fields than can (and should) be used in the YAML header of your quarto document to make use of the features of this template.\nExisting fields from quarto than need to be provided:\n\ntitle\nsubtitle\n\nkeywords\nlang (only en or de supported)\nbibliography\nauthor (multiple authors supported)\n\nNote that switching the lang field will also change the language of some of the automatically generated text. For example, ZHAW will dieplayed as follows depending on the lang field:\n\nGerman (default): “ZÜRCHER HOCHSCHULE FÜR ANGEWANDTE WISSENSCHAFTEN”\nEnglish: “ZURICH UNIVERSITY OF APPLIED SCIENCES”\n\nAdditional fields provided by this template:\n\ninstitut (in titlecase, e.g. “Institut für Umwelt und Natürliche Ressourcen”)\nthesis-type (e.g “Projektarbeit 2”)\ndegree-type (e.g. “Bachelorstudiengang”)\nstudy-year (e.g. “2009”)\nsubmission-date (e.g. “2024-12-15”)\nstudy-direction (e.g. “Umweltingenieurwesen”)\ncorrectors with title, name and affiliation (see example template.qmd)\nconfidential (default false. Set to true to mark the thesis as confidential)\ncover-image with configurable sizing options (see example below)\n\n\n\n0.3.2 Default settings\nThe template sets a number of default settings to match the ZHAW requirements (see Section 4). These include:\nexecute:\n  echo: false\n  warning: false\nFont Configuration:\n\nDefault: Arial 11pt (meets ZHAW requirements)\nBuilt-in fallbacks: Arial → Helvetica Neue → Helvetica → Liberation Sans → DejaVu Sans → Noto Sans\nEasy override: Set mainfont and fontsize in your YAML frontmatter\nExample override:\nmainfont: \"Times New Roman\"\nfontsize: 12pt\nLocal fonts: Place font files (.ttf/.otf) in _extensions/zhaw-lsfm/fonts/ directory for guaranteed availability\n\n\n\n0.3.3 Cover Image Configuration\nThe template supports adding a cover image to the title page, positioned between the subtitle and thesis type. The cover image feature offers flexible sizing options:\nBasic usage:\ncover-image:\n  src: cover.png\n  max-width: 100%\n  max-height: 5cm\nConfiguration options:\n\nsrc: Path to the image file (required)\nmax-width: Maximum width constraint (default: “100%”)\nmax-height: Maximum height constraint (default: “5cm”)\n\nImage behavior:\n\nImages scale proportionally using fit: \"contain\" to maintain aspect ratio\nBoth constraints are applied simultaneously - the image will fit within both limits\nSupports common formats: PNG, JPG, SVG, etc.\nRecommended dimensions: Images should be landscape oriented for best results\n\nSpacing: The cover image is positioned with 0.5cm spacing above and minimal spacing below for a clean layout.\n\n\n0.3.4 Shortcodes\n\nTo insert a list of figures: {{&lt; list-of-figures &gt;}}\nTo insert a list of tables: {{&lt; list-of-tables &gt;}}\nTo insert a bibliography: {{&lt; references &gt;}}\nTo insert a table of contents: {{&lt; table-of-contents &gt;}}",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>ZHAW LSFM Thesis Template</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#sec-requirements",
+    "href": "index.html#sec-requirements",
+    "title": "ZHAW LSFM Thesis Template",
+    "section": "0.3 ZHAW LSFM Requirements",
+    "text": "0.3 ZHAW LSFM Requirements\nHere is a summary of the requirements (from Abfassung Studentischer Arbeiten 2024) in German:\n\n0.3.1 Text\n\nDer Text soll einheitlich formatiert werden und vorzugsweise mit einer Schrift wie z.B. Arial 11pt und mit Zeilenabstand max. 1.5. abgefasst werden.\n\n\n\n0.3.2 Titlepage and imprint\n\nDie Titelseite ist gemäss Muster auszuführen (siehe Anhang 2).\n\nAnhang 2 ist in Figure 1 ersichtlich\n\n\n\n\n\n\nFigure 1: Titelseite (ohne ZHAW-logo)\n\n\n\n\nAuf der Rückseite des Titelblatts soll ein Impressum mit folgendem Inhalt eingefügt werden: Schlagworte (keywords), Zitiervorschlag, Name des Instituts.\n\n\n\n0.3.3 Header / Footer\n\nIn der Kopfzeile können die folgenden Angaben gemacht werden: ZHAW LSFM, Art der Arbeit, Autor/in; in der Fusszeile wird die Seitenzahl angegeben.\n\nThe header appears on all content pages (after imprint) with three columns: - Left: “ZHAW LSFM” - Center: thesis-type (from YAML metadata)\n- Right: author(s) (from YAML metadata)\nThe footer contains page numbers as required.\n\n\n0.3.4 Figure / Table numbering and captions\n\nAlle Abbildungen (Grafiken, Diagramme, Fotografien usw.) und Tabellen werden fortlaufend nummeriert und müssen eine erklärende Anschrift (Bildlegende) haben. Abbildungen werden dabei unten, Tabellen oben beschriftet, die Bezeichnung lautet Abbildung (Abb.) bzw. Tabelle (Tab.).\n\n\nFolgende Gliederung für wissenschaftliche Arbeiten hat sich bewährt und soll grundsätzlich eingehalten werden. Je nach Art oder Thema der Arbeit (z.B. Literaturarbeit, betriebswirtschaftliche Themen u.a.) sind nach Absprache mit den Fachkorrigierenden Abweichungen von dieser Gliederung sinnvoll.\n\n(siehe Figure 2)\n\n\n0.3.5 Chapter numbering\n\nFür die nummerierten Kapitel und Unterkapitel ist die Dezimalnummerierung anzuwenden (Beispiel: 3, 3.1, 3.2, 3.2.1, 3.2.2 usw.). Mehr als 3 Gliederungsebenen pro Hauptkapitel sind unübersichtlich.\n\n\n\n\n\n\n\nFigure 2\n\n\n\n\n\n0.3.6 Appendix\n\nNormalerweise werden Seiten- und Kapitelnummerierung im Anhang nicht fortgesetzt.\nBesteht ein Anhang aus mehreren Teilen, so werden diese mit Anhang A, Anhang B etc. oder mit Anhang 1, Anhang 2 etc. bezeichnet. Auf die Anhänge soll im Text verwiesen werden. Zu Beginn des Anhangs muss ein Anhangsverzeichnis eingeordnet werden.\n\n\n\n\n\n\n\nNoteTodo: not yet implemented\n\n\n\nI would like to implement #sec-appendix, and similarly #sec-abstract which all use the default values (unnumbered unlisted for abstract, unnumbered for appendix with automatic removal of page nubmering)\n\n\n\n\n0.3.7 References\n\nAPA (7th ed.)\n\n\n\n\n\n\n\nNoteTodo:\n\n\n\nEither implement numerical citatations or highight this drawback (if there is one) in the documentation",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>ZHAW LSFM Thesis Template</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#references-1",
+    "href": "index.html#references-1",
+    "title": "ZHAW LSFM Thesis Template",
+    "section": "0.4 References",
+    "text": "0.4 References\n\n\nAbfassung Studentischer Arbeiten. 2024. 5.1.1 ed. Life Sciences\nund Facility Management Stabsbereich Bildung.\n\n\nWriting Student Assignments. 2024. 5.1.1 ed. Life Sciences und\nFacility Management Stabsbereich Bildung.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>ZHAW LSFM Thesis Template</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "2  Introduction",
+    "section": "",
+    "text": "This is a book created from markdown and executable code.\nSee (knuth84?) for additional discussion of literate programming.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "3  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Summary</span>"
+    ]
+  },
+  {
+    "objectID": "manual.html",
+    "href": "manual.html",
+    "title": "2  Manual",
+    "section": "",
+    "text": "2.1 Metadata\nHere is a list of the metadata fields than can (and should) be used in the YAML header of your quarto document to make use of the features of this template.\nExisting fields from quarto than need to be provided:\nNote that switching the lang field will also change the language of some of the automatically generated text. For example, ZHAW will dieplayed as follows depending on the lang field:\nAdditional fields provided by this template:",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Manual</span>"
+    ]
+  },
+  {
+    "objectID": "manual.html#sec-metadata",
+    "href": "manual.html#sec-metadata",
+    "title": "2  Manual",
+    "section": "",
+    "text": "title\nsubtitle\n\nkeywords\nlang (only en or de supported)\nbibliography\nauthor (multiple authors supported)\n\n\n\nGerman (default): “ZÜRCHER HOCHSCHULE FÜR ANGEWANDTE WISSENSCHAFTEN”\nEnglish: “ZURICH UNIVERSITY OF APPLIED SCIENCES”\n\n\n\ninstitut (in titlecase, e.g. “Institut für Umwelt und Natürliche Ressourcen”)\nthesis-type (e.g “Projektarbeit 2”)\ndegree-type (e.g. “Bachelorstudiengang”)\nstudy-year (e.g. “2009”)\nsubmission-date (e.g. “2024-12-15”)\nstudy-direction (e.g. “Umweltingenieurwesen”)\ncorrectors with title, name and affiliation (see example template.qmd)\nconfidential (default false. Set to true to mark the thesis as confidential)\ncover-image with configurable sizing options (see example below)",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Manual</span>"
+    ]
+  },
+  {
+    "objectID": "manual.html#sec-defaults",
+    "href": "manual.html#sec-defaults",
+    "title": "2  Manual",
+    "section": "2.2 Default settings",
+    "text": "2.2 Default settings\nThe template sets a number of default settings to match the ZHAW requirements (see Section 3). These include:\nexecute:\n  echo: false\n  warning: false\nFont Configuration:\n\nDefault: Arial 11pt (meets ZHAW requirements)\nBuilt-in fallbacks: Arial → Helvetica Neue → Helvetica → Liberation Sans → DejaVu Sans → Noto Sans\nEasy override: Set mainfont and fontsize in your YAML frontmatter\nExample override:\nmainfont: \"Times New Roman\"\nfontsize: 12pt\nLocal fonts: Place font files (.ttf/.otf) in _extensions/zhaw-lsfm/fonts/ directory for guaranteed availability",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Manual</span>"
+    ]
+  },
+  {
+    "objectID": "manual.html#cover-image-configuration",
+    "href": "manual.html#cover-image-configuration",
+    "title": "2  Manual",
+    "section": "2.3 Cover Image Configuration",
+    "text": "2.3 Cover Image Configuration\nThe template supports adding a cover image to the title page, positioned between the subtitle and thesis type. The cover image feature offers flexible sizing options:\nBasic usage:\ncover-image:\n  src: cover.png\n  max-width: 100%\n  max-height: 5cm\nConfiguration options:\n\nsrc: Path to the image file (required)\nmax-width: Maximum width constraint (default: “100%”)\nmax-height: Maximum height constraint (default: “5cm”)\n\nImage behavior:\n\nImages scale proportionally using fit: \"contain\" to maintain aspect ratio\nBoth constraints are applied simultaneously - the image will fit within both limits\nSupports common formats: PNG, JPG, SVG, etc.\nRecommended dimensions: Images should be landscape oriented for best results\n\nSpacing: The cover image is positioned with 0.5cm spacing above and minimal spacing below for a clean layout.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Manual</span>"
+    ]
+  },
+  {
+    "objectID": "manual.html#sec-shortcodes",
+    "href": "manual.html#sec-shortcodes",
+    "title": "2  Manual",
+    "section": "2.4 Shortcodes",
+    "text": "2.4 Shortcodes\n\nTo insert a list of figures: {{&lt; list-of-figures &gt;}}\nTo insert a list of tables: {{&lt; list-of-tables &gt;}}\nTo insert a bibliography: {{&lt; references &gt;}}\nTo insert a table of contents: {{&lt; table-of-contents &gt;}}",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Manual</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#todo-not-yet-implemented",
+    "href": "index.html#todo-not-yet-implemented",
+    "title": "ZHAW LSFM Thesis Template",
+    "section": "0.3 Todo: not yet implemented",
+    "text": "0.3 Todo: not yet implemented\nI would like to implement #sec-appendix, and similarly #sec-abstract which all use the default values (unnumbered unlisted for abstract, unnumbered for appendix with automatic removal of page nubmering)\n:::\n\n0.3.1 References\n\nAPA (7th ed.)\n\n\n\n\n\n\n\nNoteTodo:\n\n\n\nEither implement numerical citatations or highight this drawback (if there is one) in the documentation",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>ZHAW LSFM Thesis Template</span>"
+    ]
+  },
+  {
+    "objectID": "zhaw-requirements.html",
+    "href": "zhaw-requirements.html",
+    "title": "3  ZHAW Requirements",
+    "section": "",
+    "text": "3.1 Text\nHere is a summary of the requirements (from Abfassung Studentischer Arbeiten 2024) in German:",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>ZHAW Requirements</span>"
+    ]
+  },
+  {
+    "objectID": "zhaw-requirements.html#text",
+    "href": "zhaw-requirements.html#text",
+    "title": "3  ZHAW Requirements",
+    "section": "",
+    "text": "Der Text soll einheitlich formatiert werden und vorzugsweise mit einer Schrift wie z.B. Arial 11pt und mit Zeilenabstand max. 1.5. abgefasst werden.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>ZHAW Requirements</span>"
+    ]
+  },
+  {
+    "objectID": "zhaw-requirements.html#titlepage-and-imprint",
+    "href": "zhaw-requirements.html#titlepage-and-imprint",
+    "title": "3  ZHAW Requirements",
+    "section": "3.2 Titlepage and imprint",
+    "text": "3.2 Titlepage and imprint\n\nDie Titelseite ist gemäss Muster auszuführen (siehe Anhang 2).\n\nAnhang 2 ist in Figure 3.1 ersichtlich\n\n\n\n\n\n\nFigure 3.1: Titelseite (ohne ZHAW-logo)\n\n\n\n\nAuf der Rückseite des Titelblatts soll ein Impressum mit folgendem Inhalt eingefügt werden: Schlagworte (keywords), Zitiervorschlag, Name des Instituts.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>ZHAW Requirements</span>"
+    ]
+  },
+  {
+    "objectID": "zhaw-requirements.html#header-footer",
+    "href": "zhaw-requirements.html#header-footer",
+    "title": "3  ZHAW Requirements",
+    "section": "3.3 Header / Footer",
+    "text": "3.3 Header / Footer\n\nIn der Kopfzeile können die folgenden Angaben gemacht werden: ZHAW LSFM, Art der Arbeit, Autor/in; in der Fusszeile wird die Seitenzahl angegeben.\n\nThe header appears on all content pages (after imprint) with three columns: - Left: “ZHAW LSFM” - Center: thesis-type (from YAML metadata)\n- Right: author(s) (from YAML metadata)\nThe footer contains page numbers as required.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>ZHAW Requirements</span>"
+    ]
+  },
+  {
+    "objectID": "zhaw-requirements.html#figure-table-numbering-and-captions",
+    "href": "zhaw-requirements.html#figure-table-numbering-and-captions",
+    "title": "3  ZHAW Requirements",
+    "section": "3.4 Figure / Table numbering and captions",
+    "text": "3.4 Figure / Table numbering and captions\n\nAlle Abbildungen (Grafiken, Diagramme, Fotografien usw.) und Tabellen werden fortlaufend nummeriert und müssen eine erklärende Anschrift (Bildlegende) haben. Abbildungen werden dabei unten, Tabellen oben beschriftet, die Bezeichnung lautet Abbildung (Abb.) bzw. Tabelle (Tab.).\n\n\nFolgende Gliederung für wissenschaftliche Arbeiten hat sich bewährt und soll grundsätzlich eingehalten werden. Je nach Art oder Thema der Arbeit (z.B. Literaturarbeit, betriebswirtschaftliche Themen u.a.) sind nach Absprache mit den Fachkorrigierenden Abweichungen von dieser Gliederung sinnvoll.\n\n(siehe Figure 3.2)",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>ZHAW Requirements</span>"
+    ]
+  },
+  {
+    "objectID": "zhaw-requirements.html#sec-chapter-numbering",
+    "href": "zhaw-requirements.html#sec-chapter-numbering",
+    "title": "3  ZHAW Requirements",
+    "section": "3.5 Chapter numbering",
+    "text": "3.5 Chapter numbering\n\nFür die nummerierten Kapitel und Unterkapitel ist die Dezimalnummerierung anzuwenden (Beispiel: 3, 3.1, 3.2, 3.2.1, 3.2.2 usw.). Mehr als 3 Gliederungsebenen pro Hauptkapitel sind unübersichtlich.\n\n\n\n\n\n\n\nFigure 3.2",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>ZHAW Requirements</span>"
+    ]
+  },
+  {
+    "objectID": "zhaw-requirements.html#appendix",
+    "href": "zhaw-requirements.html#appendix",
+    "title": "3  ZHAW Requirements",
+    "section": "3.6 Appendix",
+    "text": "3.6 Appendix\n\nNormalerweise werden Seiten- und Kapitelnummerierung im Anhang nicht fortgesetzt.\nBesteht ein Anhang aus mehreren Teilen, so werden diese mit Anhang A, Anhang B etc. oder mit Anhang 1, Anhang 2 etc. bezeichnet. Auf die Anhänge soll im Text verwiesen werden. Zu Beginn des Anhangs muss ein Anhangsverzeichnis eingeordnet werden.\n\n\n\n\n\n\n\nNoteTodo: not yet implemented\n\n\n\nI would like to implement #sec-appendix, and similarly #sec-abstract which all use the default values (unnumbered unlisted for abstract, unnumbered for appendix with automatic removal of page nubmering)\n\n\n\n3.6.1 References\n\nAPA (7th ed.)\n\n\n\n\n\n\n\nNoteTodo:\n\n\n\nEither implement numerical citatations or highight this drawback (if there is one) in the documentation\n\n\n\n\n\n\nAbfassung Studentischer Arbeiten. 2024. 5.1.1 ed. Life Sciences und Facility Management Stabsbereich Bildung.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>ZHAW Requirements</span>"
+    ]
+  }
+]

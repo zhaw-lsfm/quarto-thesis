@@ -2,5 +2,8 @@
 titlepage.png
 gliederung.png
 *.Rproj
-index.qmd
+*.qmd
+!template.qmd
 CLAUDE.md
+_quarto.yml
+

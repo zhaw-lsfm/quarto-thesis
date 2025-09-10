@@ -5,3 +5,5 @@ template.pdf
 .claude/
 *_files
 *.html
+
+/.quarto/
