@@ -57,13 +57,13 @@ $endif$
 $if(study-direction)$
   study-direction: [$study-direction$],
 $endif$
-$if(correctors)$
-  correctors: (
-$for(correctors)$
+$if(supervisors)$
+  supervisors: (
+$for(supervisors)$
     (
-      title: [$correctors.title$],
-      name: [$correctors.name$],
-      affiliation: [$correctors.affiliation$],
+      title: [$supervisors.title$],
+      name: [$supervisors.name$],
+      affiliation: [$supervisors.affiliation$],
     ),
 $endfor$
   ),

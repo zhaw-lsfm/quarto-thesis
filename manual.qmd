@@ -33,7 +33,7 @@ Additional fields provided by this template:
 | `study-year`            | e.g. "2009"
 | `submission-date`       | e.g. "2024-12-15"
 | `study-direction`       | e.g. "Umweltingenieurwesen"
-| `correctors`            | with title, name and affiliation
+| `supervisors`           | with title, name and affiliation
 | `confidential`          | `true` marks the thesis as confidential. default is `false`
 | `cover-image`           | optional. Has configurable sizing options (see example below)
 

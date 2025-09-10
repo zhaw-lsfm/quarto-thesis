@@ -24,7 +24,7 @@
   study-year: none,
   submission-date: none,
   study-direction: none,
-  correctors: none,
+  supervisors: none,
   cover-image: none,
   abstract: none,
   abstract-title: none,
@@ -151,16 +151,16 @@
 
       #v(1fr)
       
-      #if correctors != none {
+      #if supervisors != none {
         align(left)[
           #if lang == "en" [
             *Supervisors:* \
           ] else [
-            *Fachkorrektoren / Fachkorrektorinnen:* \
+            *Betreuer / Betreuerinnen:* \
           ]
-          #for corrector in correctors [
-            #if corrector.title != none [#corrector.title] #corrector.name \
-            #corrector.affiliation \
+          #for supervisor in supervisors [
+            #if supervisor.title != none [#supervisor.title] #supervisor.name \
+            #supervisor.affiliation \
             \
           ]
         ]

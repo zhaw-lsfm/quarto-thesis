@@ -14,7 +14,7 @@ degree-type: "Bachelorstudiengang"
 study-year: "2009"
 submission-date: "2024-12-15"
 study-direction: "Umweltingenieurwesen"
-correctors:
+supervisors:
   - title: "Prof. Dr."
     name: "Max Mustermann"
     affiliation: "ZHAW Life Sciences und Facility Management, Wädenswil"

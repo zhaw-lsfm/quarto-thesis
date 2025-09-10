@@ -75,7 +75,7 @@ Unified `{{< >}}` syntax for document elements:
 ### YAML Metadata Schema
 The template supports 20+ metadata fields including:
 - Standard Quarto: `title`, `author`, `bibliography`, `lang`
-- ZHAW-specific: `institut`, `thesis-type`, `degree-type`, `study-direction`, `correctors`
+- ZHAW-specific: `institut`, `thesis-type`, `degree-type`, `study-direction`, `supervisors`
 - Formatting: `confidential`, `submission-date`, `study-year`
 
 ## Development Notes
