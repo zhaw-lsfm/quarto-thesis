@@ -1,6 +1,11 @@
 # ZHAW Requirements {#sec-requirements}
 
-Here is a summary of the requirements [from @zhaw2024de] in German:
+Here is a summary of the requirements in German. You can download the original documents here:
+
+- [@zhaw2024de](N_AA_Abfassung_studentischer_Arbeiten.pdf)
+- [@zhaw2024en](N_AA_Writing_student_assignments.pdf)
+
+
 
 ## Text
 
