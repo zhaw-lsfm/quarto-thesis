@@ -64,20 +64,23 @@ The template sets a number of default settings to match the [ZHAW requirements](
 citeproc: true                 # <1>
 section-numbering: "1.1."      # <2>
 number-depth: 2                # <3>
-toc: false                     # <4>
-execute:                       # <5>
-  echo: false                  # <6>
-  warning: false               # <7>
-  error: true                  # <8>
+toc-depth: 2                   # <4>
+toc: false                     # <5>
+execute:                       # <6>
+  echo: false                  # <7>
+  warning: false               # <8>
+  error: true                  # <9>
 ``` 
 1. Use Pandoc’s citation processing rather than typst's built in style [more information](https://quarto.org/docs/output-formats/typst.html#bibliography)
 2. Number sections in the decimal style
 3. Only number the first two header levels
-4. Don't render a table of content automatically
-5. Sets the cell execution options
-6. Don't show the chunk code in the document
-7. Don't show warnings from code chunks
-8. Don't stop the rendering process if an error occurs in the code chunk. Rather, just show the error in the output document
+4. Number of levels in the talbe of contents (toc)
+5. Don't render a toc automatically (we'll do it manually using shortcodes, see below)
+6. Sets the cell execution options
+7. Don't show the chunk code in the document
+8. Don't show warnings from code chunks
+9. Don't stop the rendering process if an error occurs in the code chunk. Rather, just show the error in the output document
+
 
 
 
