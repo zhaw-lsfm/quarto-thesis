@@ -4,12 +4,13 @@ project:
     - "*.pdf"
 
 website:
-  title: "Welcome"
+  title: "ZHAW LSFM Thesis Template"
   repo-url: https://github.com/zhaw-lsfm/quarto-thesis
   repo-actions: [edit, source, issue]
   navbar:
     left:
-      - index.qmd
+      - href: index.qmd
+        text: "Welcome"
       - getting-started.qmd
       - manual.qmd
       - zhaw-requirements.qmd
