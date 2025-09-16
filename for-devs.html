@@ -175,24 +175,60 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># To render the template's information website:</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># to publish the the template's website:</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> publish gh-pages <span class="at">--no-prompt</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># to preview the template.qmd (starter template for users)</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview template.qmd</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># to use this template</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># (will install the template, rename template.qmd, and copy references.bib)</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> use template zhaw-lsfm/quarto-thesis</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># To update changes to the template</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add / commit / push</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>.quartoignore lists all files that should NOT be made available when the user runs <code>quarto use ...</code></p>
+<section id="developer-information" class="level1">
+<h1>Developer Information</h1>
+<p>This repository serves three purposes simultaneously:</p>
+<ol type="1">
+<li><strong>Quarto Extension</strong> (<code>_extensions/</code>) - The actual extension students will install</li>
+<li><strong>Template Scaffolding</strong> (<code>template.qmd</code>) - Example document that students will automatically receive if they install the extension</li>
+<li><strong>Information Website</strong> (<code>_quarto.yml</code>, <code>index.qmd</code>, <code>manual.qmd</code>, <code>getting-started.qmd</code>) - Documentation site including:
+<ul>
+<li>Usage instructions</li>
+<li>Demo of rendered template (from <code>template.qmd</code>)</li>
+<li>ZHAW requirements specification (<code>zhaw-requirements.qmd</code>)</li>
+</ul></li>
+</ol>
+<section id="quarto-extension-template-scaffolding" class="level2">
+<h2 class="anchored" data-anchor-id="quarto-extension-template-scaffolding">Quarto Extension / Template Scaffolding</h2>
+<p>To make changes to the extension / template scaffolding, change the relevant files (template.qmd for the scaffolding, <code>_extensions/</code> for the extension). Then, git add / commit / push the changes if you are a repo owner or make a pull request if you are not.</p>
+<p>Students will use the template with the following command:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> use template zhaw-lsfm/quarto-thesis</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This will:</p>
+<ol type="1">
+<li>Install the extension</li>
+<li>Provide the students with <code>template.qmd</code> (which is renamed to the parent directory name)</li>
+<li>Provide the students with <em>all</em> files in the repo which are <em>not mentioned in <code>.quartoignore</code></em>. Most files in the repo <em>are not relevant to the student</em>, so most files are listed in quarto ignore. Currently, <code>.quartoignore</code> includes:</li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>*.pdf
+_book
+_site
+titlepage.png
+gliederung.png
+*.Rproj
+index.qmd
+manual.qmd
+zhaw-requirements.qmd
+getting-started.qmd
+Readme.md
+CLAUDE.md
+_quarto.yml</code></pre>
+</div>
+</div>
+</section>
+<section id="information-website" class="level2">
+<h2 class="anchored" data-anchor-id="information-website">Information Website</h2>
+<p>To contribute information to the website:</p>
+<ol type="1">
+<li>Change the relevant files (e.g.&nbsp;<code>_quarto.yml</code>, <code>index.qmd</code>, <code>manual.qmd</code>, <code>getting-started.qmd</code>) and add / commit / push the changes. This will only update the git repo</li>
+<li>To update the <em>hosted</em> website, run <code>quarto publish</code></li>
+</ol>
+<p>The website is published at: <a href="https://zhaw-lsfm.github.io/quarto-thesis" class="uri">https://zhaw-lsfm.github.io/quarto-thesis</a></p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
