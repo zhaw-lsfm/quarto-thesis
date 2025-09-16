@@ -4,7 +4,7 @@ project:
     - "*.pdf"
 
 website:
-  title: "ZHAW LSFM Thesis Template"
+  title: "Welcome"
   repo-url: https://github.com/zhaw-lsfm/quarto-thesis
   repo-actions: [edit, source, issue]
   navbar:
