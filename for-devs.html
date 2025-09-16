@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>claude – ZHAW LSFM Thesis Template</title>
+<title>for-devs – ZHAW LSFM Thesis Template</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -149,7 +149,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./for-devs.html"> 
+    <a class="nav-link active" href="./for-devs.html" aria-current="page"> 
 <span class="menu-text">For Developers / Contributors</span></a>
   </li>  
   <li class="nav-item compact">
@@ -175,80 +175,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="claude.md" class="level1">
-<h1>CLAUDE.md</h1>
-<p>This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.</p>
-<section id="project-overview" class="level2">
-<h2 class="anchored" data-anchor-id="project-overview">Project Overview</h2>
-<p>This is a Quarto-Typst template for ZHAW LSFM (Zurich University of Applied Sciences) academic documents. The template provides institutional branding, proper formatting, and automated document structure generation for student theses and academic papers.</p>
-</section>
-<section id="common-development-commands" class="level2">
-<h2 class="anchored" data-anchor-id="common-development-commands">Common Development Commands</h2>
-<section id="building-and-rendering" class="level3">
-<h3 class="anchored" data-anchor-id="building-and-rendering">Building and Rendering</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Render main template example to all formats</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render template.qmd</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># To render the template's information website:</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Render specific format</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render template.qmd <span class="at">--to</span> zhaw-lsfm-typst</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render template.qmd <span class="at">--to</span> html</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Render index documentation</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render index.qmd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="development-and-testing" class="level3">
-<h3 class="anchored" data-anchor-id="development-and-testing">Development and Testing</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Preview with live reload</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview template.qmd</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Check extension installation</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> list extensions</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Install/reinstall extension locally during development</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> install extension . <span class="at">--no-prompt</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-</section>
-<section id="architecture-overview" class="level2">
-<h2 class="anchored" data-anchor-id="architecture-overview">Architecture Overview</h2>
-<section id="extension-structure" class="level3">
-<h3 class="anchored" data-anchor-id="extension-structure">Extension Structure</h3>
-<pre><code>_extensions/zhaw-lsfm/
-├── typst-template.typ     # Main Typst template with ZHAW formatting
-├── typst-show.typ         # YAML metadata mapping to Typst
-├── _extension.yml         # Extension configuration
-├── shortcodes.lua         # Document structure shortcodes
-├── class-filter.lua       # .hidden class expansion
-├── pagebreak-filter.lua   # Automatic page breaks
-└── fonts/                 # Custom font directory</code></pre>
-</section>
-<section id="core-template-features" class="level3">
-<h3 class="anchored" data-anchor-id="core-template-features">Core Template Features</h3>
-<ul>
-<li><strong>Institutional branding</strong>: Automatic ZHAW headers, title page, and imprint generation</li>
-<li><strong>Document structure</strong>: Shortcodes for TOC, figure/table lists, references</li>
-<li><strong>Metadata-driven</strong>: Extensive YAML frontmatter support for thesis information</li>
-<li><strong>Language support</strong>: German/English automatic text generation</li>
-<li><strong>Font handling</strong>: Arial default with fallback cascade and local font support</li>
-</ul>
-</section>
-<section id="key-files" class="level3">
-<h3 class="anchored" data-anchor-id="key-files">Key Files</h3>
-<ul>
-<li><code>template.qmd</code>: Example thesis document with full YAML metadata</li>
-<li><code>index.qmd</code>: Documentation and feature demonstration</li>
-<li><code>_extension.yml</code>: Extension configuration with format settings and filters</li>
-</ul>
-</section>
-<section id="template-integration" class="level3">
-<h3 class="anchored" data-anchor-id="template-integration">Template Integration</h3>
-<p>The template uses a filter pipeline: 1. <code>class-filter.lua</code>: Expands <code>.hidden</code> to <code>.unnumbered .unlisted</code> 2. <code>pagebreak-filter.lua</code>: Adds page breaks before major sections 3. Quarto’s built-in Typst processing</p>
-</section>
-<section id="shortcode-system" class="level3">
-<h3 class="anchored" data-anchor-id="shortcode-system">Shortcode System</h3>
-<p>Unified `</p>
-</section>
-</section>
-</section>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># to publish the the template's website:</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> publish gh-pages <span class="at">--no-prompt</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># to preview the template.qmd (starter template for users)</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview template.qmd</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># to use this template</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># (will install the template, rename template.qmd, and copy references.bib)</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> use template zhaw-lsfm/quarto-thesis</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># To update changes to the template</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add / commit / push</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>.quartoignore lists all files that should NOT be made available when the user runs <code>quarto use ...</code></p>
+
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -655,4 +599,4 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/zhaw-lsfm/quarto-thesis/edit/main/CLAUDE.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/zhaw-lsfm/quarto-thesis/blob/main/CLAUDE.md" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/zhaw-lsfm/quarto-thesis/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/zhaw-lsfm/quarto-thesis/edit/main/for-devs.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/zhaw-lsfm/quarto-thesis/blob/main/for-devs.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/zhaw-lsfm/quarto-thesis/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

@@ -143,8 +143,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">ZHAW Requirements</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./template.pdf"> 
+    <a class="nav-link" href="./template.html"> 
 <span class="menu-text">🖺 Demo</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./for-devs.html"> 
+<span class="menu-text">For Developers / Contributors</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/zhaw-lsfm/quarto-thesis"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -168,7 +179,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>Getting started</h1>
 <p>To install the extension use the command:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> use template zhaw-lsfm/quarto-thesis</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>This will install the format extension and create an example qmd file that you can use as a starting place for your document. If you are new to quarto: We’ve prepared a guide to getting started with Quarto, Typst and this template here:</p>
+<p>This will install the format extension and create an example qmd file that you can use as a starting place for your document. The example qmd will have the same name as the parent folder. For example, if your the parent folder is called PA2, the template will be named PA2.qmd. To preview a pdf version of this file, run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview PA2.qmd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This will use typst to render a submittable PDF of your thesis. Typst is very fast. If your document becomes large and you feel typst is too slow, we recommend using the <code>html</code> output for previewing your text, and only using typst from time to time. To render a <code>html</code> version of your thesis, you run the command with the <code>--to</code> argument:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview PA2.qmd <span class="at">--to</span> html</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>If you are new to quarto: We’ve prepared a guide to getting started with Quarto, which starts and the basics and ends with you using this zhaw-lsfm template. The course is available here:</p>
 <p><a href="https://zhaw-adls.github.io/PA2-Quarto-Typst" class="uri">https://zhaw-adls.github.io/PA2-Quarto-Typst</a></p>
 
 
@@ -579,4 +594,4 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-</body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/zhaw-lsfm/quarto-thesis/edit/main/getting-started.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/zhaw-lsfm/quarto-thesis/blob/main/getting-started.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/zhaw-lsfm/quarto-thesis/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

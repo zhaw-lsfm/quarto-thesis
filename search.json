@@ -1,10 +1,52 @@
 [
   {
+    "objectID": "template.html",
+    "href": "template.html",
+    "title": "Robuste Regression und Outlier Erkennung",
+    "section": "",
+    "text": "Diese Arbeit untersucht die Beziehung zwischen Gehirngröße und Körpergewicht bei verschiedenen Säugetierarten anhand des MASS::Animals Datensatzes. Die Analyse zeigt eine starke positive Korrelation zwischen beiden Variablen, wobei sich jedoch erhebliche Abweichungen von der erwarteten allometrischen Beziehung ergeben. Besonders Primaten zeigen ein überproportional grosses Gehirn-Körper-Verhältnis. Die Ergebnisse bestätigen frühere Erkenntnisse zur Evolution der Gehirngröße und liefern wichtige Einblicke in die Allometrie des Nervensystems."
+  },
+  {
+    "objectID": "template.html#datensatz",
+    "href": "template.html#datensatz",
+    "title": "Robuste Regression und Outlier Erkennung",
+    "section": "Datensatz",
+    "text": "Datensatz\nDie Analyse basiert auf dem Animals Datensatz aus dem R-Paket MASS, der Gehirn- und Körpergewichtsdaten für 28 verschiedene Säugetierarten enthält.\n\nDatenquelle und Charakteristika\nDer Datensatz wurde ursprünglich von Weisberg (1980) zusammengestellt und enthält Messungen von verschiedenen Wirbeltierarten. Die Daten umfassen sowohl terrestrische als auch aquatische Säugetiere mit einem breiten Spektrum von Körpergewichten.\n\n\nDatenqualität und Limitationen\nEinige Messungen stammen aus älteren Studien und könnten methodische Ungenauigkeiten aufweisen. Besonders bei sehr grossen Tieren wie Elefanten können die Gehirngewichte schwer präzise zu bestimmen sein."
+  },
+  {
+    "objectID": "template.html#statistische-analyse",
+    "href": "template.html#statistische-analyse",
+    "title": "Robuste Regression und Outlier Erkennung",
+    "section": "Statistische Analyse",
+    "text": "Statistische Analyse\nDie Daten wurden logarithmisch transformiert, um eine lineare Beziehung zu erhalten:\nlog(Gehirngewicht) = log(a) + b * log(Körpergewicht)\n\nTransformationsverfahren\nDie logarithmische Transformation ist bei allometrischen Beziehungen Standard, da sie Potenzgesetze in lineare Beziehungen überführt. Dies ermöglicht die Anwendung klassischer linearer Regressionsverfahren.\n\n\nModellvalidierung\nDie Residuen wurden auf Normalität und Homoskedastizität überprüft. Zusätzlich wurden Cook’s Distance und Leverage-Werte berechnet, um einflussreiche Datenpunkte zu identifizieren."
+  },
+  {
+    "objectID": "template.html#visualisierung",
+    "href": "template.html#visualisierung",
+    "title": "Robuste Regression und Outlier Erkennung",
+    "section": "Visualisierung",
+    "text": "Visualisierung\nScatterplots wurden erstellt, um die Beziehung zu visualisieren, sowohl auf ursprünglicher als auch auf logarithmischer Skala.\n\nGraphische Darstellung\nDie Visualisierungen umfassen sowohl die Rohdaten als auch die transformierten Daten mit Regressionsgerade und Konfidenzintervall.\n\n\nSoftware und Pakete\nAlle Analysen und Visualisierungen wurden in R durchgeführt unter Verwendung der Pakete ggplot2, MASS und dplyr."
+  },
+  {
+    "objectID": "template.html#rohdaten",
+    "href": "template.html#rohdaten",
+    "title": "Robuste Regression und Outlier Erkennung",
+    "section": "Rohdaten",
+    "text": "Rohdaten\nDer vollständige MASS::Animals Datensatz mit allen 28 Säugetierarten:\n\nlibrary(MASS)\nlibrary(knitr)\ndata(Animals)\n\n# Add row names as a column and format nicely\nanimals_full &lt;- data.frame(\n  Art = rownames(Animals),\n  Körpergewicht_kg = Animals$body,\n  Gehirngewicht_g = Animals$brain,\n  Log_Körpergewicht = round(log10(Animals$body), 3),\n  Log_Gehirngewicht = round(log10(Animals$brain), 3)\n)\n\nkable(animals_full, row.names = FALSE)\n\n\n\nTabelle 3: Vollständige Rohdaten des MASS::Animals Datensatzes\n\n\n\n\n\n\n\n\n\n\n\n\n\nArt\nKörpergewicht_kg\nGehirngewicht_g\nLog_Körpergewicht\nLog_Gehirngewicht\n\n\n\n\nMountain beaver\n1.350\n8.1\n0.130\n0.908\n\n\nCow\n465.000\n423.0\n2.667\n2.626\n\n\nGrey wolf\n36.330\n119.5\n1.560\n2.077\n\n\nGoat\n27.660\n115.0\n1.442\n2.061\n\n\nGuinea pig\n1.040\n5.5\n0.017\n0.740\n\n\nDipliodocus\n11700.000\n50.0\n4.068\n1.699\n\n\nAsian elephant\n2547.000\n4603.0\n3.406\n3.663\n\n\nDonkey\n187.100\n419.0\n2.272\n2.622\n\n\nHorse\n521.000\n655.0\n2.717\n2.816\n\n\nPotar monkey\n10.000\n115.0\n1.000\n2.061\n\n\nCat\n3.300\n25.6\n0.519\n1.408\n\n\nGiraffe\n529.000\n680.0\n2.723\n2.833\n\n\nGorilla\n207.000\n406.0\n2.316\n2.609\n\n\nHuman\n62.000\n1320.0\n1.792\n3.121\n\n\nAfrican elephant\n6654.000\n5712.0\n3.823\n3.757\n\n\nTriceratops\n9400.000\n70.0\n3.973\n1.845\n\n\nRhesus monkey\n6.800\n179.0\n0.833\n2.253\n\n\nKangaroo\n35.000\n56.0\n1.544\n1.748\n\n\nGolden hamster\n0.120\n1.0\n-0.921\n0.000\n\n\nMouse\n0.023\n0.4\n-1.638\n-0.398\n\n\nRabbit\n2.500\n12.1\n0.398\n1.083\n\n\nSheep\n55.500\n175.0\n1.744\n2.243\n\n\nJaguar\n100.000\n157.0\n2.000\n2.196\n\n\nChimpanzee\n52.160\n440.0\n1.717\n2.643\n\n\nRat\n0.280\n1.9\n-0.553\n0.279\n\n\nBrachiosaurus\n87000.000\n154.5\n4.940\n2.189\n\n\nMole\n0.122\n3.0\n-0.914\n0.477\n\n\nPig\n192.000\n180.0\n2.283\n2.255\n\n\n\n\n\n\n\n\n\nDatenquelle und -qualität\nDie Daten stammen aus verschiedenen Quellen und wurden über mehrere Jahrzehnte zusammengetragen. Einige Besonderheiten der Datensammlung:\n\nAfrikanischer Elefant: Mit 6654 kg Körpergewicht und 5712 g Gehirngewicht das grösste Säugetier in der Stichprobe\nSpitzmaus: Das kleinste Säugetier mit nur 0.004 kg Körpergewicht und 0.14 g Gehirngewicht\nMensch: Zeigt mit 1320 g Gehirngewicht bei 62 kg Körpergewicht eine deutliche positive Abweichung von der allometrischen Beziehung\nPrimaten generell: Schimpanse, Gorilla und Rhesusaffe zeigen alle überdurchschnittlich grosse Gehirne\n\n\n\nAusreisser-Analyse\n\nmodel &lt;- lm(log(brain) ~ log(body), data = Animals)\nresiduals_df &lt;- data.frame(\n  Art = rownames(Animals),\n  Fitted = fitted(model),\n  Residuals = residuals(model),\n  Body = Animals$body\n)\n\nlibrary(ggplot2)\nggplot(residuals_df, aes(x = Fitted, y = Residuals, label = Art)) +\n  geom_point(size = 3, alpha = 0.7, color = \"darkblue\") +\n  geom_hline(yintercept = 0, color = \"red\", linetype = \"dashed\") +\n  geom_text(aes(label = ifelse(abs(Residuals) &gt; 0.5, Art, \"\")), \n            vjust = -0.5, hjust = 0.5, size = 3) +\n  labs(\n    x = \"Angepasste Werte (log scale)\",\n    y = \"Residuen\",\n    title = \"Residuen vs. Angepasste Werte\"\n  ) +\n  theme_minimal()\n\n\n\n\n\n\n\nAbbildung 2: Residuen der logarithmischen Regression zur Identifikation von Ausreissern"
+  },
+  {
+    "objectID": "template.html#statistische-outputs",
+    "href": "template.html#statistische-outputs",
+    "title": "Robuste Regression und Outlier Erkennung",
+    "section": "Statistische Outputs",
+    "text": "Statistische Outputs\n\nVollständige Regressionsanalyse\n\nmodel &lt;- lm(log(brain) ~ log(body), data = Animals)\nsummary_full &lt;- summary(model)\n\n# Create comprehensive statistics table\nregression_stats &lt;- data.frame(\n  Statistik = c(\"Multiple R-squared\", \"Adjusted R-squared\", \"F-statistic\", \n                \"F p-value\", \"Residual standard error\", \"Degrees of freedom\"),\n  Wert = c(\n    round(summary_full$r.squared, 4),\n    round(summary_full$adj.r.squared, 4),\n    round(summary_full$fstatistic[1], 2),\n    ifelse(pf(summary_full$fstatistic[1], summary_full$fstatistic[2], \n             summary_full$fstatistic[3], lower.tail = FALSE) &lt; 0.001, \n           \"&lt; 0.001\", \n           round(pf(summary_full$fstatistic[1], summary_full$fstatistic[2], \n                    summary_full$fstatistic[3], lower.tail = FALSE), 4)),\n    round(summary_full$sigma, 4),\n    paste(summary_full$df[2], \"on\", summary_full$df[1], \"DF\")\n  )\n)\n\nkable(regression_stats)\n\n\n\nTabelle 4: Detaillierte Regressionsstatistiken\n\n\n\n\n\n\nStatistik\nWert\n\n\n\n\nMultiple R-squared\n0.6076\n\n\nAdjusted R-squared\n0.5925\n\n\nF-statistic\n40.26\n\n\nF p-value\n&lt; 0.001\n\n\nResidual standard error\n1.5316\n\n\nDegrees of freedom\n26 on 2 DF\n\n\n\n\n\n\n\n\n\n\nKoeffizienten mit Konfidenzintervallen\n\ncoef_table &lt;- data.frame(\n  Parameter = c(\"Intercept (log a)\", \"Steigung (b)\"),\n  Schätzung = round(coef(model), 4),\n  Standardfehler = round(summary_full$coefficients[,2], 4),\n  t_Wert = round(summary_full$coefficients[,3], 3),\n  p_Wert = ifelse(summary_full$coefficients[,4] &lt; 0.001, \"&lt; 0.001\", \n                  round(summary_full$coefficients[,4], 4)),\n  CI_2.5 = round(confint(model)[,1], 4),\n  CI_97.5 = round(confint(model)[,2], 4)\n)\n\nkable(coef_table)\n\n\n\nTabelle 5: Regressionskoeffizienten mit 95% Konfidenzintervallen\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\nSchätzung\nStandardfehler\nt_Wert\np_Wert\nCI_2.5\nCI_97.5\n\n\n\n\n(Intercept)\nIntercept (log a)\n2.5549\n0.4131\n6.184\n&lt; 0.001\n1.7057\n3.4041\n\n\nlog(body)\nSteigung (b)\n0.4960\n0.0782\n6.345\n&lt; 0.001\n0.3353\n0.6567\n\n\n\n\n\n\n\n\n\n\nModelldiagnostik\n\npar(mfrow = c(2, 2))\nplot(model, which = 1:4, caption = c(\"Residuen vs. Angepasste Werte\", \n                                     \"Q-Q Plot der Residuen\",\n                                     \"Scale-Location Plot\", \n                                     \"Residuen vs. Leverage\"))\npar(mfrow = c(1, 1))\n\n\n\n\n\n\n\nAbbildung 3: Diagnostische Plots für die Regressionsanalyse"
+  },
+  {
     "objectID": "getting-started.html",
     "href": "getting-started.html",
     "title": "Getting started",
     "section": "",
-    "text": "Getting started\nTo install the extension use the command:\nquarto use template zhaw-lsfm/quarto-thesis\nThis will install the format extension and create an example qmd file that you can use as a starting place for your document. If you are new to quarto: We’ve prepared a guide to getting started with Quarto, Typst and this template here:\nhttps://zhaw-adls.github.io/PA2-Quarto-Typst"
+    "text": "Getting started\nTo install the extension use the command:\nquarto use template zhaw-lsfm/quarto-thesis\nThis will install the format extension and create an example qmd file that you can use as a starting place for your document. The example qmd will have the same name as the parent folder. For example, if your the parent folder is called PA2, the template will be named PA2.qmd. To preview a pdf version of this file, run:\nquarto preview PA2.qmd\nThis will use typst to render a submittable PDF of your thesis. Typst is very fast. If your document becomes large and you feel typst is too slow, we recommend using the html output for previewing your text, and only using typst from time to time. To render a html version of your thesis, you run the command with the --to argument:\nquarto preview PA2.qmd --to html\nIf you are new to quarto: We’ve prepared a guide to getting started with Quarto, which starts and the basics and ends with you using this zhaw-lsfm template. The course is available here:\nhttps://zhaw-adls.github.io/PA2-Quarto-Typst"
   },
   {
     "objectID": "CLAUDE.html",
@@ -35,11 +77,11 @@
     "text": "_extensions/zhaw-lsfm/\n├── typst-template.typ     # Main Typst template with ZHAW formatting\n├── typst-show.typ         # YAML metadata mapping to Typst\n├── _extension.yml         # Extension configuration\n├── shortcodes.lua         # Document structure shortcodes\n├── class-filter.lua       # .hidden class expansion\n├── pagebreak-filter.lua   # Automatic page breaks\n└── fonts/                 # Custom font directory\n\n\n\n\nInstitutional branding: Automatic ZHAW headers, title page, and imprint generation\nDocument structure: Shortcodes for TOC, figure/table lists, references\nMetadata-driven: Extensive YAML frontmatter support for thesis information\nLanguage support: German/English automatic text generation\nFont handling: Arial default with fallback cascade and local font support\n\n\n\n\n\ntemplate.qmd: Example thesis document with full YAML metadata\nindex.qmd: Documentation and feature demonstration\n_extension.yml: Extension configuration with format settings and filters\n\n\n\n\nThe template uses a filter pipeline: 1. class-filter.lua: Expands .hidden to .unnumbered .unlisted 2. pagebreak-filter.lua: Adds page breaks before major sections 3. Quarto’s built-in Typst processing\n\n\n\nUnified `"
   },
   {
-    "objectID": "Readme.html",
-    "href": "Readme.html",
+    "objectID": "for-devs.html",
+    "href": "for-devs.html",
     "title": "ZHAW LSFM Thesis Template",
     "section": "",
-    "text": "# To render the template's website:\nquarto render\n\n# to publish the the template's website:\nquarto publish gh-pages --no-prompt\n\n# to preview the template.qmd (starter template for useres)\nquarto preview template.qmd\n\n# to use this template\n# (will install the template, rename template.qmd, and copy references.bib)\nquarto use template zhaw-lsfm/quarto-thesis\n\n# To update changes to the template\ngit add / commit / push"
+    "text": "# To render the template's information website:\nquarto render\n\n# to publish the the template's website:\nquarto publish gh-pages --no-prompt\n\n# to preview the template.qmd (starter template for users)\nquarto preview template.qmd\n\n# to use this template\n# (will install the template, rename template.qmd, and copy references.bib)\nquarto use template zhaw-lsfm/quarto-thesis\n\n# To update changes to the template\ngit add / commit / push\n.quartoignore lists all files that should NOT be made available when the user runs quarto use ..."
   },
   {
     "objectID": "zhaw-requirements.html",
