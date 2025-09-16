@@ -5,6 +5,8 @@ project:
 
 website:
   title: "ZHAW LSFM Thesis Template"
+  repo-url: https://github.com/zhaw-lsfm/quarto-thesis
+  repo-actions: [edit, source, issue]
   navbar:
     left:
       - index.qmd
@@ -13,6 +15,12 @@ website:
       - zhaw-requirements.qmd
       - href: template.qmd
         text: "🖺 Demo"
+    right:
+      - href: for-devs.qmd
+        text: "For Developers / Contributors"
+      - icon: github
+        href: https://github.com/zhaw-lsfm/quarto-thesis
+
 
 bibliography: references.bib
 

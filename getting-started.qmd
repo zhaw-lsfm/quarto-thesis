@@ -10,16 +10,18 @@ quarto use template zhaw-lsfm/quarto-thesis
 This will install the format extension and create an example qmd file that you can use as a starting place for your document. The example qmd will have the same name as the parent folder. For example, if your the parent folder is called PA2, the template will be named PA2.qmd. To preview a pdf version of this file, run:
 
 
-```bash
-
+```{.bash}
 quarto preview PA2.qmd
+``` 
 
+This will use typst to render a submittable PDF of your thesis. Typst is very fast. If your document becomes large and you feel typst is too slow, we recommend using the `html` output for previewing your text, and only using typst from time to time. To render a `html` version of your thesis, you run the command with the `--to` argument:
 
+```{.bash}
+quarto preview PA2.qmd --to html
 ``` 
 
 
-
-If you are new to quarto:  We've prepared a guide to getting started with Quarto, Typst and this template here: 
+If you are new to quarto:  We've prepared a guide to getting started with Quarto, which starts and the basics and ends with you using this zhaw-lsfm template. The course is available here:
 
 <https://zhaw-adls.github.io/PA2-Quarto-Typst>
 
