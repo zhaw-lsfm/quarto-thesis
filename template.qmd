@@ -29,15 +29,22 @@ author:
   - Peter Rousseeuw
 format: 
   zhaw-lsfm-typst: default
+  html: default
 ---
 
 # Zusammenfassung {.unnumbered .unlisted}
 
 Diese Arbeit untersucht die Beziehung zwischen Gehirngröße und Körpergewicht bei verschiedenen Säugetierarten anhand des MASS::Animals Datensatzes. Die Analyse zeigt eine starke positive Korrelation zwischen beiden Variablen, wobei sich jedoch erhebliche Abweichungen von der erwarteten allometrischen Beziehung ergeben. Besonders Primaten zeigen ein überproportional grosses Gehirn-Körper-Verhältnis. Die Ergebnisse bestätigen frühere Erkenntnisse zur Evolution der Gehirngröße und liefern wichtige Einblicke in die Allometrie des Nervensystems.
 
+
+::: {.content-hidden when-format="html"}
+
 # Inhaltsverzeichnis {.unnumbered .unlisted}
 
 {{< table-of-contents >}}
+
+:::
+
 
 
 # Liste der Abkürzungen {.unnumbered}
@@ -197,6 +204,9 @@ Die hohe Korrelation (R² = 0.96) zeigt, dass das Körpergewicht ein starker Pr�
 
 {{< references >}}
 
+
+::: {.content-hidden when-format="html"}
+
 # Verzeichnis der Abbildungen {.unnumbered}
 
 {{< list-of-figures >}}
@@ -204,6 +214,8 @@ Die hohe Korrelation (R² = 0.96) zeigt, dass das Körpergewicht ein starker Pr�
 # Verzeichnis der Tabellen {.unnumbered}
 
 {{< list-of-tables >}}
+
+:::
 
 # Anhang {.unnumbered}
 

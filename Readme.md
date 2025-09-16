@@ -20,3 +20,6 @@ git add / commit / push
 
 ```
 
+.quartoignore lists all files that should NOT be made available when the user runs `quarto use ...`
+
+

@@ -7,7 +7,19 @@ To install the extension use the command:
 quarto use template zhaw-lsfm/quarto-thesis
 ```
 
-This will install the format extension and create an example qmd file that you can use as a starting place for your document. If you are new to quarto:  We've prepared a guide to getting started with Quarto, Typst and this template here: 
+This will install the format extension and create an example qmd file that you can use as a starting place for your document. The example qmd will have the same name as the parent folder. For example, if your the parent folder is called PA2, the template will be named PA2.qmd. To preview a pdf version of this file, run:
+
+
+```bash
+
+quarto preview PA2.qmd
+
+
+``` 
+
+
+
+If you are new to quarto:  We've prepared a guide to getting started with Quarto, Typst and this template here: 
 
 <https://zhaw-adls.github.io/PA2-Quarto-Typst>
 
