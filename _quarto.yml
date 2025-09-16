@@ -13,8 +13,13 @@ website:
       - getting-started.qmd
       - manual.qmd
       - zhaw-requirements.qmd
-      - href: template.qmd
-        text: "🖺 Demo"
+      - text: "🖺 Demo"
+        menu:
+        - href: template.pdf
+          text: "pdf (for submission)"
+          target: blank
+        - href: template.html
+          text: "html (for development)"
     right:
       - href: for-devs.qmd
         text: "For Developers / Contributors"
