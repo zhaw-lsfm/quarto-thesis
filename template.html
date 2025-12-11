@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.19">
+<meta name="generator" content="quarto-1.9.11">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Peter Rousseeuw">
 <meta name="keywords" content="Robuste Regression, Ausreisser, Allometrie, Säugetiere, Gehirngrösse, Statistik">
 
-<title>Robuste Regression und Outlier Erkennung – ZHAW LSFM Thesis Template</title>
+<title>Robuste Regression und Outlier Erkennung</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -81,7 +81,6 @@ div.csl-indent {
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
@@ -94,16 +93,16 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-46eeb4c476de49ef7df495821a6125d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-a5dfee7ccc7f20503a6465e15a2cff9c.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-a512348105fe160d450f08b684c618b0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-e4e2392ece711ea705772d4f304040e4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
+  "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
+  "panel-placement": "start",
+  "type": "textbox",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -156,113 +155,104 @@ window.Quarto = {
 };
 </script>
 
+<link rel="stylesheet" href="site_libs/quarto-contrib/quarto-project/zhaw-lsfm/zhaw-html.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    </a>
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">ZHAW LSFM Thesis Template</span>
-    </a>
-  </div>
-            <div id="quarto-search" class="" title="Suchen"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navigation umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
-<span class="menu-text">Welcome</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./getting-started.html"> 
-<span class="menu-text">Getting started</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./manual.html"> 
-<span class="menu-text">Manual</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./zhaw-requirements.html"> 
-<span class="menu-text">ZHAW Requirements</span></a>
-  </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-demo" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">🖺 Demo</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-demo">    
-        <li>
-    <a class="dropdown-item" href="./template.pdf" target="blank">
- <span class="dropdown-text">pdf (for submission)</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./template.html">
- <span class="dropdown-text">html (for development)</span></a>
-  </li>  
-    </ul>
-  </li>
-</ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="./for-devs.html"> 
-<span class="menu-text">For Developers / Contributors</span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/zhaw-lsfm/quarto-thesis"> <i class="bi bi-github" role="img">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-</ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
-</div>
-      </div> <!-- /container-fluid -->
-    </nav>
-</header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <div class="quarto-alternate-formats"><h2>Andere Formate</h2><ul><li><a href="template.pdf"><i class="bi bi-file-pdf"></i>Typst (zhaw-lsfm)</a></li></ul></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Auf dieser Seite</h2>
+   
+  <ul>
+  <li><a href="#liste-der-abkürzungen" id="toc-liste-der-abkürzungen" class="nav-link active" data-scroll-target="#liste-der-abkürzungen">Liste der Abkürzungen</a></li>
+  <li><a href="#einleitung" id="toc-einleitung" class="nav-link" data-scroll-target="#einleitung"><span class="header-section-number">1</span> Einleitung</a></li>
+  <li><a href="#literaturübersicht-oder-theorie" id="toc-literaturübersicht-oder-theorie" class="nav-link" data-scroll-target="#literaturübersicht-oder-theorie"><span class="header-section-number">2</span> Literaturübersicht oder Theorie</a></li>
+  <li><a href="#material-und-methoden" id="toc-material-und-methoden" class="nav-link" data-scroll-target="#material-und-methoden"><span class="header-section-number">3</span> Material und Methoden</a>
+  <ul class="collapse">
+  <li><a href="#datensatz" id="toc-datensatz" class="nav-link" data-scroll-target="#datensatz"><span class="header-section-number">3.1</span> Datensatz</a>
+  <ul class="collapse">
+  <li><a href="#datenquelle-und-charakteristika" id="toc-datenquelle-und-charakteristika" class="nav-link" data-scroll-target="#datenquelle-und-charakteristika"><span class="header-section-number">3.1.1</span> Datenquelle und Charakteristika</a></li>
+  <li><a href="#datenqualität-und-limitationen" id="toc-datenqualität-und-limitationen" class="nav-link" data-scroll-target="#datenqualität-und-limitationen"><span class="header-section-number">3.1.2</span> Datenqualität und Limitationen</a></li>
+  </ul></li>
+  <li><a href="#statistische-analyse" id="toc-statistische-analyse" class="nav-link" data-scroll-target="#statistische-analyse"><span class="header-section-number">3.2</span> Statistische Analyse</a>
+  <ul class="collapse">
+  <li><a href="#transformationsverfahren" id="toc-transformationsverfahren" class="nav-link" data-scroll-target="#transformationsverfahren"><span class="header-section-number">3.2.1</span> Transformationsverfahren</a></li>
+  <li><a href="#modellvalidierung" id="toc-modellvalidierung" class="nav-link" data-scroll-target="#modellvalidierung"><span class="header-section-number">3.2.2</span> Modellvalidierung</a></li>
+  </ul></li>
+  <li><a href="#visualisierung" id="toc-visualisierung" class="nav-link" data-scroll-target="#visualisierung"><span class="header-section-number">3.3</span> Visualisierung</a>
+  <ul class="collapse">
+  <li><a href="#graphische-darstellung" id="toc-graphische-darstellung" class="nav-link" data-scroll-target="#graphische-darstellung"><span class="header-section-number">3.3.1</span> Graphische Darstellung</a></li>
+  <li><a href="#software-und-pakete" id="toc-software-und-pakete" class="nav-link" data-scroll-target="#software-und-pakete"><span class="header-section-number">3.3.2</span> Software und Pakete</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#ergebnisse" id="toc-ergebnisse" class="nav-link" data-scroll-target="#ergebnisse"><span class="header-section-number">4</span> Ergebnisse</a></li>
+  <li><a href="#diskussion" id="toc-diskussion" class="nav-link" data-scroll-target="#diskussion"><span class="header-section-number">5</span> Diskussion</a></li>
+  <li><a href="#sec-refs" id="toc-sec-refs" class="nav-link" data-scroll-target="#sec-refs"><span class="header-section-number">6</span> Literaturverzeichnis</a></li>
+  <li><a href="#anhang" id="toc-anhang" class="nav-link" data-scroll-target="#anhang">Anhang</a>
+  <ul class="collapse">
+  <li><a href="#rohdaten" id="toc-rohdaten" class="nav-link" data-scroll-target="#rohdaten"><span class="header-section-number">6.1</span> Rohdaten</a>
+  <ul class="collapse">
+  <li><a href="#datenquelle-und--qualität" id="toc-datenquelle-und--qualität" class="nav-link" data-scroll-target="#datenquelle-und--qualität"><span class="header-section-number">6.1.1</span> Datenquelle und -qualität</a></li>
+  <li><a href="#ausreisser-analyse" id="toc-ausreisser-analyse" class="nav-link" data-scroll-target="#ausreisser-analyse"><span class="header-section-number">6.1.2</span> Ausreisser-Analyse</a></li>
+  </ul></li>
+  <li><a href="#statistische-outputs" id="toc-statistische-outputs" class="nav-link" data-scroll-target="#statistische-outputs"><span class="header-section-number">6.2</span> Statistische Outputs</a>
+  <ul class="collapse">
+  <li><a href="#vollständige-regressionsanalyse" id="toc-vollständige-regressionsanalyse" class="nav-link" data-scroll-target="#vollständige-regressionsanalyse"><span class="header-section-number">6.2.1</span> Vollständige Regressionsanalyse</a></li>
+  <li><a href="#koeffizienten-mit-konfidenzintervallen" id="toc-koeffizienten-mit-konfidenzintervallen" class="nav-link" data-scroll-target="#koeffizienten-mit-konfidenzintervallen"><span class="header-section-number">6.2.2</span> Koeffizienten mit Konfidenzintervallen</a></li>
+  <li><a href="#modelldiagnostik" id="toc-modelldiagnostik" class="nav-link" data-scroll-target="#modelldiagnostik"><span class="header-section-number">6.2.3</span> Modelldiagnostik</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Andere Formate</h2><ul><li><a href="template.pdf"><i class="bi bi-file-pdf"></i>Typst (zhaw-lsfm)</a></li></ul></div></nav>
+    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Robuste Regression und Outlier Erkennung</h1>
-<p class="subtitle lead">Einfache Regression</p>
+<header id="title-block-header">
+<div class="zhaw-header">
+Zürcher Hochschule für Angewandte Wissenschaften<br>
+Departement Life Sciences und Facility Management<br>
+Institut für Umwelt und Natürliche Ressourcen
 </div>
 
+<h1 class="title display-7">Robuste Regression und Outlier Erkennung</h1>
+<p class="subtitle lead">Einfache Regression</p>
 
+<div class="cover-image">
+<img src="cover.png" alt="Cover">
+</div>
 
-<div class="quarto-title-meta">
+<p class="confidential">Vertraulich</p>
 
-    <div>
-    <div class="quarto-title-meta-heading">Autor:in</div>
-    <div class="quarto-title-meta-contents">
-             <p>Peter Rousseeuw </p>
-          </div>
-  </div>
-    
-  
-    
-  </div>
-  
+<p class="thesis-type">Projektarbeit 2</p>
 
-<div>
-  <div class="keywords">
-    <div class="block-title">Schlüsselwörter</div>
-    <p>Robuste Regression, Ausreisser, Allometrie, Säugetiere, Gehirngrösse, Statistik</p>
-  </div>
+<div class="author-section">
+<p class="von">von</p>
+<p class="author">Peter Rousseeuw</p>
+</div>
+
+<p class="degree-type">Bachelorstudiengang 2009</p>
+
+<p class="submission-date">Abgabedatum 2024-12-15</p>
+
+<p class="study-direction">Studienrichtung Umweltingenieurwesen</p>
+
+<div class="supervisors">
+<p>Betreuer / Betreuerinnen:</p>
+<ul>
+<li>Prof.&nbsp;Dr. Max Mustermann<br>
+ZHAW Life Sciences und Facility Management, Wädenswil</li>
+<li>Dr. Anna Beispiel<br>
+ETH Zürich, Institut für Umweltingenieurwissenschaften, Zürich</li>
+<li>Prof.&nbsp;Dr. Susanne Müller<br>
+Universität Zürich, Institut für Evolutionsbiologie und Umweltwissenschaften, Zürich</li>
+</ul>
 </div>
 
 </header>
@@ -303,83 +293,63 @@ window.Quarto = {
 </tbody>
 </table>
 </section>
-<section id="einleitung" class="level1">
-<h1>Einleitung</h1>
+<section id="einleitung" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Einleitung</h1>
 <p>Die Beziehung zwischen Gehirngrösse und Körpergewicht ist ein fundamentaler Aspekt der vergleichenden Neurobiologie und Evolution. Seit den bahnbrechenden Arbeiten zur fossilen Evidenz der menschlichen Gehirnentwicklung <span class="citation" data-cites="jerison1973">(<a href="#ref-jerison1973" role="doc-biblioref">Jerison 1973</a>)</span> ist bekannt, dass die Gehirngrösse nicht linear mit dem Körpergewicht skaliert.</p>
 <p>Diese Studie analysiert die Allometrie von Gehirn- und Körpergewicht anhand eines umfangreichen Datensatzes verschiedener Säugetierarten. Das Ziel ist es, die mathematische Beziehung zwischen diesen Variablen zu quantifizieren und Ausreisser zu identifizieren, die auf besondere evolutionäre Anpassungen hinweisen könnten.</p>
 </section>
-<section id="literaturübersicht-oder-theorie" class="level1">
-<h1>Literaturübersicht oder Theorie</h1>
+<section id="literaturübersicht-oder-theorie" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Literaturübersicht oder Theorie</h1>
 <p>Die theoretische Grundlage für Gehirn-Körper-Allometrie basiert auf dem Konzept, dass biologische Strukturen häufig Potenzgesetzen folgen. Die erwartete Beziehung wird typischerweise als:</p>
 <p><span class="math display">\[\text{Gehirngewicht} = a \times \text{Körpergewicht}^b\]</span></p>
 <p>beschrieben, wobei der Exponent b in der Regel zwischen 0.6 und 0.8 liegt. <span class="citation" data-cites="jerison1973">Jerison (<a href="#ref-jerison1973" role="doc-biblioref">1973</a>)</span> zeigte, dass die Evolution des menschlichen Gehirns erheblich von dieser allgemeinen Regel abweicht.</p>
 <p>Statistische Probleme bei der Analyse solcher Daten wurden von <span class="citation" data-cites="weisberg1980">Weisberg (<a href="#ref-weisberg1980" role="doc-biblioref">1980</a>)</span> diskutiert, insbesondere bezüglich der Normalitätsannahmen in linearen Regressionsmodellen bei grossen Stichproben.</p>
 </section>
-<section id="material-und-methoden" class="level1">
-<h1>Material und Methoden</h1>
-<section id="datensatz" class="level2">
-<h2 class="anchored" data-anchor-id="datensatz">Datensatz</h2>
+<section id="material-und-methoden" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Material und Methoden</h1>
+<section id="datensatz" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="datensatz"><span class="header-section-number">3.1</span> Datensatz</h2>
 <p>Die Analyse basiert auf dem <code>Animals</code> Datensatz aus dem R-Paket MASS, der Gehirn- und Körpergewichtsdaten für 28 verschiedene Säugetierarten enthält.</p>
-<section id="datenquelle-und-charakteristika" class="level3">
-<h3 class="anchored" data-anchor-id="datenquelle-und-charakteristika">Datenquelle und Charakteristika</h3>
+<section id="datenquelle-und-charakteristika" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="datenquelle-und-charakteristika"><span class="header-section-number">3.1.1</span> Datenquelle und Charakteristika</h3>
 <p>Der Datensatz wurde ursprünglich von <span class="citation" data-cites="weisberg1980">Weisberg (<a href="#ref-weisberg1980" role="doc-biblioref">1980</a>)</span> zusammengestellt und enthält Messungen von verschiedenen Wirbeltierarten. Die Daten umfassen sowohl terrestrische als auch aquatische Säugetiere mit einem breiten Spektrum von Körpergewichten.</p>
 </section>
-<section id="datenqualität-und-limitationen" class="level3">
-<h3 class="anchored" data-anchor-id="datenqualität-und-limitationen">Datenqualität und Limitationen</h3>
+<section id="datenqualität-und-limitationen" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="datenqualität-und-limitationen"><span class="header-section-number">3.1.2</span> Datenqualität und Limitationen</h3>
 <p>Einige Messungen stammen aus älteren Studien und könnten methodische Ungenauigkeiten aufweisen. Besonders bei sehr grossen Tieren wie Elefanten können die Gehirngewichte schwer präzise zu bestimmen sein.</p>
 </section>
 </section>
-<section id="statistische-analyse" class="level2">
-<h2 class="anchored" data-anchor-id="statistische-analyse">Statistische Analyse</h2>
+<section id="statistische-analyse" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="statistische-analyse"><span class="header-section-number">3.2</span> Statistische Analyse</h2>
 <p>Die Daten wurden logarithmisch transformiert, um eine lineare Beziehung zu erhalten:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span>(Gehirngewicht) <span class="ot">=</span> <span class="fu">log</span>(a) <span class="sc">+</span> b <span class="sc">*</span> <span class="fu">log</span>(Körpergewicht)</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
-<section id="transformationsverfahren" class="level3">
-<h3 class="anchored" data-anchor-id="transformationsverfahren">Transformationsverfahren</h3>
+<section id="transformationsverfahren" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="transformationsverfahren"><span class="header-section-number">3.2.1</span> Transformationsverfahren</h3>
 <p>Die logarithmische Transformation ist bei allometrischen Beziehungen Standard, da sie Potenzgesetze in lineare Beziehungen überführt. Dies ermöglicht die Anwendung klassischer linearer Regressionsverfahren.</p>
 </section>
-<section id="modellvalidierung" class="level3">
-<h3 class="anchored" data-anchor-id="modellvalidierung">Modellvalidierung</h3>
+<section id="modellvalidierung" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="modellvalidierung"><span class="header-section-number">3.2.2</span> Modellvalidierung</h3>
 <p>Die Residuen wurden auf Normalität und Homoskedastizität überprüft. Zusätzlich wurden Cook’s Distance und Leverage-Werte berechnet, um einflussreiche Datenpunkte zu identifizieren.</p>
 </section>
 </section>
-<section id="visualisierung" class="level2">
-<h2 class="anchored" data-anchor-id="visualisierung">Visualisierung</h2>
+<section id="visualisierung" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="visualisierung"><span class="header-section-number">3.3</span> Visualisierung</h2>
 <p>Scatterplots wurden erstellt, um die Beziehung zu visualisieren, sowohl auf ursprünglicher als auch auf logarithmischer Skala.</p>
-<section id="graphische-darstellung" class="level3">
-<h3 class="anchored" data-anchor-id="graphische-darstellung">Graphische Darstellung</h3>
+<section id="graphische-darstellung" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="graphische-darstellung"><span class="header-section-number">3.3.1</span> Graphische Darstellung</h3>
 <p>Die Visualisierungen umfassen sowohl die Rohdaten als auch die transformierten Daten mit Regressionsgerade und Konfidenzintervall.</p>
 </section>
-<section id="software-und-pakete" class="level3">
-<h3 class="anchored" data-anchor-id="software-und-pakete">Software und Pakete</h3>
+<section id="software-und-pakete" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="software-und-pakete"><span class="header-section-number">3.3.2</span> Software und Pakete</h3>
 <p>Alle Analysen und Visualisierungen wurden in R durchgeführt unter Verwendung der Pakete ggplot2, MASS und dplyr.</p>
 </section>
 </section>
 </section>
-<section id="ergebnisse" class="level1">
-<h1>Ergebnisse</h1>
+<section id="ergebnisse" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Ergebnisse</h1>
 <p>Die statistische Analyse des MASS::Animals Datensatzes liefert umfassende Einblicke in die Beziehung zwischen Körper- und Gehirngewicht bei Säugetieren. Die deskriptiven Statistiken in <a href="#tbl-summary" class="quarto-xref">Tabelle&nbsp;2</a> zeigen die erhebliche Variabilität der untersuchten Arten: Das Körpergewicht reicht von kleinen Nagern bis hin zu grossen Säugetieren wie Elefanten, während das Gehirngewicht entsprechend von wenigen Gramm bis zu mehreren Kilogramm variiert.</p>
 <p>Die logarithmische Darstellung in <a href="#fig-animals" class="quarto-xref">Abbildung&nbsp;1</a> visualisiert deutlich die allometrische Beziehung zwischen beiden Variablen. Trotz der logarithmischen Transformation zeigen sich einige interessante Abweichungen von der Regressionsgerade, die auf artspezifische Anpassungen hinweisen. Besonders auffällig sind Datenpunkte oberhalb der Regressionslinie, die Arten mit überproportional grossem Gehirn repräsentieren.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(MASS)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(Animals)</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Scatterplot auf logarithmischer Skala</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Animals, <span class="fu">aes</span>(<span class="at">x =</span> body, <span class="at">y =</span> brain)) <span class="sc">+</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">3</span>, <span class="at">alpha =</span> <span class="fl">0.7</span>, <span class="at">color =</span> <span class="st">"darkblue"</span>) <span class="sc">+</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">TRUE</span>, <span class="at">color =</span> <span class="st">"red"</span>) <span class="sc">+</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_log10</span>() <span class="sc">+</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_log10</span>() <span class="sc">+</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Körpergewicht (kg)"</span>, </span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Gehirngewicht (g)"</span>,</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Gehirn- vs. Körpergewicht (logarithmische Skala)"</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
-</div>
 <div class="cell-output-display">
 <div id="fig-animals" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -394,24 +364,6 @@ Abbildung&nbsp;1: Beziehung zwischen Körpergewicht und Gehirngewicht bei Säuge
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Regressionsanalyse</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(<span class="fu">log</span>(brain) <span class="sc">~</span> <span class="fu">log</span>(body), <span class="at">data =</span> Animals)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>summary_stats <span class="ot">&lt;-</span> <span class="fu">summary</span>(model)</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Tabelle erstellen</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>coef_table <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">Parameter =</span> <span class="fu">c</span>(<span class="st">"Intercept (log a)"</span>, <span class="st">"Steigung (b)"</span>, <span class="st">"R²"</span>, <span class="st">"p-Wert"</span>),</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">Wert =</span> <span class="fu">c</span>(</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">round</span>(<span class="fu">coef</span>(model)[<span class="dv">1</span>], <span class="dv">3</span>),</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">round</span>(<span class="fu">coef</span>(model)[<span class="dv">2</span>], <span class="dv">3</span>),</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">round</span>(summary_stats<span class="sc">$</span>r.squared, <span class="dv">3</span>),</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ifelse</span>(summary_stats<span class="sc">$</span>coefficients[<span class="dv">2</span>,<span class="dv">4</span>] <span class="sc">&lt;</span> <span class="fl">0.001</span>, <span class="st">"&lt; 0.001"</span>, </span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>           <span class="fu">round</span>(summary_stats<span class="sc">$</span>coefficients[<span class="dv">2</span>,<span class="dv">4</span>], <span class="dv">3</span>))</span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(coef_table)</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div id="tbl-animals" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-animals-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -451,16 +403,6 @@ Tabelle&nbsp;1: Statistische Kennwerte der Gehirn-Körper-Beziehung
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>summary_table <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">Variable =</span> <span class="fu">c</span>(<span class="st">"Körpergewicht (kg)"</span>, <span class="st">"Gehirngewicht (g)"</span>),</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">Minimum =</span> <span class="fu">c</span>(<span class="fu">min</span>(Animals<span class="sc">$</span>body), <span class="fu">min</span>(Animals<span class="sc">$</span>brain)),</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">Mittelwert =</span> <span class="fu">c</span>(<span class="fu">round</span>(<span class="fu">mean</span>(Animals<span class="sc">$</span>body), <span class="dv">1</span>), <span class="fu">round</span>(<span class="fu">mean</span>(Animals<span class="sc">$</span>brain), <span class="dv">1</span>)),</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">Maximum =</span> <span class="fu">c</span>(<span class="fu">max</span>(Animals<span class="sc">$</span>body), <span class="fu">max</span>(Animals<span class="sc">$</span>brain)),</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">N =</span> <span class="fu">c</span>(<span class="fu">nrow</span>(Animals), <span class="fu">nrow</span>(Animals))</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(summary_table)</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div id="tbl-summary" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -503,14 +445,14 @@ Tabelle&nbsp;2: Deskriptive Statistik der MASS::Animals Daten
 <p>Die Regressionsanalyse bestätigt die theoretischen Erwartungen zur allometrischen Skalierung. Die statistischen Kennwerte in <a href="#tbl-animals" class="quarto-xref">Tabelle&nbsp;1</a> zeigen einen Steigungsparameter von 0.75, der optimal in den von der Literatur vorhergesagten Bereich zwischen 0.6 und 0.8 fällt. Das hohe Bestimmtheitsmass (R² = 0.96) belegt die starke lineare Beziehung zwischen logarithmiertem Körper- und Gehirngewicht.</p>
 <p>Der hochsignifikante p-Wert (&lt; 0.001) in <a href="#tbl-animals" class="quarto-xref">Tabelle&nbsp;1</a> unterstreicht die statistische Robustheit dieser Beziehung. Diese Ergebnisse stehen im Einklang mit der allometrischen Theorie und bestätigen, dass das Gehirngewicht systematisch mit dem Körpergewicht skaliert, jedoch nicht proportional, sondern mit einem reduzierten Exponenten.</p>
 </section>
-<section id="diskussion" class="level1">
-<h1>Diskussion</h1>
+<section id="diskussion" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Diskussion</h1>
 <p>Die Ergebnisse bestätigen die grundlegende allometrische Beziehung zwischen Gehirn- und Körpergewicht bei Säugetieren. Der ermittelte Exponent von 0.75 liegt im erwarteten Bereich und stimmt mit früheren Studien überein <span class="citation" data-cites="jerison1973">(<a href="#ref-jerison1973" role="doc-biblioref">Jerison 1973</a>)</span>.</p>
 <p>Besonders interessant sind die Ausreisser in den Daten: Arten wie der Mensch und andere Primaten zeigen ein überproportional grosses Gehirn, was auf spezielle evolutionäre Anpassungen hinweist. Diese Abweichungen unterstreichen die Bedeutung der Encephalisation in der Primatenevolution.</p>
 <p>Die hohe Korrelation (R² = 0.96) zeigt, dass das Körpergewicht ein starker Prädiktor für das Gehirngewicht ist, auch wenn bedeutsame biologische Variationen existieren.</p>
 </section>
-<section id="sec-refs" class="level1">
-<h1>Literaturverzeichnis</h1>
+<section id="sec-refs" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Literaturverzeichnis</h1>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-jerison1973" class="csl-entry" role="listitem">
 Jerison, Harry J. 1973. <span>„Fossil evidence of the evolution of the human brain“</span>. <em>Annual Review of Anthropology</em> 4: 27–58.
@@ -523,24 +465,10 @@ Weisberg, Sanford. 1980. <span>„Some large-sample tests for nonnormality in th
 <section id="anhang" class="level1 unnumbered">
 <h1 class="unnumbered">Anhang</h1>
 <p>Zusätzliche Materialien und Daten, die nicht im Hauptteil der Arbeit enthalten sind, werden im Anhang aufgeführt.</p>
-<section id="rohdaten" class="level2">
-<h2 class="anchored" data-anchor-id="rohdaten">Rohdaten</h2>
+<section id="rohdaten" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="rohdaten"><span class="header-section-number">6.1</span> Rohdaten</h2>
 <p>Der vollständige MASS::Animals Datensatz mit allen 28 Säugetierarten:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(MASS)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(Animals)</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Add row names as a column and format nicely</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>animals_full <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">Art =</span> <span class="fu">rownames</span>(Animals),</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  Körpergewicht<span class="at">_kg =</span> Animals<span class="sc">$</span>body,</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">Gehirngewicht_g =</span> Animals<span class="sc">$</span>brain,</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  Log_Körpergewicht <span class="ot">=</span> <span class="fu">round</span>(<span class="fu">log10</span>(Animals<span class="sc">$</span>body), <span class="dv">3</span>),</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">Log_Gehirngewicht =</span> <span class="fu">round</span>(<span class="fu">log10</span>(Animals<span class="sc">$</span>brain), <span class="dv">3</span>)</span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(animals_full, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div id="tbl-full-data" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-full-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -769,8 +697,8 @@ Tabelle&nbsp;3: Vollständige Rohdaten des MASS::Animals Datensatzes
 </figure>
 </div>
 </div>
-<section id="datenquelle-und--qualität" class="level3">
-<h3 class="anchored" data-anchor-id="datenquelle-und--qualität">Datenquelle und -qualität</h3>
+<section id="datenquelle-und--qualität" class="level3" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="datenquelle-und--qualität"><span class="header-section-number">6.1.1</span> Datenquelle und -qualität</h3>
 <p>Die Daten stammen aus verschiedenen Quellen und wurden über mehrere Jahrzehnte zusammengetragen. Einige Besonderheiten der Datensammlung:</p>
 <ul>
 <li><strong>Afrikanischer Elefant</strong>: Mit 6654 kg Körpergewicht und 5712 g Gehirngewicht das grösste Säugetier in der Stichprobe</li>
@@ -779,29 +707,9 @@ Tabelle&nbsp;3: Vollständige Rohdaten des MASS::Animals Datensatzes
 <li><strong>Primaten generell</strong>: Schimpanse, Gorilla und Rhesusaffe zeigen alle überdurchschnittlich grosse Gehirne</li>
 </ul>
 </section>
-<section id="ausreisser-analyse" class="level3">
-<h3 class="anchored" data-anchor-id="ausreisser-analyse">Ausreisser-Analyse</h3>
+<section id="ausreisser-analyse" class="level3" data-number="6.1.2">
+<h3 data-number="6.1.2" class="anchored" data-anchor-id="ausreisser-analyse"><span class="header-section-number">6.1.2</span> Ausreisser-Analyse</h3>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(<span class="fu">log</span>(brain) <span class="sc">~</span> <span class="fu">log</span>(body), <span class="at">data =</span> Animals)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>residuals_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">Art =</span> <span class="fu">rownames</span>(Animals),</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">Fitted =</span> <span class="fu">fitted</span>(model),</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">Residuals =</span> <span class="fu">residuals</span>(model),</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">Body =</span> Animals<span class="sc">$</span>body</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(residuals_df, <span class="fu">aes</span>(<span class="at">x =</span> Fitted, <span class="at">y =</span> Residuals, <span class="at">label =</span> Art)) <span class="sc">+</span></span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">3</span>, <span class="at">alpha =</span> <span class="fl">0.7</span>, <span class="at">color =</span> <span class="st">"darkblue"</span>) <span class="sc">+</span></span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">color =</span> <span class="st">"red"</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>) <span class="sc">+</span></span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> <span class="fu">ifelse</span>(<span class="fu">abs</span>(Residuals) <span class="sc">&gt;</span> <span class="fl">0.5</span>, Art, <span class="st">""</span>)), </span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>            <span class="at">vjust =</span> <span class="sc">-</span><span class="fl">0.5</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Angepasste Werte (log scale)"</span>,</span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Residuen"</span>,</span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Residuen vs. Angepasste Werte"</span></span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div id="fig-residuals" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -817,33 +725,11 @@ Abbildung&nbsp;2: Residuen der logarithmischen Regression zur Identifikation von
 </div>
 </section>
 </section>
-<section id="statistische-outputs" class="level2">
-<h2 class="anchored" data-anchor-id="statistische-outputs">Statistische Outputs</h2>
-<section id="vollständige-regressionsanalyse" class="level3">
-<h3 class="anchored" data-anchor-id="vollständige-regressionsanalyse">Vollständige Regressionsanalyse</h3>
+<section id="statistische-outputs" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="statistische-outputs"><span class="header-section-number">6.2</span> Statistische Outputs</h2>
+<section id="vollständige-regressionsanalyse" class="level3" data-number="6.2.1">
+<h3 data-number="6.2.1" class="anchored" data-anchor-id="vollständige-regressionsanalyse"><span class="header-section-number">6.2.1</span> Vollständige Regressionsanalyse</h3>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(<span class="fu">log</span>(brain) <span class="sc">~</span> <span class="fu">log</span>(body), <span class="at">data =</span> Animals)</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>summary_full <span class="ot">&lt;-</span> <span class="fu">summary</span>(model)</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create comprehensive statistics table</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>regression_stats <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">Statistik =</span> <span class="fu">c</span>(<span class="st">"Multiple R-squared"</span>, <span class="st">"Adjusted R-squared"</span>, <span class="st">"F-statistic"</span>, </span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>                <span class="st">"F p-value"</span>, <span class="st">"Residual standard error"</span>, <span class="st">"Degrees of freedom"</span>),</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">Wert =</span> <span class="fu">c</span>(</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">round</span>(summary_full<span class="sc">$</span>r.squared, <span class="dv">4</span>),</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">round</span>(summary_full<span class="sc">$</span>adj.r.squared, <span class="dv">4</span>),</span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">round</span>(summary_full<span class="sc">$</span>fstatistic[<span class="dv">1</span>], <span class="dv">2</span>),</span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ifelse</span>(<span class="fu">pf</span>(summary_full<span class="sc">$</span>fstatistic[<span class="dv">1</span>], summary_full<span class="sc">$</span>fstatistic[<span class="dv">2</span>], </span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>             summary_full<span class="sc">$</span>fstatistic[<span class="dv">3</span>], <span class="at">lower.tail =</span> <span class="cn">FALSE</span>) <span class="sc">&lt;</span> <span class="fl">0.001</span>, </span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>           <span class="st">"&lt; 0.001"</span>, </span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>           <span class="fu">round</span>(<span class="fu">pf</span>(summary_full<span class="sc">$</span>fstatistic[<span class="dv">1</span>], summary_full<span class="sc">$</span>fstatistic[<span class="dv">2</span>], </span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>                    summary_full<span class="sc">$</span>fstatistic[<span class="dv">3</span>], <span class="at">lower.tail =</span> <span class="cn">FALSE</span>), <span class="dv">4</span>)),</span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">round</span>(summary_full<span class="sc">$</span>sigma, <span class="dv">4</span>),</span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">paste</span>(summary_full<span class="sc">$</span>df[<span class="dv">2</span>], <span class="st">"on"</span>, summary_full<span class="sc">$</span>df[<span class="dv">1</span>], <span class="st">"DF"</span>)</span>
-<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(regression_stats)</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div id="tbl-full-regression" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-full-regression-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -891,21 +777,9 @@ Tabelle&nbsp;4: Detaillierte Regressionsstatistiken
 </div>
 </div>
 </section>
-<section id="koeffizienten-mit-konfidenzintervallen" class="level3">
-<h3 class="anchored" data-anchor-id="koeffizienten-mit-konfidenzintervallen">Koeffizienten mit Konfidenzintervallen</h3>
+<section id="koeffizienten-mit-konfidenzintervallen" class="level3" data-number="6.2.2">
+<h3 data-number="6.2.2" class="anchored" data-anchor-id="koeffizienten-mit-konfidenzintervallen"><span class="header-section-number">6.2.2</span> Koeffizienten mit Konfidenzintervallen</h3>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>coef_table <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">Parameter =</span> <span class="fu">c</span>(<span class="st">"Intercept (log a)"</span>, <span class="st">"Steigung (b)"</span>),</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  Schätzung <span class="ot">=</span> <span class="fu">round</span>(<span class="fu">coef</span>(model), <span class="dv">4</span>),</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">Standardfehler =</span> <span class="fu">round</span>(summary_full<span class="sc">$</span>coefficients[,<span class="dv">2</span>], <span class="dv">4</span>),</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">t_Wert =</span> <span class="fu">round</span>(summary_full<span class="sc">$</span>coefficients[,<span class="dv">3</span>], <span class="dv">3</span>),</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">p_Wert =</span> <span class="fu">ifelse</span>(summary_full<span class="sc">$</span>coefficients[,<span class="dv">4</span>] <span class="sc">&lt;</span> <span class="fl">0.001</span>, <span class="st">"&lt; 0.001"</span>, </span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>                  <span class="fu">round</span>(summary_full<span class="sc">$</span>coefficients[,<span class="dv">4</span>], <span class="dv">4</span>)),</span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">CI_2.5 =</span> <span class="fu">round</span>(<span class="fu">confint</span>(model)[,<span class="dv">1</span>], <span class="dv">4</span>),</span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">CI_97.5 =</span> <span class="fu">round</span>(<span class="fu">confint</span>(model)[,<span class="dv">2</span>], <span class="dv">4</span>)</span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(coef_table)</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div id="tbl-coefficients" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-coefficients-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -965,15 +839,9 @@ Tabelle&nbsp;5: Regressionskoeffizienten mit 95% Konfidenzintervallen
 </div>
 </div>
 </section>
-<section id="modelldiagnostik" class="level3">
-<h3 class="anchored" data-anchor-id="modelldiagnostik">Modelldiagnostik</h3>
+<section id="modelldiagnostik" class="level3" data-number="6.2.3">
+<h3 data-number="6.2.3" class="anchored" data-anchor-id="modelldiagnostik"><span class="header-section-number">6.2.3</span> Modelldiagnostik</h3>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">2</span>))</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(model, <span class="at">which =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="at">caption =</span> <span class="fu">c</span>(<span class="st">"Residuen vs. Angepasste Werte"</span>, </span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>                                     <span class="st">"Q-Q Plot der Residuen"</span>,</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>                                     <span class="st">"Scale-Location Plot"</span>, </span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>                                     <span class="st">"Residuen vs. Leverage"</span>))</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>))</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div id="fig-diagnostics" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -1045,13 +913,14 @@ Abbildung&nbsp;3: Diagnostische Plots für die Regressionsanalyse
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
@@ -1398,4 +1267,4 @@ Abbildung&nbsp;3: Diagnostische Plots für die Regressionsanalyse
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/zhaw-lsfm/quarto-thesis/edit/main/template.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/zhaw-lsfm/quarto-thesis/blob/main/template.qmd" class="toc-action"><i class="bi empty"></i>Quellcode anzeigen</a></li><li><a href="https://github.com/zhaw-lsfm/quarto-thesis/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div></div></footer></body></html>
+</body></html>

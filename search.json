@@ -4,181 +4,153 @@
     "href": "template.html",
     "title": "Robuste Regression und Outlier Erkennung",
     "section": "",
-    "text": "Diese Arbeit untersucht die Beziehung zwischen Gehirngröße und Körpergewicht bei verschiedenen Säugetierarten anhand des MASS::Animals Datensatzes. Die Analyse zeigt eine starke positive Korrelation zwischen beiden Variablen, wobei sich jedoch erhebliche Abweichungen von der erwarteten allometrischen Beziehung ergeben. Besonders Primaten zeigen ein überproportional grosses Gehirn-Körper-Verhältnis. Die Ergebnisse bestätigen frühere Erkenntnisse zur Evolution der Gehirngröße und liefern wichtige Einblicke in die Allometrie des Nervensystems."
+    "text": "Zürcher Hochschule für Angewandte Wissenschaften\nDepartement Life Sciences und Facility Management\nInstitut für Umwelt und Natürliche Ressourcen\n\n\n\nEinfache Regression\n\n\n\n\n\nVertraulich\n\nProjektarbeit 2\n\n\nvon\nPeter Rousseeuw\n\n\nBachelorstudiengang 2009\n\nAbgabedatum 2024-12-15\n\nStudienrichtung Umweltingenieurwesen\n\n\nBetreuer / Betreuerinnen:\n\nProf. Dr. Max Mustermann\nZHAW Life Sciences und Facility Management, Wädenswil\nDr. Anna Beispiel\nETH Zürich, Institut für Umweltingenieurwissenschaften, Zürich\nProf. Dr. Susanne Müller\nUniversität Zürich, Institut für Evolutionsbiologie und Umweltwissenschaften, Zürich"
   },
   {
     "objectID": "template.html#datensatz",
     "href": "template.html#datensatz",
     "title": "Robuste Regression und Outlier Erkennung",
-    "section": "Datensatz",
-    "text": "Datensatz\nDie Analyse basiert auf dem Animals Datensatz aus dem R-Paket MASS, der Gehirn- und Körpergewichtsdaten für 28 verschiedene Säugetierarten enthält.\n\nDatenquelle und Charakteristika\nDer Datensatz wurde ursprünglich von Weisberg (1980) zusammengestellt und enthält Messungen von verschiedenen Wirbeltierarten. Die Daten umfassen sowohl terrestrische als auch aquatische Säugetiere mit einem breiten Spektrum von Körpergewichten.\n\n\nDatenqualität und Limitationen\nEinige Messungen stammen aus älteren Studien und könnten methodische Ungenauigkeiten aufweisen. Besonders bei sehr grossen Tieren wie Elefanten können die Gehirngewichte schwer präzise zu bestimmen sein."
+    "section": "3.1 Datensatz",
+    "text": "3.1 Datensatz\nDie Analyse basiert auf dem Animals Datensatz aus dem R-Paket MASS, der Gehirn- und Körpergewichtsdaten für 28 verschiedene Säugetierarten enthält.\n\n3.1.1 Datenquelle und Charakteristika\nDer Datensatz wurde ursprünglich von Weisberg (1980) zusammengestellt und enthält Messungen von verschiedenen Wirbeltierarten. Die Daten umfassen sowohl terrestrische als auch aquatische Säugetiere mit einem breiten Spektrum von Körpergewichten.\n\n\n3.1.2 Datenqualität und Limitationen\nEinige Messungen stammen aus älteren Studien und könnten methodische Ungenauigkeiten aufweisen. Besonders bei sehr grossen Tieren wie Elefanten können die Gehirngewichte schwer präzise zu bestimmen sein."
   },
   {
     "objectID": "template.html#statistische-analyse",
     "href": "template.html#statistische-analyse",
     "title": "Robuste Regression und Outlier Erkennung",
-    "section": "Statistische Analyse",
-    "text": "Statistische Analyse\nDie Daten wurden logarithmisch transformiert, um eine lineare Beziehung zu erhalten:\nlog(Gehirngewicht) = log(a) + b * log(Körpergewicht)\n\nTransformationsverfahren\nDie logarithmische Transformation ist bei allometrischen Beziehungen Standard, da sie Potenzgesetze in lineare Beziehungen überführt. Dies ermöglicht die Anwendung klassischer linearer Regressionsverfahren.\n\n\nModellvalidierung\nDie Residuen wurden auf Normalität und Homoskedastizität überprüft. Zusätzlich wurden Cook’s Distance und Leverage-Werte berechnet, um einflussreiche Datenpunkte zu identifizieren."
+    "section": "3.2 Statistische Analyse",
+    "text": "3.2 Statistische Analyse\nDie Daten wurden logarithmisch transformiert, um eine lineare Beziehung zu erhalten:\nlog(Gehirngewicht) = log(a) + b * log(Körpergewicht)\n\n3.2.1 Transformationsverfahren\nDie logarithmische Transformation ist bei allometrischen Beziehungen Standard, da sie Potenzgesetze in lineare Beziehungen überführt. Dies ermöglicht die Anwendung klassischer linearer Regressionsverfahren.\n\n\n3.2.2 Modellvalidierung\nDie Residuen wurden auf Normalität und Homoskedastizität überprüft. Zusätzlich wurden Cook’s Distance und Leverage-Werte berechnet, um einflussreiche Datenpunkte zu identifizieren."
   },
   {
     "objectID": "template.html#visualisierung",
     "href": "template.html#visualisierung",
     "title": "Robuste Regression und Outlier Erkennung",
-    "section": "Visualisierung",
-    "text": "Visualisierung\nScatterplots wurden erstellt, um die Beziehung zu visualisieren, sowohl auf ursprünglicher als auch auf logarithmischer Skala.\n\nGraphische Darstellung\nDie Visualisierungen umfassen sowohl die Rohdaten als auch die transformierten Daten mit Regressionsgerade und Konfidenzintervall.\n\n\nSoftware und Pakete\nAlle Analysen und Visualisierungen wurden in R durchgeführt unter Verwendung der Pakete ggplot2, MASS und dplyr."
+    "section": "3.3 Visualisierung",
+    "text": "3.3 Visualisierung\nScatterplots wurden erstellt, um die Beziehung zu visualisieren, sowohl auf ursprünglicher als auch auf logarithmischer Skala.\n\n3.3.1 Graphische Darstellung\nDie Visualisierungen umfassen sowohl die Rohdaten als auch die transformierten Daten mit Regressionsgerade und Konfidenzintervall.\n\n\n3.3.2 Software und Pakete\nAlle Analysen und Visualisierungen wurden in R durchgeführt unter Verwendung der Pakete ggplot2, MASS und dplyr."
   },
   {
     "objectID": "template.html#rohdaten",
     "href": "template.html#rohdaten",
     "title": "Robuste Regression und Outlier Erkennung",
-    "section": "Rohdaten",
-    "text": "Rohdaten\nDer vollständige MASS::Animals Datensatz mit allen 28 Säugetierarten:\n\nlibrary(MASS)\nlibrary(knitr)\ndata(Animals)\n\n# Add row names as a column and format nicely\nanimals_full &lt;- data.frame(\n  Art = rownames(Animals),\n  Körpergewicht_kg = Animals$body,\n  Gehirngewicht_g = Animals$brain,\n  Log_Körpergewicht = round(log10(Animals$body), 3),\n  Log_Gehirngewicht = round(log10(Animals$brain), 3)\n)\n\nkable(animals_full, row.names = FALSE)\n\n\n\nTabelle 3: Vollständige Rohdaten des MASS::Animals Datensatzes\n\n\n\n\n\n\n\n\n\n\n\n\n\nArt\nKörpergewicht_kg\nGehirngewicht_g\nLog_Körpergewicht\nLog_Gehirngewicht\n\n\n\n\nMountain beaver\n1.350\n8.1\n0.130\n0.908\n\n\nCow\n465.000\n423.0\n2.667\n2.626\n\n\nGrey wolf\n36.330\n119.5\n1.560\n2.077\n\n\nGoat\n27.660\n115.0\n1.442\n2.061\n\n\nGuinea pig\n1.040\n5.5\n0.017\n0.740\n\n\nDipliodocus\n11700.000\n50.0\n4.068\n1.699\n\n\nAsian elephant\n2547.000\n4603.0\n3.406\n3.663\n\n\nDonkey\n187.100\n419.0\n2.272\n2.622\n\n\nHorse\n521.000\n655.0\n2.717\n2.816\n\n\nPotar monkey\n10.000\n115.0\n1.000\n2.061\n\n\nCat\n3.300\n25.6\n0.519\n1.408\n\n\nGiraffe\n529.000\n680.0\n2.723\n2.833\n\n\nGorilla\n207.000\n406.0\n2.316\n2.609\n\n\nHuman\n62.000\n1320.0\n1.792\n3.121\n\n\nAfrican elephant\n6654.000\n5712.0\n3.823\n3.757\n\n\nTriceratops\n9400.000\n70.0\n3.973\n1.845\n\n\nRhesus monkey\n6.800\n179.0\n0.833\n2.253\n\n\nKangaroo\n35.000\n56.0\n1.544\n1.748\n\n\nGolden hamster\n0.120\n1.0\n-0.921\n0.000\n\n\nMouse\n0.023\n0.4\n-1.638\n-0.398\n\n\nRabbit\n2.500\n12.1\n0.398\n1.083\n\n\nSheep\n55.500\n175.0\n1.744\n2.243\n\n\nJaguar\n100.000\n157.0\n2.000\n2.196\n\n\nChimpanzee\n52.160\n440.0\n1.717\n2.643\n\n\nRat\n0.280\n1.9\n-0.553\n0.279\n\n\nBrachiosaurus\n87000.000\n154.5\n4.940\n2.189\n\n\nMole\n0.122\n3.0\n-0.914\n0.477\n\n\nPig\n192.000\n180.0\n2.283\n2.255\n\n\n\n\n\n\n\n\n\nDatenquelle und -qualität\nDie Daten stammen aus verschiedenen Quellen und wurden über mehrere Jahrzehnte zusammengetragen. Einige Besonderheiten der Datensammlung:\n\nAfrikanischer Elefant: Mit 6654 kg Körpergewicht und 5712 g Gehirngewicht das grösste Säugetier in der Stichprobe\nSpitzmaus: Das kleinste Säugetier mit nur 0.004 kg Körpergewicht und 0.14 g Gehirngewicht\nMensch: Zeigt mit 1320 g Gehirngewicht bei 62 kg Körpergewicht eine deutliche positive Abweichung von der allometrischen Beziehung\nPrimaten generell: Schimpanse, Gorilla und Rhesusaffe zeigen alle überdurchschnittlich grosse Gehirne\n\n\n\nAusreisser-Analyse\n\nmodel &lt;- lm(log(brain) ~ log(body), data = Animals)\nresiduals_df &lt;- data.frame(\n  Art = rownames(Animals),\n  Fitted = fitted(model),\n  Residuals = residuals(model),\n  Body = Animals$body\n)\n\nlibrary(ggplot2)\nggplot(residuals_df, aes(x = Fitted, y = Residuals, label = Art)) +\n  geom_point(size = 3, alpha = 0.7, color = \"darkblue\") +\n  geom_hline(yintercept = 0, color = \"red\", linetype = \"dashed\") +\n  geom_text(aes(label = ifelse(abs(Residuals) &gt; 0.5, Art, \"\")), \n            vjust = -0.5, hjust = 0.5, size = 3) +\n  labs(\n    x = \"Angepasste Werte (log scale)\",\n    y = \"Residuen\",\n    title = \"Residuen vs. Angepasste Werte\"\n  ) +\n  theme_minimal()\n\n\n\n\n\n\n\nAbbildung 2: Residuen der logarithmischen Regression zur Identifikation von Ausreissern"
+    "section": "6.1 Rohdaten",
+    "text": "6.1 Rohdaten\nDer vollständige MASS::Animals Datensatz mit allen 28 Säugetierarten:\n\n\n\n\nTabelle 3: Vollständige Rohdaten des MASS::Animals Datensatzes\n\n\n\n\n\n\n\n\n\n\n\n\n\nArt\nKörpergewicht_kg\nGehirngewicht_g\nLog_Körpergewicht\nLog_Gehirngewicht\n\n\n\n\nMountain beaver\n1.350\n8.1\n0.130\n0.908\n\n\nCow\n465.000\n423.0\n2.667\n2.626\n\n\nGrey wolf\n36.330\n119.5\n1.560\n2.077\n\n\nGoat\n27.660\n115.0\n1.442\n2.061\n\n\nGuinea pig\n1.040\n5.5\n0.017\n0.740\n\n\nDipliodocus\n11700.000\n50.0\n4.068\n1.699\n\n\nAsian elephant\n2547.000\n4603.0\n3.406\n3.663\n\n\nDonkey\n187.100\n419.0\n2.272\n2.622\n\n\nHorse\n521.000\n655.0\n2.717\n2.816\n\n\nPotar monkey\n10.000\n115.0\n1.000\n2.061\n\n\nCat\n3.300\n25.6\n0.519\n1.408\n\n\nGiraffe\n529.000\n680.0\n2.723\n2.833\n\n\nGorilla\n207.000\n406.0\n2.316\n2.609\n\n\nHuman\n62.000\n1320.0\n1.792\n3.121\n\n\nAfrican elephant\n6654.000\n5712.0\n3.823\n3.757\n\n\nTriceratops\n9400.000\n70.0\n3.973\n1.845\n\n\nRhesus monkey\n6.800\n179.0\n0.833\n2.253\n\n\nKangaroo\n35.000\n56.0\n1.544\n1.748\n\n\nGolden hamster\n0.120\n1.0\n-0.921\n0.000\n\n\nMouse\n0.023\n0.4\n-1.638\n-0.398\n\n\nRabbit\n2.500\n12.1\n0.398\n1.083\n\n\nSheep\n55.500\n175.0\n1.744\n2.243\n\n\nJaguar\n100.000\n157.0\n2.000\n2.196\n\n\nChimpanzee\n52.160\n440.0\n1.717\n2.643\n\n\nRat\n0.280\n1.9\n-0.553\n0.279\n\n\nBrachiosaurus\n87000.000\n154.5\n4.940\n2.189\n\n\nMole\n0.122\n3.0\n-0.914\n0.477\n\n\nPig\n192.000\n180.0\n2.283\n2.255\n\n\n\n\n\n\n\n\n\n6.1.1 Datenquelle und -qualität\nDie Daten stammen aus verschiedenen Quellen und wurden über mehrere Jahrzehnte zusammengetragen. Einige Besonderheiten der Datensammlung:\n\nAfrikanischer Elefant: Mit 6654 kg Körpergewicht und 5712 g Gehirngewicht das grösste Säugetier in der Stichprobe\nSpitzmaus: Das kleinste Säugetier mit nur 0.004 kg Körpergewicht und 0.14 g Gehirngewicht\nMensch: Zeigt mit 1320 g Gehirngewicht bei 62 kg Körpergewicht eine deutliche positive Abweichung von der allometrischen Beziehung\nPrimaten generell: Schimpanse, Gorilla und Rhesusaffe zeigen alle überdurchschnittlich grosse Gehirne\n\n\n\n6.1.2 Ausreisser-Analyse\n\n\n\n\n\n\n\n\nAbbildung 2: Residuen der logarithmischen Regression zur Identifikation von Ausreissern"
   },
   {
     "objectID": "template.html#statistische-outputs",
     "href": "template.html#statistische-outputs",
     "title": "Robuste Regression und Outlier Erkennung",
-    "section": "Statistische Outputs",
-    "text": "Statistische Outputs\n\nVollständige Regressionsanalyse\n\nmodel &lt;- lm(log(brain) ~ log(body), data = Animals)\nsummary_full &lt;- summary(model)\n\n# Create comprehensive statistics table\nregression_stats &lt;- data.frame(\n  Statistik = c(\"Multiple R-squared\", \"Adjusted R-squared\", \"F-statistic\", \n                \"F p-value\", \"Residual standard error\", \"Degrees of freedom\"),\n  Wert = c(\n    round(summary_full$r.squared, 4),\n    round(summary_full$adj.r.squared, 4),\n    round(summary_full$fstatistic[1], 2),\n    ifelse(pf(summary_full$fstatistic[1], summary_full$fstatistic[2], \n             summary_full$fstatistic[3], lower.tail = FALSE) &lt; 0.001, \n           \"&lt; 0.001\", \n           round(pf(summary_full$fstatistic[1], summary_full$fstatistic[2], \n                    summary_full$fstatistic[3], lower.tail = FALSE), 4)),\n    round(summary_full$sigma, 4),\n    paste(summary_full$df[2], \"on\", summary_full$df[1], \"DF\")\n  )\n)\n\nkable(regression_stats)\n\n\n\nTabelle 4: Detaillierte Regressionsstatistiken\n\n\n\n\n\n\nStatistik\nWert\n\n\n\n\nMultiple R-squared\n0.6076\n\n\nAdjusted R-squared\n0.5925\n\n\nF-statistic\n40.26\n\n\nF p-value\n&lt; 0.001\n\n\nResidual standard error\n1.5316\n\n\nDegrees of freedom\n26 on 2 DF\n\n\n\n\n\n\n\n\n\n\nKoeffizienten mit Konfidenzintervallen\n\ncoef_table &lt;- data.frame(\n  Parameter = c(\"Intercept (log a)\", \"Steigung (b)\"),\n  Schätzung = round(coef(model), 4),\n  Standardfehler = round(summary_full$coefficients[,2], 4),\n  t_Wert = round(summary_full$coefficients[,3], 3),\n  p_Wert = ifelse(summary_full$coefficients[,4] &lt; 0.001, \"&lt; 0.001\", \n                  round(summary_full$coefficients[,4], 4)),\n  CI_2.5 = round(confint(model)[,1], 4),\n  CI_97.5 = round(confint(model)[,2], 4)\n)\n\nkable(coef_table)\n\n\n\nTabelle 5: Regressionskoeffizienten mit 95% Konfidenzintervallen\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\nSchätzung\nStandardfehler\nt_Wert\np_Wert\nCI_2.5\nCI_97.5\n\n\n\n\n(Intercept)\nIntercept (log a)\n2.5549\n0.4131\n6.184\n&lt; 0.001\n1.7057\n3.4041\n\n\nlog(body)\nSteigung (b)\n0.4960\n0.0782\n6.345\n&lt; 0.001\n0.3353\n0.6567\n\n\n\n\n\n\n\n\n\n\nModelldiagnostik\n\npar(mfrow = c(2, 2))\nplot(model, which = 1:4, caption = c(\"Residuen vs. Angepasste Werte\", \n                                     \"Q-Q Plot der Residuen\",\n                                     \"Scale-Location Plot\", \n                                     \"Residuen vs. Leverage\"))\npar(mfrow = c(1, 1))\n\n\n\n\n\n\n\nAbbildung 3: Diagnostische Plots für die Regressionsanalyse"
-  },
-  {
-    "objectID": "getting-started.html",
-    "href": "getting-started.html",
-    "title": "Getting started",
-    "section": "",
-    "text": "Getting started\nTo install the extension use the command:\nquarto use template zhaw-lsfm/quarto-thesis\nThis will install the format extension and create an example qmd file that you can use as a starting place for your document. The example qmd will have the same name as the parent folder. For example, if your the parent folder is called PA2, the template will be named PA2.qmd. To preview a pdf version of this file, run:\nquarto preview PA2.qmd\nThis will use typst to render a submittable PDF of your thesis. Typst is very fast. If your document becomes large and you feel typst is too slow, we recommend using the html output for previewing your text, and only using typst from time to time. To render a html version of your thesis, you run the command with the --to argument:\nquarto preview PA2.qmd --to html\nIf you are new to quarto: We’ve prepared a guide to getting started with Quarto, which starts and the basics and ends with you using this zhaw-lsfm template. The course is available here:\nhttps://zhaw-adls.github.io/PA2-Quarto-Typst"
+    "section": "6.2 Statistische Outputs",
+    "text": "6.2 Statistische Outputs\n\n6.2.1 Vollständige Regressionsanalyse\n\n\n\n\nTabelle 4: Detaillierte Regressionsstatistiken\n\n\n\n\n\n\nStatistik\nWert\n\n\n\n\nMultiple R-squared\n0.6076\n\n\nAdjusted R-squared\n0.5925\n\n\nF-statistic\n40.26\n\n\nF p-value\n&lt; 0.001\n\n\nResidual standard error\n1.5316\n\n\nDegrees of freedom\n26 on 2 DF\n\n\n\n\n\n\n\n\n\n\n6.2.2 Koeffizienten mit Konfidenzintervallen\n\n\n\n\nTabelle 5: Regressionskoeffizienten mit 95% Konfidenzintervallen\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\nSchätzung\nStandardfehler\nt_Wert\np_Wert\nCI_2.5\nCI_97.5\n\n\n\n\n(Intercept)\nIntercept (log a)\n2.5549\n0.4131\n6.184\n&lt; 0.001\n1.7057\n3.4041\n\n\nlog(body)\nSteigung (b)\n0.4960\n0.0782\n6.345\n&lt; 0.001\n0.3353\n0.6567\n\n\n\n\n\n\n\n\n\n\n6.2.3 Modelldiagnostik\n\n\n\n\n\n\n\n\nAbbildung 3: Diagnostische Plots für die Regressionsanalyse"
   },
   {
     "objectID": "CLAUDE.html",
     "href": "CLAUDE.html",
     "title": "CLAUDE.md",
     "section": "",
-    "text": "This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.\n\n\nThis is a Quarto-Typst template for ZHAW LSFM (Zurich University of Applied Sciences) academic documents. The template provides institutional branding, proper formatting, and automated document structure generation for student theses and academic papers.\n\n\n\n\n\n# Render main template example to all formats\nquarto render template.qmd\n\n# Render specific format\nquarto render template.qmd --to zhaw-lsfm-typst\nquarto render template.qmd --to html\n\n# Render index documentation\nquarto render index.qmd\n\n\n\n# Preview with live reload\nquarto preview template.qmd\n\n# Check extension installation\nquarto list extensions\n\n# Install/reinstall extension locally during development\nquarto install extension . --no-prompt\n\n\n\n\n\n\n_extensions/zhaw-lsfm/\n├── typst-template.typ     # Main Typst template with ZHAW formatting\n├── typst-show.typ         # YAML metadata mapping to Typst\n├── _extension.yml         # Extension configuration\n├── shortcodes.lua         # Document structure shortcodes\n├── class-filter.lua       # .hidden class expansion\n├── pagebreak-filter.lua   # Automatic page breaks\n└── fonts/                 # Custom font directory\n\n\n\n\nInstitutional branding: Automatic ZHAW headers, title page, and imprint generation\nDocument structure: Shortcodes for TOC, figure/table lists, references\nMetadata-driven: Extensive YAML frontmatter support for thesis information\nLanguage support: German/English automatic text generation\nFont handling: Arial default with fallback cascade and local font support\n\n\n\n\n\ntemplate.qmd: Example thesis document with full YAML metadata\nindex.qmd: Documentation and feature demonstration\n_extension.yml: Extension configuration with format settings and filters\n\n\n\n\nThe template uses a filter pipeline: 1. class-filter.lua: Expands .hidden to .unnumbered .unlisted 2. pagebreak-filter.lua: Adds page breaks before major sections 3. Quarto’s built-in Typst processing\n\n\n\nUnified `"
+    "text": "This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.\n\n\nThis is the template repository for the ZHAW LSFM Quarto-Typst template.\nRepository Structure: - Extension (_extensions/zhaw-lsfm/) - Template scaffolding (template.qmd) - Minimal landing page (index.qmd)\nFull documentation is maintained separately at: - Repository: https://github.com/zhaw-lsfm/quarto-thesis-docs - Website: https://zhaw-lsfm.github.io/quarto-thesis-docs\n\n\n\n\n\n# Render template to all formats\nquarto render template.qmd\n\n# Specific formats\nquarto render template.qmd --to zhaw-lsfm-typst\nquarto render template.qmd --to html\n\n# Preview\nquarto preview template.qmd\n\n\n\n# Render landing page and demos\nquarto render index.qmd\nquarto render template.qmd\n\n# Publish to GitHub Pages\nquarto publish gh-pages\n\n\n\n# Test in clean directory\nmkdir ../test-install && cd ../test-install\nquarto use template zhaw-lsfm/quarto-thesis\n\n# Verify installed files\nls -la\n\n\n\n\n\n\nServes two purposes: 1. Quarto Extension - Students install via quarto use template 2. Landing Page - Quick start info at https://zhaw-lsfm.github.io/quarto-thesis\n\n\n\nContains: - Full user manual - ZHAW requirements - Developer guides - Getting started tutorials\n\n\n\n_extensions/zhaw-lsfm/\n├── typst-template.typ     # Main Typst template with ZHAW formatting\n├── typst-show.typ         # YAML metadata mapping to Typst\n├── _extension.yml         # Extension configuration\n├── shortcodes.lua         # Document structure shortcodes\n├── pagebreak-filter.lua   # Automatic page breaks\n└── fonts/                 # Custom font directory\n\n\n\n\nInstitutional branding: Automatic ZHAW headers, title page, and imprint generation\nDocument structure: Shortcodes for TOC, figure/table lists, references\nMetadata-driven: Extensive YAML frontmatter support for thesis information\nLanguage support: German/English automatic text generation\nFont handling: Arial default with fallback cascade and local font support\n\n\n\n\nThe template uses a filter pipeline: 1. pagebreak-filter.lua: Adds page breaks before major sections 2. Quarto’s built-in Typst processing\n\n\n\nUnified `"
   },
   {
     "objectID": "CLAUDE.html#project-overview",
     "href": "CLAUDE.html#project-overview",
     "title": "CLAUDE.md",
     "section": "",
-    "text": "This is a Quarto-Typst template for ZHAW LSFM (Zurich University of Applied Sciences) academic documents. The template provides institutional branding, proper formatting, and automated document structure generation for student theses and academic papers."
+    "text": "This is the template repository for the ZHAW LSFM Quarto-Typst template.\nRepository Structure: - Extension (_extensions/zhaw-lsfm/) - Template scaffolding (template.qmd) - Minimal landing page (index.qmd)\nFull documentation is maintained separately at: - Repository: https://github.com/zhaw-lsfm/quarto-thesis-docs - Website: https://zhaw-lsfm.github.io/quarto-thesis-docs"
   },
   {
     "objectID": "CLAUDE.html#common-development-commands",
     "href": "CLAUDE.html#common-development-commands",
     "title": "CLAUDE.md",
     "section": "",
-    "text": "# Render main template example to all formats\nquarto render template.qmd\n\n# Render specific format\nquarto render template.qmd --to zhaw-lsfm-typst\nquarto render template.qmd --to html\n\n# Render index documentation\nquarto render index.qmd\n\n\n\n# Preview with live reload\nquarto preview template.qmd\n\n# Check extension installation\nquarto list extensions\n\n# Install/reinstall extension locally during development\nquarto install extension . --no-prompt"
+    "text": "# Render template to all formats\nquarto render template.qmd\n\n# Specific formats\nquarto render template.qmd --to zhaw-lsfm-typst\nquarto render template.qmd --to html\n\n# Preview\nquarto preview template.qmd\n\n\n\n# Render landing page and demos\nquarto render index.qmd\nquarto render template.qmd\n\n# Publish to GitHub Pages\nquarto publish gh-pages\n\n\n\n# Test in clean directory\nmkdir ../test-install && cd ../test-install\nquarto use template zhaw-lsfm/quarto-thesis\n\n# Verify installed files\nls -la"
   },
   {
     "objectID": "CLAUDE.html#architecture-overview",
     "href": "CLAUDE.html#architecture-overview",
     "title": "CLAUDE.md",
     "section": "",
-    "text": "_extensions/zhaw-lsfm/\n├── typst-template.typ     # Main Typst template with ZHAW formatting\n├── typst-show.typ         # YAML metadata mapping to Typst\n├── _extension.yml         # Extension configuration\n├── shortcodes.lua         # Document structure shortcodes\n├── class-filter.lua       # .hidden class expansion\n├── pagebreak-filter.lua   # Automatic page breaks\n└── fonts/                 # Custom font directory\n\n\n\n\nInstitutional branding: Automatic ZHAW headers, title page, and imprint generation\nDocument structure: Shortcodes for TOC, figure/table lists, references\nMetadata-driven: Extensive YAML frontmatter support for thesis information\nLanguage support: German/English automatic text generation\nFont handling: Arial default with fallback cascade and local font support\n\n\n\n\n\ntemplate.qmd: Example thesis document with full YAML metadata\nindex.qmd: Documentation and feature demonstration\n_extension.yml: Extension configuration with format settings and filters\n\n\n\n\nThe template uses a filter pipeline: 1. class-filter.lua: Expands .hidden to .unnumbered .unlisted 2. pagebreak-filter.lua: Adds page breaks before major sections 3. Quarto’s built-in Typst processing\n\n\n\nUnified `"
+    "text": "Serves two purposes: 1. Quarto Extension - Students install via quarto use template 2. Landing Page - Quick start info at https://zhaw-lsfm.github.io/quarto-thesis\n\n\n\nContains: - Full user manual - ZHAW requirements - Developer guides - Getting started tutorials\n\n\n\n_extensions/zhaw-lsfm/\n├── typst-template.typ     # Main Typst template with ZHAW formatting\n├── typst-show.typ         # YAML metadata mapping to Typst\n├── _extension.yml         # Extension configuration\n├── shortcodes.lua         # Document structure shortcodes\n├── pagebreak-filter.lua   # Automatic page breaks\n└── fonts/                 # Custom font directory\n\n\n\n\nInstitutional branding: Automatic ZHAW headers, title page, and imprint generation\nDocument structure: Shortcodes for TOC, figure/table lists, references\nMetadata-driven: Extensive YAML frontmatter support for thesis information\nLanguage support: German/English automatic text generation\nFont handling: Arial default with fallback cascade and local font support\n\n\n\n\nThe template uses a filter pipeline: 1. pagebreak-filter.lua: Adds page breaks before major sections 2. Quarto’s built-in Typst processing\n\n\n\nUnified `"
   },
   {
-    "objectID": "for-devs.html",
-    "href": "for-devs.html",
-    "title": "Developer Information",
+    "objectID": "Readme.html",
+    "href": "Readme.html",
+    "title": "ZHAW LSFM Thesis Template",
     "section": "",
-    "text": "This repository serves three purposes simultaneously:\n\nQuarto Extension (_extensions/) - The actual extension students will install\nTemplate Scaffolding (template.qmd) - Example document that students will automatically receive if they install the extension\nInformation Website (_quarto.yml, index.qmd, manual.qmd, getting-started.qmd) - Documentation site including:\n\nUsage instructions\nDemo of rendered template (from template.qmd)\nZHAW requirements specification (zhaw-requirements.qmd)\n\n\n\n\nTo make changes to the extension / template scaffolding, change the relevant files (template.qmd for the scaffolding, _extensions/ for the extension). Then, git add / commit / push the changes if you are a repo owner or make a pull request if you are not.\nStudents will use the template with the following command:\nquarto use template zhaw-lsfm/quarto-thesis\nThis will:\n\nInstall the extension\nProvide the students with template.qmd (which is renamed to the parent directory name)\nProvide the students with all files in the repo which are not mentioned in .quartoignore. Most files in the repo are not relevant to the student, so most files are listed in quarto ignore. Currently, .quartoignore includes:\n\n\n\n*.pdf\n_book\n_site\ntitlepage.png\ngliederung.png\n*.Rproj\nindex.qmd\nmanual.qmd\nzhaw-requirements.qmd\ngetting-started.qmd\nReadme.md\nCLAUDE.md\n_quarto.yml\n\n\n\n\n\nTo contribute information to the website:\n\nChange the relevant files (e.g. _quarto.yml, index.qmd, manual.qmd, getting-started.qmd) and add / commit / push the changes. This will only update the git repo\nTo update the hosted website, run quarto publish\n\nThe website is published at: https://zhaw-lsfm.github.io/quarto-thesis"
+    "text": "A Quarto template implementing ZHAW LSFM thesis formatting guidelines using Typst.\n\n\nquarto use template zhaw-lsfm/quarto-thesis\n\n\n\nFull documentation: https://zhaw-lsfm.github.io/quarto-thesis-docs\n\n\n\n\n_extensions/zhaw-lsfm/ - Quarto extension\ntemplate.qmd - Example thesis document\nSupporting files (bibliography, cover image)\n\n\n\n\n\nLive Demo (PDF)\nLive Demo (HTML)\nDocumentation Site\nDocumentation Repository"
   },
   {
-    "objectID": "for-devs.html#quarto-extension-template-scaffolding",
-    "href": "for-devs.html#quarto-extension-template-scaffolding",
-    "title": "Developer Information",
+    "objectID": "Readme.html#installation",
+    "href": "Readme.html#installation",
+    "title": "ZHAW LSFM Thesis Template",
     "section": "",
-    "text": "To make changes to the extension / template scaffolding, change the relevant files (template.qmd for the scaffolding, _extensions/ for the extension). Then, git add / commit / push the changes if you are a repo owner or make a pull request if you are not.\nStudents will use the template with the following command:\nquarto use template zhaw-lsfm/quarto-thesis\nThis will:\n\nInstall the extension\nProvide the students with template.qmd (which is renamed to the parent directory name)\nProvide the students with all files in the repo which are not mentioned in .quartoignore. Most files in the repo are not relevant to the student, so most files are listed in quarto ignore. Currently, .quartoignore includes:\n\n\n\n*.pdf\n_book\n_site\ntitlepage.png\ngliederung.png\n*.Rproj\nindex.qmd\nmanual.qmd\nzhaw-requirements.qmd\ngetting-started.qmd\nReadme.md\nCLAUDE.md\n_quarto.yml"
+    "text": "quarto use template zhaw-lsfm/quarto-thesis"
   },
   {
-    "objectID": "for-devs.html#information-website",
-    "href": "for-devs.html#information-website",
-    "title": "Developer Information",
+    "objectID": "Readme.html#documentation",
+    "href": "Readme.html#documentation",
+    "title": "ZHAW LSFM Thesis Template",
     "section": "",
-    "text": "To contribute information to the website:\n\nChange the relevant files (e.g. _quarto.yml, index.qmd, manual.qmd, getting-started.qmd) and add / commit / push the changes. This will only update the git repo\nTo update the hosted website, run quarto publish\n\nThe website is published at: https://zhaw-lsfm.github.io/quarto-thesis"
+    "text": "Full documentation: https://zhaw-lsfm.github.io/quarto-thesis-docs"
   },
   {
-    "objectID": "zhaw-requirements.html",
-    "href": "zhaw-requirements.html",
-    "title": "ZHAW Requirements",
+    "objectID": "Readme.html#repository-structure",
+    "href": "Readme.html#repository-structure",
+    "title": "ZHAW LSFM Thesis Template",
     "section": "",
-    "text": "Here is a summary of the requirements in German. You can download the original documents here:\n\nAbfassung Studentischer Arbeiten (2024)\nWriting Student Assignments (2024)\n\n\n\n\nDer Text soll einheitlich formatiert werden und vorzugsweise mit einer Schrift wie z.B. Arial 11pt und mit Zeilenabstand max. 1.5. abgefasst werden.\n\n\n\n\n\nDie Titelseite ist gemäss Muster auszuführen (siehe Anhang 2).\n\nAnhang 2 ist in Figure 1 ersichtlich\n\n\n\n\n\n\nFigure 1: Titelseite (ohne ZHAW-logo)\n\n\n\n\nAuf der Rückseite des Titelblatts soll ein Impressum mit folgendem Inhalt eingefügt werden: Schlagworte (keywords), Zitiervorschlag, Name des Instituts.\n\n\n\n\n\nIn der Kopfzeile können die folgenden Angaben gemacht werden: ZHAW LSFM, Art der Arbeit, Autor/in; in der Fusszeile wird die Seitenzahl angegeben.\n\nThe header appears on all content pages (after imprint) with three columns: - Left: “ZHAW LSFM” - Center: thesis-type (from YAML metadata)\n- Right: author(s) (from YAML metadata)\nThe footer contains page numbers as required.\n\n\n\n\nAlle Abbildungen (Grafiken, Diagramme, Fotografien usw.) und Tabellen werden fortlaufend nummeriert und müssen eine erklärende Anschrift (Bildlegende) haben. Abbildungen werden dabei unten, Tabellen oben beschriftet, die Bezeichnung lautet Abbildung (Abb.) bzw. Tabelle (Tab.).\n\n\nFolgende Gliederung für wissenschaftliche Arbeiten hat sich bewährt und soll grundsätzlich eingehalten werden. Je nach Art oder Thema der Arbeit (z.B. Literaturarbeit, betriebswirtschaftliche Themen u.a.) sind nach Absprache mit den Fachkorrigierenden Abweichungen von dieser Gliederung sinnvoll.\n\n(siehe Figure 2)\n\n\n\n\nFür die nummerierten Kapitel und Unterkapitel ist die Dezimalnummerierung anzuwenden (Beispiel: 3, 3.1, 3.2, 3.2.1, 3.2.2 usw.). Mehr als 3 Gliederungsebenen pro Hauptkapitel sind unübersichtlich.\n\n\n\n\n\n\n\nFigure 2\n\n\n\n\n\n\n\nNormalerweise werden Seiten- und Kapitelnummerierung im Anhang nicht fortgesetzt.\nBesteht ein Anhang aus mehreren Teilen, so werden diese mit Anhang A, Anhang B etc. oder mit Anhang 1, Anhang 2 etc. bezeichnet. Auf die Anhänge soll im Text verwiesen werden. Zu Beginn des Anhangs muss ein Anhangsverzeichnis eingeordnet werden.\n\n\n\n\n\n\n\nNoteTodo: not yet implemented\n\n\n\nI would like to implement #sec-appendix, and similarly #sec-abstract which all use the default values (unnumbered unlisted for abstract, unnumbered for appendix with automatic removal of page nubmering)\n\n\n\n\n\nAPA (7th ed.)\n\n\n\n\n\n\n\nNoteTodo:\n\n\n\nEither implement numerical citatations or highight this drawback (if there is one) in the documentation"
+    "text": "_extensions/zhaw-lsfm/ - Quarto extension\ntemplate.qmd - Example thesis document\nSupporting files (bibliography, cover image)"
   },
   {
-    "objectID": "zhaw-requirements.html#text",
-    "href": "zhaw-requirements.html#text",
-    "title": "ZHAW Requirements",
+    "objectID": "Readme.html#links",
+    "href": "Readme.html#links",
+    "title": "ZHAW LSFM Thesis Template",
     "section": "",
-    "text": "Der Text soll einheitlich formatiert werden und vorzugsweise mit einer Schrift wie z.B. Arial 11pt und mit Zeilenabstand max. 1.5. abgefasst werden."
-  },
-  {
-    "objectID": "zhaw-requirements.html#titlepage-and-imprint",
-    "href": "zhaw-requirements.html#titlepage-and-imprint",
-    "title": "ZHAW Requirements",
-    "section": "",
-    "text": "Die Titelseite ist gemäss Muster auszuführen (siehe Anhang 2).\n\nAnhang 2 ist in Figure 1 ersichtlich\n\n\n\n\n\n\nFigure 1: Titelseite (ohne ZHAW-logo)\n\n\n\n\nAuf der Rückseite des Titelblatts soll ein Impressum mit folgendem Inhalt eingefügt werden: Schlagworte (keywords), Zitiervorschlag, Name des Instituts."
-  },
-  {
-    "objectID": "zhaw-requirements.html#header-footer",
-    "href": "zhaw-requirements.html#header-footer",
-    "title": "ZHAW Requirements",
-    "section": "",
-    "text": "In der Kopfzeile können die folgenden Angaben gemacht werden: ZHAW LSFM, Art der Arbeit, Autor/in; in der Fusszeile wird die Seitenzahl angegeben.\n\nThe header appears on all content pages (after imprint) with three columns: - Left: “ZHAW LSFM” - Center: thesis-type (from YAML metadata)\n- Right: author(s) (from YAML metadata)\nThe footer contains page numbers as required."
-  },
-  {
-    "objectID": "zhaw-requirements.html#figure-table-numbering-and-captions",
-    "href": "zhaw-requirements.html#figure-table-numbering-and-captions",
-    "title": "ZHAW Requirements",
-    "section": "",
-    "text": "Alle Abbildungen (Grafiken, Diagramme, Fotografien usw.) und Tabellen werden fortlaufend nummeriert und müssen eine erklärende Anschrift (Bildlegende) haben. Abbildungen werden dabei unten, Tabellen oben beschriftet, die Bezeichnung lautet Abbildung (Abb.) bzw. Tabelle (Tab.).\n\n\nFolgende Gliederung für wissenschaftliche Arbeiten hat sich bewährt und soll grundsätzlich eingehalten werden. Je nach Art oder Thema der Arbeit (z.B. Literaturarbeit, betriebswirtschaftliche Themen u.a.) sind nach Absprache mit den Fachkorrigierenden Abweichungen von dieser Gliederung sinnvoll.\n\n(siehe Figure 2)"
-  },
-  {
-    "objectID": "zhaw-requirements.html#sec-chapter-numbering",
-    "href": "zhaw-requirements.html#sec-chapter-numbering",
-    "title": "ZHAW Requirements",
-    "section": "",
-    "text": "Für die nummerierten Kapitel und Unterkapitel ist die Dezimalnummerierung anzuwenden (Beispiel: 3, 3.1, 3.2, 3.2.1, 3.2.2 usw.). Mehr als 3 Gliederungsebenen pro Hauptkapitel sind unübersichtlich.\n\n\n\n\n\n\n\nFigure 2"
-  },
-  {
-    "objectID": "zhaw-requirements.html#appendix",
-    "href": "zhaw-requirements.html#appendix",
-    "title": "ZHAW Requirements",
-    "section": "",
-    "text": "Normalerweise werden Seiten- und Kapitelnummerierung im Anhang nicht fortgesetzt.\nBesteht ein Anhang aus mehreren Teilen, so werden diese mit Anhang A, Anhang B etc. oder mit Anhang 1, Anhang 2 etc. bezeichnet. Auf die Anhänge soll im Text verwiesen werden. Zu Beginn des Anhangs muss ein Anhangsverzeichnis eingeordnet werden.\n\n\n\n\n\n\n\nNoteTodo: not yet implemented\n\n\n\nI would like to implement #sec-appendix, and similarly #sec-abstract which all use the default values (unnumbered unlisted for abstract, unnumbered for appendix with automatic removal of page nubmering)\n\n\n\n\n\nAPA (7th ed.)\n\n\n\n\n\n\n\nNoteTodo:\n\n\n\nEither implement numerical citatations or highight this drawback (if there is one) in the documentation"
+    "text": "Live Demo (PDF)\nLive Demo (HTML)\nDocumentation Site\nDocumentation Repository"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "ZHAW LSFM Thesis Template",
     "section": "",
-    "text": "This quarto template implements the guidelines and requirements for student theses at ZHAW LSFM as described in Abfassung Studentischer Arbeiten (2024) (german) and Writing Student Assignments (2024) (english). These guidelines are summarized here.\nIt is uses the Typst typesetting system for high-quality and fast rendering of PDF output. The template tries to be minimalistic. You won’t miss out on any features natively supported by quarto and typst, it simply adds the features required by ZHAW LSFM.\nFeatures:\n\nThe ability to enter all the required metadata in the YAML header of your quarto document. This metadata is used in various places throughout the document (see Manual)\nThe creation of the title page and imprint page according to ZHAW guidelines (this uses the metadata mentioned above)\nSettings the default values to match the ZHAW requirements: numbering type, font size, margins, etc. (see Manual)\nShortcodes to manually place the table of contents, list of figures, list of tables, and bibliography in the document (see Manual)\nClass shortcuts for removing a header numbering and removing it from the table of contents (see Manual).\nThe template also serves as a boilerplate for your thesis document, so you can get started quickly (bibtex included and a scaffold of the document structure)\n\n\n\n\n\n\n\nNoteTodo\n\n\n\n\nAdd the possibility to add callout todos, that can be hidden\nAdd text on the html version\nWrite about how quarto projects are not supported\n\n\n\n\n\n\n\nReferences\n\nAbfassung Studentischer Arbeiten. 2024. 5.1.1 ed. Life Sciences und Facility Management Stabsbereich Bildung.\n\n\nWriting Student Assignments. 2024. 5.1.1 ed. Life Sciences und Facility Management Stabsbereich Bildung."
+    "text": "Install the template with:\nquarto use template zhaw-lsfm/quarto-thesis\nThis will:\n\nInstall the zhaw-lsfm Quarto extension\nCreate a template document for your thesis\nSet up all required files (bibliography, cover image, etc.)"
   },
   {
-    "objectID": "manual.html",
-    "href": "manual.html",
-    "title": "Manual",
+    "objectID": "index.html#quick-start",
+    "href": "index.html#quick-start",
+    "title": "ZHAW LSFM Thesis Template",
     "section": "",
-    "text": "Here is a list of the metadata fields than can (and should) be used in the YAML header of your quarto document to make use of the features of this template.\nExisting fields from quarto that have an effect on the output:\n\n\n\n\n\n\n\nField\nDescription\n\n\n\n\ntitle\nTitle of the thesis\n\n\nsubtitle\nOptional subtitle\n\n\nkeywords\nOptional list of keywords for the titlepage\n\n\nlang\nLanguage of the thesis, only en or de supported\n\n\nbibliography\nthe .bib file containing bibtex entries\n\n\nauthor\nmultiple authors supported as a YAML list\n\n\n\nNote that switching the lang field will also change the language of some of the automatically generated text. For example, ZHAW will dieplayed as follows depending on the lang field:\n\nGerman (default): “ZÜRCHER HOCHSCHULE FÜR ANGEWANDTE WISSENSCHAFTEN”\nEnglish: “ZURICH UNIVERSITY OF APPLIED SCIENCES”\n\nAdditional fields provided by this template:\n\n\n\n\n\n\n\nField\nDescription\n\n\n\n\ninstitut\nin titlecase, e.g. “Institut für Umwelt und Natürliche Ressourcen”\n\n\nthesis-type\ne.g “Projektarbeit 2”\n\n\ndegree-type\ne.g. “Bachelorstudiengang”\n\n\nstudy-year\ne.g. “2009”\n\n\nsubmission-date\ne.g. “2024-12-15”\n\n\nstudy-direction\ne.g. “Umweltingenieurwesen”\n\n\nsupervisors\nwith title, name and affiliation\n\n\nconfidential\ntrue marks the thesis as confidential. default is false\n\n\ncover-image\noptional. Has configurable sizing options (see example below)\n\n\n\n\n\nBasic usage:\ncover-image:\n1  src: cover.png\n2  max-width: 100%\n3  max-height: 5cm\n\n1\n\nsrc: Path to the image file\n\n2\n\nMaximum width constraint (optional, default 100%)\n\n3\n\nMaximum height constraint (optional, default 5cm)\n\n\n\n\n\n\nThe template sets a number of default settings to match the ZHAW requirements. These include:\n1citeproc: true\n2section-numbering: \"1.1.\"\n3number-depth: 2\n4toc-depth: 2\n5toc: false\n6execute:\n7  echo: false\n8  warning: false\n9  error: true\n\n1\n\nUse Pandoc’s citation processing rather than typst’s built in style more information\n\n2\n\nNumber sections in the decimal style\n\n3\n\nOnly number the first two header levels\n\n4\n\nNumber of levels in the talbe of contents (toc)\n\n5\n\nDon’t render a toc automatically (we’ll do it manually using shortcodes, see below)\n\n6\n\nSets the cell execution options\n\n7\n\nDon’t show the chunk code in the document\n\n8\n\nDon’t show warnings from code chunks\n\n9\n\nDon’t stop the rendering process if an error occurs in the code chunk. Rather, just show the error in the output document\n\n\n\n\n\n\n\n\nNotetodo\n\n\n\nResolve how fonts are handled in quarto / typst.\n\nDefault: Arial 11pt (meets ZHAW requirements)\nBuilt-in fallbacks: Arial → Helvetica Neue → Helvetica → Liberation Sans → DejaVu Sans → Noto Sans\nEasy override: Set mainfont and fontsize in your YAML frontmatter\nExample override:\nmainfont: \"Times New Roman\"\nfontsize: 12pt\nLocal fonts: Place font files (.ttf/.otf) in _extensions/zhaw-lsfm/fonts/ directory for guaranteed availability\n\n\n\n\n\n\n\nTo insert a list of figures: {{&lt; list-of-figures &gt;}}\nTo insert a list of tables: {{&lt; list-of-tables &gt;}}\nTo insert a bibliography: {{&lt; references &gt;}}\nTo insert a table of contents: {{&lt; table-of-contents &gt;}}"
+    "text": "Install the template with:\nquarto use template zhaw-lsfm/quarto-thesis\nThis will:\n\nInstall the zhaw-lsfm Quarto extension\nCreate a template document for your thesis\nSet up all required files (bibliography, cover image, etc.)"
   },
   {
-    "objectID": "manual.html#sec-metadata",
-    "href": "manual.html#sec-metadata",
-    "title": "Manual",
-    "section": "",
-    "text": "Here is a list of the metadata fields than can (and should) be used in the YAML header of your quarto document to make use of the features of this template.\nExisting fields from quarto that have an effect on the output:\n\n\n\n\n\n\n\nField\nDescription\n\n\n\n\ntitle\nTitle of the thesis\n\n\nsubtitle\nOptional subtitle\n\n\nkeywords\nOptional list of keywords for the titlepage\n\n\nlang\nLanguage of the thesis, only en or de supported\n\n\nbibliography\nthe .bib file containing bibtex entries\n\n\nauthor\nmultiple authors supported as a YAML list\n\n\n\nNote that switching the lang field will also change the language of some of the automatically generated text. For example, ZHAW will dieplayed as follows depending on the lang field:\n\nGerman (default): “ZÜRCHER HOCHSCHULE FÜR ANGEWANDTE WISSENSCHAFTEN”\nEnglish: “ZURICH UNIVERSITY OF APPLIED SCIENCES”\n\nAdditional fields provided by this template:\n\n\n\n\n\n\n\nField\nDescription\n\n\n\n\ninstitut\nin titlecase, e.g. “Institut für Umwelt und Natürliche Ressourcen”\n\n\nthesis-type\ne.g “Projektarbeit 2”\n\n\ndegree-type\ne.g. “Bachelorstudiengang”\n\n\nstudy-year\ne.g. “2009”\n\n\nsubmission-date\ne.g. “2024-12-15”\n\n\nstudy-direction\ne.g. “Umweltingenieurwesen”\n\n\nsupervisors\nwith title, name and affiliation\n\n\nconfidential\ntrue marks the thesis as confidential. default is false\n\n\ncover-image\noptional. Has configurable sizing options (see example below)\n\n\n\n\n\nBasic usage:\ncover-image:\n1  src: cover.png\n2  max-width: 100%\n3  max-height: 5cm\n\n1\n\nsrc: Path to the image file\n\n2\n\nMaximum width constraint (optional, default 100%)\n\n3\n\nMaximum height constraint (optional, default 5cm)"
+    "objectID": "index.html#features",
+    "href": "index.html#features",
+    "title": "ZHAW LSFM Thesis Template",
+    "section": "Features",
+    "text": "Features\n\nAutomated ZHAW Formatting: Title page, imprint, headers, and margins per ZHAW guidelines\nFast PDF Rendering: Uses Typst typesetting system\nMetadata-Driven: Configure thesis details in YAML frontmatter\nDocument Structure Shortcodes: Easy placement of TOC, figure/table lists, references\nLanguage Support: German and English automatic text generation\nDual Output: High-quality PDF for submission, HTML for development preview"
   },
   {
-    "objectID": "manual.html#sec-defaults",
-    "href": "manual.html#sec-defaults",
-    "title": "Manual",
-    "section": "",
-    "text": "The template sets a number of default settings to match the ZHAW requirements. These include:\n1citeproc: true\n2section-numbering: \"1.1.\"\n3number-depth: 2\n4toc-depth: 2\n5toc: false\n6execute:\n7  echo: false\n8  warning: false\n9  error: true\n\n1\n\nUse Pandoc’s citation processing rather than typst’s built in style more information\n\n2\n\nNumber sections in the decimal style\n\n3\n\nOnly number the first two header levels\n\n4\n\nNumber of levels in the talbe of contents (toc)\n\n5\n\nDon’t render a toc automatically (we’ll do it manually using shortcodes, see below)\n\n6\n\nSets the cell execution options\n\n7\n\nDon’t show the chunk code in the document\n\n8\n\nDon’t show warnings from code chunks\n\n9\n\nDon’t stop the rendering process if an error occurs in the code chunk. Rather, just show the error in the output document\n\n\n\n\n\n\n\n\nNotetodo\n\n\n\nResolve how fonts are handled in quarto / typst.\n\nDefault: Arial 11pt (meets ZHAW requirements)\nBuilt-in fallbacks: Arial → Helvetica Neue → Helvetica → Liberation Sans → DejaVu Sans → Noto Sans\nEasy override: Set mainfont and fontsize in your YAML frontmatter\nExample override:\nmainfont: \"Times New Roman\"\nfontsize: 12pt\nLocal fonts: Place font files (.ttf/.otf) in _extensions/zhaw-lsfm/fonts/ directory for guaranteed availability"
+    "objectID": "index.html#documentation",
+    "href": "index.html#documentation",
+    "title": "ZHAW LSFM Thesis Template",
+    "section": "Documentation",
+    "text": "Documentation\nFull documentation available at: https://zhaw-lsfm.github.io/quarto-thesis-docs\n\nGetting Started Guide\nUser Manual\nZHAW Requirements\nDeveloper Guide"
   },
   {
-    "objectID": "manual.html#sec-shortcodes",
-    "href": "manual.html#sec-shortcodes",
-    "title": "Manual",
-    "section": "",
-    "text": "To insert a list of figures: {{&lt; list-of-figures &gt;}}\nTo insert a list of tables: {{&lt; list-of-tables &gt;}}\nTo insert a bibliography: {{&lt; references &gt;}}\nTo insert a table of contents: {{&lt; table-of-contents &gt;}}"
+    "objectID": "index.html#demo",
+    "href": "index.html#demo",
+    "title": "ZHAW LSFM Thesis Template",
+    "section": "Demo",
+    "text": "Demo\nView rendered template examples:\n\nPDF Demo (for submission)\nHTML Demo (for development)"
+  },
+  {
+    "objectID": "index.html#repository",
+    "href": "index.html#repository",
+    "title": "ZHAW LSFM Thesis Template",
+    "section": "Repository",
+    "text": "Repository\n\nTemplate Repository: https://github.com/zhaw-lsfm/quarto-thesis\nDocumentation Repository: https://github.com/zhaw-lsfm/quarto-thesis-docs"
+  },
+  {
+    "objectID": "index.html#support",
+    "href": "index.html#support",
+    "title": "ZHAW LSFM Thesis Template",
+    "section": "Support",
+    "text": "Support\n\nReport Issues\nContribute\nView Documentation"
   }
 ]

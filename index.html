@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.19">
+<meta name="generator" content="quarto-1.9.11">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -20,31 +20,45 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
 }
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
@@ -57,16 +71,16 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-46eeb4c476de49ef7df495821a6125d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-a5dfee7ccc7f20503a6465e15a2cff9c.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-a512348105fe160d450f08b684c618b0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-e4e2392ece711ea705772d4f304040e4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
+  "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
+  "panel-placement": "start",
+  "type": "textbox",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -92,88 +106,21 @@ div.csl-indent {
 
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    </a>
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">ZHAW LSFM Thesis Template</span>
-    </a>
-  </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
-<span class="menu-text">Welcome</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./getting-started.html"> 
-<span class="menu-text">Getting started</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./manual.html"> 
-<span class="menu-text">Manual</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./zhaw-requirements.html"> 
-<span class="menu-text">ZHAW Requirements</span></a>
-  </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-demo" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">🖺 Demo</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-demo">    
-        <li>
-    <a class="dropdown-item" href="./template.pdf" target="blank">
- <span class="dropdown-text">pdf (for submission)</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./template.html">
- <span class="dropdown-text">html (for development)</span></a>
-  </li>  
-    </ul>
-  </li>
-</ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="./for-devs.html"> 
-<span class="menu-text">For Developers / Contributors</span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/zhaw-lsfm/quarto-thesis"> <i class="bi bi-github" role="img">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-</ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
-</div>
-      </div> <!-- /container-fluid -->
-    </nav>
-</header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">ZHAW LSFM Thesis Template</h1>
-<p class="subtitle lead">A Quarto template for ZHAW LSFM Students</p>
+<p class="subtitle lead">A Quarto-Typst template for ZHAW LSFM student theses</p>
 </div>
 
 
@@ -190,46 +137,65 @@ div.csl-indent {
 </header>
 
 
-<p>This quarto template implements the guidelines and requirements for student theses at ZHAW LSFM as described in <span class="citation" data-cites="zhaw2024de"><em>Abfassung Studentischer Arbeiten</em> (<a href="#ref-zhaw2024de" role="doc-biblioref">2024</a>)</span> (german) and <span class="citation" data-cites="zhaw2024en"><em>Writing Student Assignments</em> (<a href="#ref-zhaw2024en" role="doc-biblioref">2024</a>)</span> (english). These guidelines are summarized <a href="./zhaw-requirements.html#sec-requirements">here</a>.</p>
-<p>It is uses the Typst typesetting system for high-quality and fast rendering of PDF output. The template tries to be minimalistic. You won’t miss out on any features natively supported by quarto and typst, it simply adds the features required by ZHAW LSFM.</p>
-<p>Features:</p>
+<section id="quick-start" class="level2">
+<h2 class="anchored" data-anchor-id="quick-start">Quick Start</h2>
+<p>Install the template with:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> use template zhaw-lsfm/quarto-thesis</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This will:</p>
 <ul>
-<li>The ability to enter all the required metadata in the YAML header of your quarto document. This metadata is used in various places throughout the document (see <a href="./manual.html#sec-metadata">Manual</a>)</li>
-<li>The creation of the title page and imprint page according to ZHAW guidelines (this uses the metadata mentioned above)</li>
-<li>Settings the default values to match the ZHAW requirements: numbering type, font size, margins, etc. (see <a href="./manual.html#sec-defaults">Manual</a>)</li>
-<li>Shortcodes to manually place the table of contents, list of figures, list of tables, and bibliography in the document (see <a href="./manual.html#sec-shortcodes">Manual</a>)</li>
-<li>Class shortcuts for removing a header numbering and removing it from the table of contents (see <a href="./manual.html#sec-chapter-numbering">Manual</a>).</li>
-<li>The template also serves as a boilerplate for your thesis document, so you can get started quickly (bibtex included and a scaffold of the document structure)</li>
+<li>Install the <code>zhaw-lsfm</code> Quarto extension</li>
+<li>Create a template document for your thesis</li>
+<li>Set up all required files (bibliography, cover image, etc.)</li>
 </ul>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Todo
-</div>
-</div>
-<div class="callout-body-container callout-body">
+</section>
+<section id="features" class="level2">
+<h2 class="anchored" data-anchor-id="features">Features</h2>
 <ul>
-<li>Add the possibility to add callout todos, that can be hidden</li>
-<li>Add text on the html version</li>
-<li>Write about how quarto projects are not supported</li>
+<li><strong>Automated ZHAW Formatting</strong>: Title page, imprint, headers, and margins per ZHAW guidelines</li>
+<li><strong>Fast PDF Rendering</strong>: Uses Typst typesetting system</li>
+<li><strong>Metadata-Driven</strong>: Configure thesis details in YAML frontmatter</li>
+<li><strong>Document Structure Shortcodes</strong>: Easy placement of TOC, figure/table lists, references</li>
+<li><strong>Language Support</strong>: German and English automatic text generation</li>
+<li><strong>Dual Output</strong>: High-quality PDF for submission, HTML for development preview</li>
 </ul>
-</div>
-</div>
+</section>
+<section id="documentation" class="level2">
+<h2 class="anchored" data-anchor-id="documentation">Documentation</h2>
+<p>Full documentation available at: <strong><a href="https://zhaw-lsfm.github.io/quarto-thesis-docs" class="uri">https://zhaw-lsfm.github.io/quarto-thesis-docs</a></strong></p>
+<ul>
+<li><a href="https://zhaw-lsfm.github.io/quarto-thesis-docs/getting-started.html">Getting Started Guide</a></li>
+<li><a href="https://zhaw-lsfm.github.io/quarto-thesis-docs/manual.html">User Manual</a></li>
+<li><a href="https://zhaw-lsfm.github.io/quarto-thesis-docs/zhaw-requirements.html">ZHAW Requirements</a></li>
+<li><a href="https://zhaw-lsfm.github.io/quarto-thesis-docs/for-devs.html">Developer Guide</a></li>
+</ul>
+</section>
+<section id="demo" class="level2">
+<h2 class="anchored" data-anchor-id="demo">Demo</h2>
+<p>View rendered template examples:</p>
+<ul>
+<li><a href="template.pdf">PDF Demo (for submission)</a></li>
+<li><a href="template.html">HTML Demo (for development)</a></li>
+</ul>
+</section>
+<section id="repository" class="level2">
+<h2 class="anchored" data-anchor-id="repository">Repository</h2>
+<ul>
+<li><strong>Template Repository</strong>: <a href="https://github.com/zhaw-lsfm/quarto-thesis" class="uri">https://github.com/zhaw-lsfm/quarto-thesis</a></li>
+<li><strong>Documentation Repository</strong>: <a href="https://github.com/zhaw-lsfm/quarto-thesis-docs" class="uri">https://github.com/zhaw-lsfm/quarto-thesis-docs</a></li>
+</ul>
+</section>
+<section id="support" class="level2">
+<h2 class="anchored" data-anchor-id="support">Support</h2>
+<ul>
+<li><a href="https://github.com/zhaw-lsfm/quarto-thesis/issues">Report Issues</a></li>
+<li><a href="https://github.com/zhaw-lsfm/quarto-thesis/pulls">Contribute</a></li>
+<li><a href="https://zhaw-lsfm.github.io/quarto-thesis-docs">View Documentation</a></li>
+</ul>
 
 
+</section>
 
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-zhaw2024de" class="csl-entry" role="listitem">
-<em>Abfassung Studentischer Arbeiten</em>. 2024. 5.1.1 ed. Life Sciences und Facility Management Stabsbereich Bildung.
-</div>
-<div id="ref-zhaw2024en" class="csl-entry" role="listitem">
-<em>Writing Student Assignments</em>. 2024. 5.1.1 ed. Life Sciences und Facility Management Stabsbereich Bildung.
-</div>
-</div></section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -281,13 +247,14 @@ div.csl-indent {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
@@ -634,4 +601,4 @@ div.csl-indent {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/zhaw-lsfm/quarto-thesis/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/zhaw-lsfm/quarto-thesis/blob/main/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/zhaw-lsfm/quarto-thesis/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+</body></html>
