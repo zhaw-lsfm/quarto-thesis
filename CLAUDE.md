@@ -129,7 +129,58 @@ After changes:
 1. Test with `template.qmd`
 2. Test with clean installation
 3. Update documentation (in separate repo)
-4. Commit and push
+4. Follow release process (see below)
+
+## Release Process
+
+The extension uses semantic versioning (MAJOR.MINOR.PATCH). Follow this checklist when releasing:
+
+### Making Changes
+1. As you develop, add notes to `CHANGELOG.md` under `[Unreleased]` section
+   - `Added`: New features
+   - `Changed`: Changes to existing functionality
+   - `Fixed`: Bug fixes
+   - `Removed`: Removed features
+
+### Creating a Release
+1. **Update version number** in `_extensions/zhaw-lsfm/_extension.yml`
+   - MAJOR: Breaking changes (e.g., 0.x.x → 1.0.0)
+   - MINOR: New features, backwards compatible (e.g., 0.1.x → 0.2.0)
+   - PATCH: Bug fixes only (e.g., 0.1.0 → 0.1.1)
+
+2. **Update CHANGELOG.md**:
+   ```bash
+   # Move [Unreleased] changes to new version section
+   # Add release date
+   # Update comparison links at bottom
+   ```
+
+3. **Test thoroughly**:
+   ```bash
+   quarto render template.qmd --to zhaw-lsfm-typst
+   quarto render template.qmd --to zhaw-lsfm-html
+
+   # Test clean installation
+   cd ../test && quarto use template ../quarto-thesis
+   ```
+
+4. **Commit and tag**:
+   ```bash
+   git add _extensions/zhaw-lsfm/_extension.yml CHANGELOG.md
+   git commit -m "Release v0.x.x"
+   git tag v0.x.x
+   git push && git push --tags
+   ```
+
+5. **Create GitHub release** (optional but recommended):
+   ```bash
+   gh release create v0.x.x --title "v0.x.x" --notes-file CHANGELOG.md
+   ```
+
+### Version Guidelines
+- Students use `quarto use template` which pulls latest commit
+- Git tags allow pinning to specific versions if needed
+- Keep CHANGELOG.md updated so changes are traceable
 
 ## Development Notes
 
