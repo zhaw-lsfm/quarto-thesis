@@ -1,0 +1,41 @@
+project:
+  type: website
+  resources: 
+    - "*.pdf"
+
+website:
+  title: "ZHAW LSFM Thesis Template"
+  repo-url: https://github.com/zhaw-lsfm/quarto-thesis
+  repo-actions: [edit, source, issue]
+  navbar:
+    left:
+      - href: index.qmd
+        text: "Welcome"
+      - getting-started.qmd
+      - manual.qmd
+      - zhaw-requirements.qmd
+      - text: "🖺 Demo"
+        menu:
+        - href: template.pdf
+          text: "pdf (for submission)"
+          target: blank
+        - href: template.html
+          text: "html (for development)"
+    right:
+      - href: for-devs.qmd
+        text: "For Developers / Contributors"
+      - icon: github
+        href: https://github.com/zhaw-lsfm/quarto-thesis
+
+
+bibliography: references.bib
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+
+
+
+

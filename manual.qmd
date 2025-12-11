@@ -1,0 +1,117 @@
+# Manual
+
+
+## Metadata {#sec-metadata}
+
+Here is a list of the metadata fields than can (and should) be used in the YAML header of your quarto document to make use of the features of this template.
+
+Existing fields from quarto that have an effect on the output:
+
+| Field                   | Description                     |
+|:------------------------|:--------------------------------|
+| `title`                 | Title of the thesis
+| `subtitle`              | Optional subtitle
+| `keywords`              | Optional list of keywords for the titlepage
+| `lang`                  | Language of the thesis, only `en` or `de` supported
+| `bibliography`          | the .bib file containing bibtex entries
+| `author`                | multiple authors supported as a YAML list
+
+
+Note that switching the `lang` field will also change the language of some of the automatically generated text. For example, ZHAW will dieplayed as follows depending on the `lang` field:
+
+- German (default): "ZÜRCHER HOCHSCHULE FÜR ANGEWANDTE WISSENSCHAFTEN"
+- English: "ZURICH UNIVERSITY OF APPLIED SCIENCES"
+
+
+Additional fields provided by this template:
+
+| Field                   | Description                     |
+|:------------------------|:--------------------------------|
+| `institut`              | in titlecase, e.g. "Institut für Umwelt und Natürliche Ressourcen"
+| `thesis-type`           | e.g "Projektarbeit 2"
+| `degree-type`           | e.g. "Bachelorstudiengang"
+| `study-year`            | e.g. "2009"
+| `submission-date`       | e.g. "2024-12-15"
+| `study-direction`       | e.g. "Umweltingenieurwesen"
+| `supervisors`           | with title, name and affiliation
+| `confidential`          | `true` marks the thesis as confidential. default is `false`
+| `cover-image`           | optional. Has configurable sizing options (see example below)
+
+
+### Cover Image Configuration
+
+
+Basic usage:
+```{.yaml}
+cover-image:
+  src: cover.png         # <1>
+  max-width: 100%        # <2>
+  max-height: 5cm        # <3>
+```
+1. src: Path to the image file
+2. Maximum width constraint (optional, default `100%`)
+3. Maximum height constraint (optional, default `5cm`)
+
+
+
+
+
+## Default settings {#sec-defaults}
+
+The template sets a number of default settings to match the [ZHAW requirements](zhaw-requirements.qmd#sec-requirements). These include:
+
+```{.yaml}
+citeproc: true                 # <1>
+section-numbering: "1.1."      # <2>
+number-depth: 2                # <3>
+toc-depth: 2                   # <4>
+toc: false                     # <5>
+execute:                       # <6>
+  echo: false                  # <7>
+  warning: false               # <8>
+  error: true                  # <9>
+``` 
+1. Use Pandoc’s citation processing rather than typst's built in style [more information](https://quarto.org/docs/output-formats/typst.html#bibliography)
+2. Number sections in the decimal style
+3. Only number the first two header levels
+4. Number of levels in the talbe of contents (toc)
+5. Don't render a toc automatically (we'll do it manually using shortcodes, see below)
+6. Sets the cell execution options
+7. Don't show the chunk code in the document
+8. Don't show warnings from code chunks
+9. Don't stop the rendering process if an error occurs in the code chunk. Rather, just show the error in the output document
+
+
+
+
+
+
+:::{.callout-note title="todo"}
+
+Resolve how fonts are handled in quarto / typst.
+
+- **Default:** Arial 11pt (meets ZHAW requirements)
+- **Built-in fallbacks:** Arial → Helvetica Neue → Helvetica → Liberation Sans → DejaVu Sans → Noto Sans
+- **Easy override:** Set `mainfont` and `fontsize` in your YAML frontmatter
+- **Example override:**
+  ```yaml
+  mainfont: "Times New Roman"
+  fontsize: 12pt
+  ```
+- **Local fonts:** Place font files (.ttf/.otf) in `_extensions/zhaw-lsfm/fonts/` directory for guaranteed availability
+
+
+:::
+
+
+
+
+## Shortcodes {#sec-shortcodes}
+
+- To insert a list of figures: `{{{< list-of-figures >}}}`
+- To insert a list of tables: `{{{< list-of-tables >}}}`
+- To insert a bibliography: `{{{< references >}}}`
+- To insert a table of contents: `{{{< table-of-contents >}}}`
+
+
+

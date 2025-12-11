@@ -1,0 +1,80 @@
+# ZHAW Requirements {#sec-requirements}
+
+Here is a summary of the requirements in German. You can download the original documents here:
+
+- [@zhaw2024de](N_AA_Abfassung_studentischer_Arbeiten.pdf)
+- [@zhaw2024en](N_AA_Writing_student_assignments.pdf)
+
+
+
+## Text
+
+> Der Text soll einheitlich formatiert werden und vorzugsweise mit einer Schrift wie z.B. Arial 11pt und mit Zeilenabstand max. 1.5. abgefasst werden.
+
+
+
+## Titlepage and imprint 
+ 
+> Die Titelseite ist gemäss Muster auszuführen (siehe Anhang 2). 
+
+Anhang 2 ist in @fig-titlepage ersichtlich
+
+![Titelseite (ohne ZHAW-logo)](titlepage.png){#fig-titlepage}
+
+
+> Auf der Rückseite des Titelblatts soll ein Impressum mit folgendem Inhalt eingefügt werden: Schlagworte (keywords), Zitiervorschlag, Name des Instituts.
+
+## Header / Footer
+
+> In der Kopfzeile können die folgenden Angaben gemacht werden: ZHAW LSFM, Art der Arbeit, Autor/in; in der Fusszeile wird die Seitenzahl angegeben.
+
+The header appears on all content pages (after imprint) with three columns:
+- Left: "ZHAW LSFM"
+- Center: thesis-type (from YAML metadata)  
+- Right: author(s) (from YAML metadata)
+
+The footer contains page numbers as required.
+
+## Figure / Table numbering and captions
+
+> Alle Abbildungen (Grafiken, Diagramme, Fotografien usw.) und Tabellen werden fortlaufend nummeriert und müssen eine erklärende Anschrift (Bildlegende) haben. Abbildungen werden dabei unten, Tabellen oben beschriftet, die Bezeichnung lautet Abbildung (Abb.) bzw. Tabelle
+(Tab.).
+
+
+
+
+> Folgende Gliederung für wissenschaftliche Arbeiten hat sich bewährt und soll grundsätzlich eingehalten werden. Je nach Art oder Thema der Arbeit (z.B. Literaturarbeit, betriebswirtschaftliche Themen u.a.) sind nach Absprache mit den Fachkorrigierenden Abweichungen von dieser Gliederung sinnvoll.
+
+(siehe @fig-gliederung) 
+
+## Chapter numbering {#sec-chapter-numbering}
+
+> Für die nummerierten Kapitel und Unterkapitel ist die Dezimalnummerierung anzuwenden (Beispiel: 3, 3.1, 3.2, 3.2.1, 3.2.2 usw.). Mehr als 3 Gliederungsebenen pro Hauptkapitel sind unübersichtlich.
+
+
+![](gliederung.png){#fig-gliederung}
+
+
+## Appendix
+
+> Normalerweise werden Seiten- und Kapitelnummerierung im Anhang nicht fortgesetzt. 
+> 
+> Besteht ein Anhang aus mehreren Teilen, so werden diese mit Anhang A, Anhang B etc. oder mit Anhang 1, Anhang 2 etc. bezeichnet. Auf die Anhänge soll im Text verwiesen werden. Zu Beginn des Anhangs muss ein Anhangsverzeichnis eingeordnet werden.
+
+:::{.callout-note}
+## Todo: not yet implemented
+
+I would like to implement #sec-appendix, and similarly #sec-abstract which all use the default values (unnumbered unlisted for abstract, unnumbered for appendix with automatic removal of page nubmering)
+
+:::
+
+### References
+
+> APA (7th ed.) 
+
+:::{.callout-note}
+## Todo:
+
+Either implement numerical citatations or highight this drawback (if there is one) in the documentation
+
+:::
