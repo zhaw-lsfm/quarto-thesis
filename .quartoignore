@@ -1,7 +1,5 @@
 *.pdf
 ./*.html
-_book
-_site
 *.Rproj
 .Rproj.user
 .Rhistory

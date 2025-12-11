@@ -4,9 +4,9 @@ template.pdf
 .Rhistory
 .quarto
 .claude/
-*_files
-*.html
-
+docs
+./*.html
+./*_files
 /.quarto/
 
 **/*.quarto_ipynb
