@@ -1,45 +1,57 @@
 ---
 title: "ZHAW LSFM Thesis Template"
-subtitle: "A Quarto template for ZHAW LSFM Students"
-bibliography: references.bib
+subtitle: "A Quarto-Typst template for ZHAW LSFM student theses"
 format:
   html:
-    toc: true
+    toc: false
 ---
 
+## Quick Start
 
-This quarto template implements the guidelines and requirements for student theses at ZHAW LSFM as described in @zhaw2024de (german) and @zhaw2024en (english). These guidelines are summarized [here](zhaw-requirements.qmd#sec-requirements).
+Install the template with:
 
-It is uses the Typst typesetting system for high-quality and fast rendering of PDF output.
-The template tries to be minimalistic. You won't miss out on any features natively supported by quarto and typst, it simply adds the features required by ZHAW LSFM.
+```bash
+quarto use template zhaw-lsfm/quarto-thesis
+```
 
-Features: 
+This will:
 
-- The ability to enter all the required metadata in the YAML header of your quarto document. This metadata is used in various places throughout the document (see [Manual](manual.qmd#sec-metadata))
-- The creation of the title page and imprint page according to ZHAW guidelines (this uses the metadata mentioned above)
-- Settings the default values to match the ZHAW requirements: numbering type, font size, margins, etc. (see [Manual](manual.qmd#sec-defaults))
-- Shortcodes to manually place the table of contents, list of figures, list of tables, and bibliography in the document (see [Manual](manual.qmd#sec-shortcodes))
-- Class shortcuts for removing a header numbering and removing it from the table of contents (see [Manual](manual.qmd#sec-chapter-numbering)).
-- The template also serves as a boilerplate for your thesis document, so you can get started quickly (bibtex included and a scaffold of the document structure)
+- Install the `zhaw-lsfm` Quarto extension
+- Create a template document for your thesis
+- Set up all required files (bibliography, cover image, etc.)
 
-:::{.callout-note}
-## Todo
+## Features
 
-- Add the possibility to add callout todos, that can be hidden
-- Add text on the html version
-- Write about how quarto projects are not supported
+- **Automated ZHAW Formatting**: Title page, imprint, headers, and margins per ZHAW guidelines
+- **Fast PDF Rendering**: Uses Typst typesetting system
+- **Metadata-Driven**: Configure thesis details in YAML frontmatter
+- **Document Structure Shortcodes**: Easy placement of TOC, figure/table lists, references
+- **Language Support**: German and English automatic text generation
+- **Dual Output**: High-quality PDF for submission, HTML for development preview
 
-:::
+## Documentation
 
+Full documentation available at: **<https://zhaw-lsfm.github.io/quarto-thesis-docs>**
 
+- [Getting Started Guide](https://zhaw-lsfm.github.io/quarto-thesis-docs/getting-started.html)
+- [User Manual](https://zhaw-lsfm.github.io/quarto-thesis-docs/manual.html)
+- [ZHAW Requirements](https://zhaw-lsfm.github.io/quarto-thesis-docs/zhaw-requirements.html)
+- [Developer Guide](https://zhaw-lsfm.github.io/quarto-thesis-docs/for-devs.html)
 
+## Demo
 
+View rendered template examples:
 
+- [PDF Demo (for submission)](template.pdf)
+- [HTML Demo (for development)](template.html)
 
+## Repository
 
+- **Template Repository**: <https://github.com/zhaw-lsfm/quarto-thesis>
+- **Documentation Repository**: <https://github.com/zhaw-lsfm/quarto-thesis-docs>
 
+## Support
 
-
-
-
-
+- [Report Issues](https://github.com/zhaw-lsfm/quarto-thesis/issues)
+- [Contribute](https://github.com/zhaw-lsfm/quarto-thesis/pulls)
+- [View Documentation](https://zhaw-lsfm.github.io/quarto-thesis-docs)

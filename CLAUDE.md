@@ -4,36 +4,67 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Quarto-Typst template for ZHAW LSFM (Zurich University of Applied Sciences) academic documents. The template provides institutional branding, proper formatting, and automated document structure generation for student theses and academic papers.
+This is the **template repository** for the ZHAW LSFM Quarto-Typst template.
+
+**Repository Structure:**
+- Extension (`_extensions/zhaw-lsfm/`)
+- Template scaffolding (`template.qmd`)
+- Minimal landing page (`index.qmd`)
+
+**Full documentation** is maintained separately at:
+- Repository: <https://github.com/zhaw-lsfm/quarto-thesis-docs>
+- Website: <https://zhaw-lsfm.github.io/quarto-thesis-docs>
 
 ## Common Development Commands
 
-### Building and Rendering
+### Building Template Demo
 ```bash
-# Render main template example to all formats
+# Render template to all formats
 quarto render template.qmd
 
-# Render specific format
+# Specific formats
 quarto render template.qmd --to zhaw-lsfm-typst
 quarto render template.qmd --to html
 
-# Render index documentation
-quarto render index.qmd
+# Preview
+quarto preview template.qmd
 ```
 
-### Development and Testing
+### Publishing Landing Page
 ```bash
-# Preview with live reload
-quarto preview template.qmd
+# Render landing page and demos
+quarto render index.qmd
+quarto render template.qmd
 
-# Check extension installation
-quarto list extensions
+# Publish to GitHub Pages
+quarto publish gh-pages
+```
 
-# Install/reinstall extension locally during development
-quarto install extension . --no-prompt
+### Testing Template Installation
+```bash
+# Test in clean directory
+mkdir ../test-install && cd ../test-install
+quarto use template zhaw-lsfm/quarto-thesis
+
+# Verify installed files
+ls -la
 ```
 
 ## Architecture Overview
+
+### This Repository (quarto-thesis)
+
+Serves two purposes:
+1. **Quarto Extension** - Students install via `quarto use template`
+2. **Landing Page** - Quick start info at <https://zhaw-lsfm.github.io/quarto-thesis>
+
+### Documentation Repository (quarto-thesis-docs)
+
+Contains:
+- Full user manual
+- ZHAW requirements
+- Developer guides
+- Getting started tutorials
 
 ### Extension Structure
 ```
@@ -42,7 +73,6 @@ _extensions/zhaw-lsfm/
 ├── typst-show.typ         # YAML metadata mapping to Typst
 ├── _extension.yml         # Extension configuration
 ├── shortcodes.lua         # Document structure shortcodes
-├── class-filter.lua       # .hidden class expansion
 ├── pagebreak-filter.lua   # Automatic page breaks
 └── fonts/                 # Custom font directory
 ```
@@ -54,21 +84,15 @@ _extensions/zhaw-lsfm/
 - **Language support**: German/English automatic text generation
 - **Font handling**: Arial default with fallback cascade and local font support
 
-### Key Files
-- `template.qmd`: Example thesis document with full YAML metadata
-- `index.qmd`: Documentation and feature demonstration
-- `_extension.yml`: Extension configuration with format settings and filters
-
 ### Template Integration
 The template uses a filter pipeline:
-1. `class-filter.lua`: Expands `.hidden` to `.unnumbered .unlisted`
-2. `pagebreak-filter.lua`: Adds page breaks before major sections
-3. Quarto's built-in Typst processing
+1. `pagebreak-filter.lua`: Adds page breaks before major sections
+2. Quarto's built-in Typst processing
 
 ### Shortcode System
 Unified `{{< >}}` syntax for document elements:
 - `{{< table-of-contents >}}`
-- `{{< list-of-figures >}}`  
+- `{{< list-of-figures >}}`
 - `{{< list-of-tables >}}`
 - `{{< references >}}`
 
@@ -77,6 +101,35 @@ The template supports 20+ metadata fields including:
 - Standard Quarto: `title`, `author`, `bibliography`, `lang`
 - ZHAW-specific: `institut`, `thesis-type`, `degree-type`, `study-direction`, `supervisors`
 - Formatting: `confidential`, `submission-date`, `study-year`
+
+## Working with .quartoignore
+
+Files listed in `.quartoignore` are NOT provided to students when they run `quarto use template`.
+
+Current exclusions:
+- Website files (index.qmd, _quarto.yml)
+- Documentation files (now in separate repo)
+- Project files (CLAUDE.md, Readme.md, .Rproj)
+- Build artifacts (_site, .quarto)
+
+Students receive:
+- `template.qmd` (renamed to their directory name)
+- `_extensions/` directory
+- `cover.png`
+- `references.bib`
+
+## Extension Development
+
+Changes to `_extensions/zhaw-lsfm/` affect:
+- Template rendering behavior
+- Available metadata fields
+- Document formatting
+
+After changes:
+1. Test with `template.qmd`
+2. Test with clean installation
+3. Update documentation (in separate repo)
+4. Commit and push
 
 ## Development Notes
 
@@ -93,6 +146,3 @@ The template supports 20+ metadata fields including:
 ### Known Limitations
 - **Quarto Book Projects**: Not supported for custom Typst formats (confirmed by Quarto team)
 - **Workaround**: Use single document with `{{< include >}}` for multi-chapter content
-
-### File Ignore Patterns
-The `.quartoignore` excludes build artifacts and example files from template distribution.

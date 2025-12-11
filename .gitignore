@@ -8,3 +8,5 @@ template.pdf
 *.html
 
 /.quarto/
+
+**/*.quarto_ipynb
