@@ -29,10 +29,7 @@ author:
   - Peter Rousseeuw
 format:
   zhaw-lsfm-typst: default
-  html:
-    echo: false
-    toc: true
-    number-sections: true
+  zhaw-lsfm-html: default
 ---
 
 # Zusammenfassung {.unnumbered .unlisted}
