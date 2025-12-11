@@ -66,3 +66,32 @@ $abstract$
 </div>
 $endif$
 </header>
+
+<!-- Imprint Section -->
+<section id="imprint" class="imprint-section">
+<hr>
+<h3 class="imprint-title">$imprint-title$</h3>
+
+$if(author)$
+<div class="imprint-citation">
+<p class="imprint-label">$citation-label$</p>
+<p class="citation-text">
+$for(author)$$author$$if(author.name)$$author.name$$endif$$sep$, $endfor$
+$if(date)$ ($date$). $elseif(submission-date)$ ($submission-date-year$). $else$ (n.d.). $endif$
+<em>$title$$if(subtitle)$: $subtitle$$endif$</em>.
+$if(institut)$
+$zhaw-university$, $zhaw-department$, $institut$.
+$endif$
+</p>
+</div>
+
+$endif$
+
+$if(keywords)$
+<div class="imprint-keywords">
+<p><strong>$keywords-label$</strong> $keywords$</p>
+</div>
+$endif$
+
+<hr>
+</section>

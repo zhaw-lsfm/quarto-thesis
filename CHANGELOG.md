@@ -12,6 +12,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
+## [0.2.1] - 2025-12-11
+
+### Added
+- Imprint (Impressum) section for HTML format
+- Citation recommendation in imprint section
+- Keywords display in imprint section
+- Institution information in imprint section
+- Year extraction from submission date for citations
+- Imprint-related labels (German/English) in `html-labels.lua`
+
+### Changed
+- Updated HTML title block template to include imprint section
+- Enhanced CSS styling for imprint section
+
 ## [0.2.0] - 2025-12-11
 
 ### Added
@@ -37,6 +51,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Custom font support via `fonts/` directory
 - Metadata-driven template with 20+ YAML fields
 
-[Unreleased]: https://github.com/zhaw-lsfm/quarto-thesis/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/zhaw-lsfm/quarto-thesis/compare/v0.2.1...HEAD
+[0.2.1]: https://github.com/zhaw-lsfm/quarto-thesis/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/zhaw-lsfm/quarto-thesis/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/zhaw-lsfm/quarto-thesis/releases/tag/v0.1.0

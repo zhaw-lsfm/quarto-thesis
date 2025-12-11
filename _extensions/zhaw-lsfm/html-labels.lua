@@ -25,9 +25,11 @@ function Meta(meta)
       ["study-direction-prefix"] = "Studienrichtung",
       ["study-direction-label"] = "Studienrichtung:",
       ["supervisors-label"] = "Betreuer / Betreuerinnen:",
-      ["keywords-label"] = "Schlüsselwörter:",
+      ["keywords-label"] = "Schlagworte:",
       ["status-label"] = "Status:",
-      ["confidential-label"] = "Vertraulich"
+      ["confidential-label"] = "Vertraulich",
+      ["imprint-title"] = "Impressum",
+      ["citation-label"] = "Zitiervorschlag:"
     }
   else -- default to English
     labels = {
@@ -45,13 +47,24 @@ function Meta(meta)
       ["supervisors-label"] = "Supervisors:",
       ["keywords-label"] = "Keywords:",
       ["status-label"] = "Status:",
-      ["confidential-label"] = "Confidential"
+      ["confidential-label"] = "Confidential",
+      ["imprint-title"] = "Imprint",
+      ["citation-label"] = "Recommended Citation:"
     }
   end
 
   -- Add labels to metadata
   for key, value in pairs(labels) do
     meta[key] = value
+  end
+
+  -- Extract year from submission-date if present
+  if meta["submission-date"] then
+    local date_str = pandoc.utils.stringify(meta["submission-date"])
+    local year = date_str:match("^(%d%d%d%d)")
+    if year then
+      meta["submission-date-year"] = year
+    end
   end
 
   return meta
