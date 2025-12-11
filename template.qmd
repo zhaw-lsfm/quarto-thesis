@@ -25,9 +25,9 @@ supervisors:
     name: "Susanne Müller"
     affiliation: "Universität Zürich, Institut für Evolutionsbiologie und Umweltwissenschaften, Zürich"
 bibliography: references.bib
-author: 
+author:
   - Peter Rousseeuw
-format: 
+format:
   zhaw-lsfm-typst: default
   html:
     echo: false

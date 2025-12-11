@@ -1,0 +1,14 @@
+*.pdf
+_book
+_site
+titlepage.png
+gliederung.png
+*.Rproj
+index.qmd
+manual.qmd
+zhaw-requirements.qmd
+getting-started.qmd
+Readme.md
+CLAUDE.md
+_quarto.yml
+
