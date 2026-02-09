@@ -8,9 +8,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Quarto book project support (requires Quarto >= 1.9.18)
+- Multi-chapter structure with numbered chapter files in root directory
+- `appendix-filter.lua` for automatic A/B appendix numbering via `file_metadata` API
+- Appendix-aware heading numbering in `typst-template.typ` via `appendix-mode` state
+
 ### Changed
-### Fixed
+- Switched project type from single-file to `type: book`
+- Replaced `template.qmd` with `index.qmd` as book entry point plus numbered chapter files
+- ZHAW-specific metadata now lives in `_quarto.yml` instead of per-file YAML frontmatter
+- Book HTML output now serves as the landing page (replaces separate `index.qmd` landing page)
+- Bumped minimum Quarto version to 1.9.18
+
 ### Removed
+- `template.qmd` single-file template (replaced by book chapter files)
+- Separate landing page `index.qmd` (replaced by book HTML output)
 
 ## [0.2.1] - 2025-12-11
 
