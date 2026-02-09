@@ -8,8 +8,8 @@ This is the **template repository** for the ZHAW LSFM Quarto-Typst template.
 
 **Repository Structure:**
 - Extension (`_extensions/zhaw-lsfm/`)
-- Template scaffolding (`template.qmd`)
-- Minimal landing page (`index.qmd`)
+- Book project with numbered chapter files (`index.qmd`, `1-einleitung.qmd`, ...)
+- Project configuration (`_quarto.yml`)
 
 **Full documentation** is maintained separately at:
 - Repository: <https://github.com/zhaw-lsfm/quarto-thesis-docs>
@@ -17,26 +17,21 @@ This is the **template repository** for the ZHAW LSFM Quarto-Typst template.
 
 ## Common Development Commands
 
-### Building Template Demo
+### Building the Book
 ```bash
-# Render template to all formats
-quarto render template.qmd
+# Render to all formats
+quarto render
 
-# Specific formats
-quarto render template.qmd --to zhaw-lsfm-typst
-quarto render template.qmd --to html
+# Specific format
+quarto render --to zhaw-lsfm-typst
 
 # Preview
-quarto preview template.qmd
+quarto preview
 ```
 
-### Publishing Landing Page
+### Publishing to GitHub Pages
 ```bash
-# Render landing page and demos
-quarto render index.qmd
-quarto render template.qmd
-
-# Publish to GitHub Pages
+# Render and publish (book HTML output serves as the landing page)
 quarto publish gh-pages
 ```
 
@@ -55,8 +50,27 @@ ls -la
 ### This Repository (quarto-thesis)
 
 Serves two purposes:
-1. **Quarto Extension** - Students install via `quarto use template`
-2. **Landing Page** - Quick start info at <https://zhaw-lsfm.github.io/quarto-thesis>
+1. **Quarto Extension** — Students install via `quarto use template`
+2. **Demo / Landing Page** — The book rendered to HTML at <https://zhaw-lsfm.github.io/quarto-thesis>
+
+### Book Project Structure
+
+The project uses `type: book` in `_quarto.yml`. Chapter files are in the root directory with numeric prefixes to indicate order:
+
+```
+_quarto.yml              # Book project config + ZHAW metadata
+index.qmd                # Front matter (Zusammenfassung, TOC, Abkürzungen)
+1-einleitung.qmd         # Chapter 1
+2-literatur.qmd          # Chapter 2
+3-methoden.qmd           # Chapter 3
+4-ergebnisse.qmd         # Chapter 4
+5-diskussion.qmd         # Chapter 5
+references.qmd           # Bibliography
+6-anhang-rohdaten.qmd    # Appendix A (under appendices: key)
+7-anhang-statistik.qmd   # Appendix B
+```
+
+**Why `index.qmd`?** When students install via `quarto use template`, the template file is renamed to their directory name. `index.qmd` is the standard Quarto book entry point and works for both book and website rendering.
 
 ### Documentation Repository (quarto-thesis-docs)
 
@@ -73,21 +87,25 @@ _extensions/zhaw-lsfm/
 ├── typst-show.typ         # YAML metadata mapping to Typst
 ├── _extension.yml         # Extension configuration
 ├── shortcodes.lua         # Document structure shortcodes
-├── pagebreak-filter.lua   # Automatic page breaks
+├── pagebreak-filter.lua   # Automatic page breaks before H1 headings
+├── appendix-filter.lua    # Switches appendix numbering to A, B, C
 └── fonts/                 # Custom font directory
 ```
 
 ### Core Template Features
+- **Book project**: Multi-chapter thesis with proper chapter numbering
 - **Institutional branding**: Automatic ZHAW headers, title page, and imprint generation
 - **Document structure**: Shortcodes for TOC, figure/table lists, references
-- **Metadata-driven**: Extensive YAML frontmatter support for thesis information
+- **Appendix support**: Automatic A/B numbering for appendix chapters
+- **Metadata-driven**: Extensive YAML configuration in `_quarto.yml`
 - **Language support**: German/English automatic text generation
 - **Font handling**: Arial default with fallback cascade and local font support
 
-### Template Integration
-The template uses a filter pipeline:
-1. `pagebreak-filter.lua`: Adds page breaks before major sections
-2. Quarto's built-in Typst processing
+### Filter Pipeline
+The template uses three Lua filters:
+1. `pagebreak-filter.lua`: Adds page breaks before level-1 headings
+2. `appendix-filter.lua`: Detects appendix chapters via `file_metadata` API and switches heading numbering from `1.1.` to `A.1.`
+3. Quarto's built-in Typst processing
 
 ### Shortcode System
 Unified `{{< >}}` syntax for document elements:
@@ -97,23 +115,24 @@ Unified `{{< >}}` syntax for document elements:
 - `{{< references >}}`
 
 ### YAML Metadata Schema
-The template supports 20+ metadata fields including:
-- Standard Quarto: `title`, `author`, `bibliography`, `lang`
+ZHAW-specific metadata lives in `_quarto.yml` (not in individual chapter files):
+- Standard Quarto: `title`, `author`, `bibliography`, `lang` (under `book:`)
 - ZHAW-specific: `institut`, `thesis-type`, `degree-type`, `study-direction`, `supervisors`
-- Formatting: `confidential`, `submission-date`, `study-year`
+- Formatting: `confidential`, `submission-date`, `study-year`, `cover-image`
 
 ## Working with .quartoignore
 
 Files listed in `.quartoignore` are NOT provided to students when they run `quarto use template`.
 
 Current exclusions:
-- Website files (index.qmd, _quarto.yml)
-- Documentation files (now in separate repo)
-- Project files (CLAUDE.md, Readme.md, .Rproj)
-- Build artifacts (_site, .quarto)
+- Project files (CLAUDE.md, Readme.md, .Rproj, _quarto.yml)
+- Build artifacts (*_files, *.typ, .quarto)
+- Documentation files
 
 Students receive:
-- `template.qmd` (renamed to their directory name)
+- `index.qmd` (renamed to their directory name)
+- Numbered chapter files (`1-einleitung.qmd`, etc.)
+- `references.qmd`
 - `_extensions/` directory
 - `cover.png`
 - `references.bib`
@@ -126,7 +145,7 @@ Changes to `_extensions/zhaw-lsfm/` affect:
 - Document formatting
 
 After changes:
-1. Test with `template.qmd`
+1. Test with `quarto render --to zhaw-lsfm-typst`
 2. Test with clean installation
 3. Update documentation (in separate repo)
 4. Follow release process (see below)
@@ -157,8 +176,7 @@ The extension uses semantic versioning (MAJOR.MINOR.PATCH). Follow this checklis
 
 3. **Test thoroughly**:
    ```bash
-   quarto render template.qmd --to zhaw-lsfm-typst
-   quarto render template.qmd --to zhaw-lsfm-html
+   quarto render --to zhaw-lsfm-typst
 
    # Test clean installation
    cd ../test && quarto use template ../quarto-thesis
@@ -181,6 +199,7 @@ The extension uses semantic versioning (MAJOR.MINOR.PATCH). Follow this checklis
 - Students use `quarto use template` which pulls latest commit
 - Git tags allow pinning to specific versions if needed
 - Keep CHANGELOG.md updated so changes are traceable
+- **Minimum Quarto version**: 1.9.18 (required for Typst book support)
 
 ## Development Notes
 
@@ -191,9 +210,11 @@ The extension uses semantic versioning (MAJOR.MINOR.PATCH). Follow this checklis
 - **Known Issue**: Template rendering shows font warnings for Arial, Helvetica Neue, and Helvetica when these fonts are not installed on the system. Document still renders successfully using system fallback fonts.
 
 ### Class Usage Patterns
-- `.hidden`: For abstracts (unnumbered, not in TOC)
-- `.unnumbered`: For TOC, abbreviations, bibliographies (not numbered, appears in TOC)
+- `.unnumbered .unlisted`: Exclude heading from TOC and numbering
+- `.unnumbered`: Not numbered but appears in TOC (e.g., abbreviations, bibliography)
 
-### Known Limitations
-- **Quarto Book Projects**: Not supported for custom Typst formats (confirmed by Quarto team)
-- **Workaround**: Use single document with `{{< include >}}` for multi-chapter content
+### Appendix Handling
+- Chapters listed under `appendices:` in `_quarto.yml` get A/B numbering
+- `appendix-filter.lua` uses `quarto.doc.file_metadata()` API to detect appendix chapters (language-independent)
+- The filter sets a Typst state (`appendix-mode`) and resets the heading counter
+- `typst-template.typ` checks this state to switch between `1.1.` and `A.1.` numbering
