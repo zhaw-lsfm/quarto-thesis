@@ -8,3 +8,5 @@ CLAUDE.md
 index.qmd
 .quarto
 .claude
+*_files
+*.typ

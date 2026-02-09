@@ -12,3 +12,4 @@ docs
 **/*.quarto_ipynb
 
 /.luarc.json
+/index.typ
