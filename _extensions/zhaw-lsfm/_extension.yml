@@ -12,6 +12,7 @@ contributes:
       toc: false
       filters:
         - pagebreak-filter.lua
+        - appendix-filter.lua
       template-partials:
         - typst-template.typ
         - typst-show.typ

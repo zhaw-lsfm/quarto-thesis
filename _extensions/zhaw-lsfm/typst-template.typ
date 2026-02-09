@@ -61,16 +61,22 @@
            region: region,
            font: font,
            size: fontsize)
+  // State to track if we're in appendix mode
+  let appendix-mode = state("appendix-mode", false)
+
   set heading(
     numbering: if sectionnumbering != none {
       (..nums) => if nums.pos().len() <= number-depth {
-        numbering(sectionnumbering, ..nums)
+        let is-appendix = appendix-mode.get()
+        if is-appendix {
+          numbering("A.1.", ..nums)
+        } else {
+          numbering(sectionnumbering, ..nums)
+        }
       }
     } else { none }
   )
-  // State to track if we're in appendix mode
-  let appendix-mode = state("appendix-mode", false)
-  
+
   show heading: it => {
     it
     v(0.5em)

@@ -1,57 +1,25 @@
----
-title: "ZHAW LSFM Thesis Template"
-subtitle: "A Quarto-Typst template for ZHAW LSFM student theses"
-format:
-  html:
-    toc: false
----
+# Zusammenfassung {.unnumbered .unlisted}
 
-## Quick Start
+Diese Arbeit untersucht die Beziehung zwischen Gehirngröße und Körpergewicht bei verschiedenen Säugetierarten anhand des MASS::Animals Datensatzes. Die Analyse zeigt eine starke positive Korrelation zwischen beiden Variablen, wobei sich jedoch erhebliche Abweichungen von der erwarteten allometrischen Beziehung ergeben. Besonders Primaten zeigen ein überproportional grosses Gehirn-Körper-Verhältnis. Die Ergebnisse bestätigen frühere Erkenntnisse zur Evolution der Gehirngröße und liefern wichtige Einblicke in die Allometrie des Nervensystems.
 
-Install the template with:
+::: {.content-hidden when-format="html"}
 
-```bash
-quarto use template zhaw-lsfm/quarto-thesis
-```
+# Inhaltsverzeichnis {.unnumbered .unlisted}
 
-This will:
+{{< table-of-contents >}}
 
-- Install the `zhaw-lsfm` Quarto extension
-- Create a template document for your thesis
-- Set up all required files (bibliography, cover image, etc.)
+:::
 
-## Features
+# Liste der Abkürzungen {.unnumbered}
 
-- **Automated ZHAW Formatting**: Title page, imprint, headers, and margins per ZHAW guidelines
-- **Fast PDF Rendering**: Uses Typst typesetting system
-- **Metadata-Driven**: Configure thesis details in YAML frontmatter
-- **Document Structure Shortcodes**: Easy placement of TOC, figure/table lists, references
-- **Language Support**: German and English automatic text generation
-- **Dual Output**: High-quality PDF for submission, HTML for development preview
-
-## Documentation
-
-Full documentation available at: **<https://zhaw-lsfm.github.io/quarto-thesis-docs>**
-
-- [Getting Started Guide](https://zhaw-lsfm.github.io/quarto-thesis-docs/getting-started.html)
-- [User Manual](https://zhaw-lsfm.github.io/quarto-thesis-docs/manual.html)
-- [ZHAW Requirements](https://zhaw-lsfm.github.io/quarto-thesis-docs/zhaw-requirements.html)
-- [Developer Guide](https://zhaw-lsfm.github.io/quarto-thesis-docs/for-devs.html)
-
-## Demo
-
-View rendered template examples:
-
-- [PDF Demo (for submission)](template.pdf)
-- [HTML Demo (for development)](template.html)
-
-## Repository
-
-- **Template Repository**: <https://github.com/zhaw-lsfm/quarto-thesis>
-- **Documentation Repository**: <https://github.com/zhaw-lsfm/quarto-thesis-docs>
-
-## Support
-
-- [Report Issues](https://github.com/zhaw-lsfm/quarto-thesis/issues)
-- [Contribute](https://github.com/zhaw-lsfm/quarto-thesis/pulls)
-- [View Documentation](https://zhaw-lsfm.github.io/quarto-thesis-docs)
++---------+----------------------------------+
+| MASS    | Modern Applied Statistics with S |
++---------+----------------------------------+
+| log     | natürlicher Logarithmus          |
++---------+----------------------------------+
+| R²      | Bestimmtheitsmass                |
++---------+----------------------------------+
+| kg      | Kilogramm                        |
++---------+----------------------------------+
+| g       | Gramm                            |
++---------+----------------------------------+

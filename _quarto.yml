@@ -1,3 +1,51 @@
-project: 
+project:
+  type: book
   output-dir: docs
-  type: website
+
+book:
+  title: "Robuste Regression und Outlier Erkennung"
+  subtitle: "Einfache Regression"
+  author:
+    - Peter Rousseeuw
+  date: "2024-12-15"
+  chapters:
+    - index.qmd
+    - 1-einleitung.qmd
+    - 2-literatur.qmd
+    - 3-methoden.qmd
+    - 4-ergebnisse.qmd
+    - 5-diskussion.qmd
+    - references.qmd
+  appendices:
+    - 6-anhang-rohdaten.qmd
+    - 7-anhang-statistik.qmd
+
+bibliography: references.bib
+lang: de
+
+institut: "Institut für Umwelt und Natürliche Ressourcen"
+keywords: "Robuste Regression, Ausreisser, Allometrie, Säugetiere, Gehirngrösse, Statistik"
+confidential: true
+cover-image:
+  src: cover.png
+  max-width: 100%
+  max-height: 5cm
+thesis-type: "Projektarbeit 2"
+degree-type: "Bachelorstudiengang"
+study-year: "2009"
+submission-date: "2024-12-15"
+study-direction: "Umweltingenieurwesen"
+supervisors:
+  - title: "Prof. Dr."
+    name: "Max Mustermann"
+    affiliation: "ZHAW Life Sciences und Facility Management, Wädenswil"
+  - title: "Dr."
+    name: "Anna Beispiel"
+    affiliation: "ETH Zürich, Institut für Umweltingenieurwissenschaften, Zürich"
+  - title: "Prof. Dr."
+    name: "Susanne Müller"
+    affiliation: "Universität Zürich, Institut für Evolutionsbiologie und Umweltwissenschaften, Zürich"
+
+format:
+  zhaw-lsfm-typst:
+    keep-typ: true
