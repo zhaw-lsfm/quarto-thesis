@@ -70,7 +70,7 @@ references.qmd           # Bibliography
 7-anhang-statistik.qmd   # Appendix B
 ```
 
-**Why `index.qmd`?** When students install via `quarto use template`, the template file is renamed to their directory name. `index.qmd` is the standard Quarto book entry point and works for both book and website rendering.
+**Why `index.qmd`?** `index.qmd` is the standard Quarto book entry point and works for both book and website rendering. When students install via `quarto use template`, they receive `index.qmd` plus a renamed copy (e.g., `PA2.qmd`) — the renamed copy can be deleted.
 
 ### Documentation Repository (quarto-thesis-docs)
 
@@ -99,7 +99,7 @@ _extensions/zhaw-lsfm/
 - **Appendix support**: Automatic A/B numbering for appendix chapters
 - **Metadata-driven**: Extensive YAML configuration in `_quarto.yml`
 - **Language support**: German/English automatic text generation
-- **Font handling**: Arial default with fallback cascade and local font support
+- **Font handling**: Arial default via Quarto's `mainfont` YAML parameter, with local font support
 
 ### Filter Pipeline
 The template uses three Lua filters:
@@ -125,17 +125,20 @@ ZHAW-specific metadata lives in `_quarto.yml` (not in individual chapter files):
 Files listed in `.quartoignore` are NOT provided to students when they run `quarto use template`.
 
 Current exclusions:
-- Project files (CLAUDE.md, Readme.md, .Rproj, _quarto.yml)
-- Build artifacts (*_files, *.typ, .quarto)
+- Project files (CLAUDE.md, Readme.md, .Rproj)
+- Build artifacts (docs/, *_files, *.typ, .quarto)
 - Documentation files
 
 Students receive:
-- `index.qmd` (renamed to their directory name)
+- `_quarto.yml` (book project config with metadata)
+- `index.qmd` (front matter / book entry point)
 - Numbered chapter files (`1-einleitung.qmd`, etc.)
 - `references.qmd`
 - `_extensions/` directory
 - `cover.png`
 - `references.bib`
+
+**Note:** `quarto use template` also creates a renamed copy of `index.qmd` (e.g., `PA2.qmd`). This duplicate can be deleted — `_quarto.yml` references `index.qmd`.
 
 ## Extension Development
 
@@ -204,10 +207,9 @@ The extension uses semantic versioning (MAJOR.MINOR.PATCH). Follow this checklis
 ## Development Notes
 
 ### Font Configuration
-- Default: Arial 11pt with extensive fallback cascade
+- Default: Arial 11pt (set via `mainfont` and `fontsize` in `_extension.yml`)
 - Custom fonts: Place .ttf/.otf files in `_extensions/zhaw-lsfm/fonts/`
-- Override: Use `mainfont` and `fontsize` in YAML frontmatter
-- **Known Issue**: Template rendering shows font warnings for Arial, Helvetica Neue, and Helvetica when these fonts are not installed on the system. Document still renders successfully using system fallback fonts.
+- Override: Use `mainfont` and `fontsize` in `_quarto.yml` under the format key
 
 ### Class Usage Patterns
 - `.unnumbered .unlisted`: Exclude heading from TOC and numbering
@@ -218,3 +220,7 @@ The extension uses semantic versioning (MAJOR.MINOR.PATCH). Follow this checklis
 - `appendix-filter.lua` uses `quarto.doc.file_metadata()` API to detect appendix chapters (language-independent)
 - The filter sets a Typst state (`appendix-mode`) and resets the heading counter
 - `typst-template.typ` checks this state to switch between `1.1.` and `A.1.` numbering
+
+## TODOs
+
+1. **Push / publish** — push main to origin, publish GitHub Pages.

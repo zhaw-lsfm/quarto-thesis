@@ -5,8 +5,8 @@
 .Rhistory
 Readme.md
 CLAUDE.md
-index.qmd
 .quarto
 .claude
+docs
 *_files
 *.typ

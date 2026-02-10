@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Appendix-aware heading numbering in `typst-template.typ` via `appendix-mode` state
 
 ### Changed
+- Font configuration now uses Quarto's standard `mainfont` YAML parameter instead of hardcoded Typst fallback chain
 - Switched project type from single-file to `type: book`
 - Replaced `template.qmd` with `index.qmd` as book entry point plus numbered chapter files
 - ZHAW-specific metadata now lives in `_quarto.yml` instead of per-file YAML frontmatter

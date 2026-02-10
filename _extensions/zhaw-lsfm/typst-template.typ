@@ -33,7 +33,7 @@
   paper: "us-letter",
   lang: "en",
   region: "US",
-  font: ("Arial", "Helvetica Neue", "Helvetica", "Liberation Sans", "DejaVu Sans", "Noto Sans"),
+  font: (),
   fontsize: 11pt,
   title-size: 1.5em,
   subtitle-size: 1.25em,
