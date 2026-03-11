@@ -7,37 +7,34 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Added
-- PDF download button in HTML output via Quarto's built-in `downloads: pdf` book option
-- `1-zusammenfassung.qmd` as a dedicated abstract chapter (visible as its own page in HTML)
-- `zhaw-title-block` shortcode for rendering the full ZHAW title page in HTML (called from `index.qmd`)
-- Quarto book project support (requires Quarto >= 1.9.18)
+## [0.3.0] - 2026-03-11
 
-### Changed
-- HTML title block (`title-block.html`) now only renders the chapter title for non-index pages; the index title page is handled entirely by the `{{< zhaw-title-block >}}` shortcode
-- `index.qmd` sidebar label set to `"Titelseite"` via `text:` in `_quarto.yml`
-- Removed default `mainfont: Arial` — Typst now uses its built-in default font; Arial can be set optionally via `mainfont` in `_quarto.yml`
-- Multi-chapter structure with numbered chapter files in root directory
+### Added
+- Quarto book project support (requires Quarto >= 1.9.18)
+- Multi-chapter structure with numbered chapter files (`index.qmd`, `1-zusammenfassung.qmd`, `2-einleitung.qmd`, ...)
+- `1-zusammenfassung.qmd` as a dedicated abstract chapter (visible as its own page in HTML)
 - `appendix-filter.lua` for automatic A/B appendix numbering via `file_metadata` API
 - Appendix-aware heading numbering in `typst-template.typ` via `appendix-mode` state
+- `zhaw-title-block` shortcode rendering the full ZHAW title page in HTML (header, supervisors, imprint)
+- PDF download button in HTML output via Quarto's built-in `downloads: pdf` book option
+
+### Changed
+- Renamed `cover-image` metadata field to `zhaw-cover-image` to avoid conflict with Quarto's built-in `cover-image` book field
+- Switched project type from single-file to `type: book`
+- ZHAW-specific metadata now lives in `_quarto.yml` instead of per-file YAML frontmatter
+- HTML title block (`title-block.html`) now empty — index title page handled by `{{< zhaw-title-block >}}` shortcode; chapter titles rendered via `is-index` flag
+- `index.qmd` sidebar label set to `"Titelseite"` via `text:` in `_quarto.yml`
+- Removed default `mainfont: Arial` — Typst uses its built-in default; Arial can be set optionally via `mainfont` in `_quarto.yml`
+- Bumped minimum Quarto version to 1.9.18
+- `zhaw-lsfm-html` listed before `zhaw-lsfm-typst` in `_quarto.yml` so HTML sidebar links resolve correctly
 
 ### Fixed
-- Renamed `cover-image` metadata field to `zhaw-cover-image` to avoid conflict with Quarto's built-in `cover-image` book field (which caused `[object Object].png` in HTML output)
+- `[object Object].png` in HTML cover image (caused by conflict with Quarto's built-in `cover-image` field)
+- Empty font fallback list crash in Typst when `mainfont` is not set
+- HTML title block and sidebar appearing on every chapter page
 
 ### Removed
 - `template.qmd` single-file template (superseded by book chapter files)
-
-### Changed
-- Font configuration now uses Quarto's standard `mainfont` YAML parameter instead of hardcoded Typst fallback chain
-- Switched project type from single-file to `type: book`
-- Replaced `template.qmd` with `index.qmd` as book entry point plus numbered chapter files
-- ZHAW-specific metadata now lives in `_quarto.yml` instead of per-file YAML frontmatter
-- Book HTML output now serves as the landing page (replaces separate `index.qmd` landing page)
-- Bumped minimum Quarto version to 1.9.18
-
-### Removed
-- `template.qmd` single-file template (replaced by book chapter files)
-- Separate landing page `index.qmd` (replaced by book HTML output)
 
 ## [0.2.1] - 2025-12-11
 
@@ -78,7 +75,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Custom font support via `fonts/` directory
 - Metadata-driven template with 20+ YAML fields
 
-[Unreleased]: https://github.com/zhaw-lsfm/quarto-thesis/compare/v0.2.1...HEAD
+[Unreleased]: https://github.com/zhaw-lsfm/quarto-thesis/compare/v0.3.0...HEAD
+[0.3.0]: https://github.com/zhaw-lsfm/quarto-thesis/compare/v0.2.1...v0.3.0
 [0.2.1]: https://github.com/zhaw-lsfm/quarto-thesis/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/zhaw-lsfm/quarto-thesis/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/zhaw-lsfm/quarto-thesis/releases/tag/v0.1.0
