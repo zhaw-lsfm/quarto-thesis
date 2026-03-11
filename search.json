@@ -1,156 +1,121 @@
 [
   {
-    "objectID": "template.html",
-    "href": "template.html",
+    "objectID": "index.html",
+    "href": "index.html",
     "title": "Robuste Regression und Outlier Erkennung",
     "section": "",
-    "text": "Zürcher Hochschule für Angewandte Wissenschaften\nDepartement Life Sciences und Facility Management\nInstitut für Umwelt und Natürliche Ressourcen\n\n\n\nEinfache Regression\n\n\n\n\n\nVertraulich\n\nProjektarbeit 2\n\n\nvon\nPeter Rousseeuw\n\n\nBachelorstudiengang 2009\n\nAbgabedatum 2024-12-15\n\nStudienrichtung Umweltingenieurwesen\n\n\nBetreuer / Betreuerinnen:\n\nProf. Dr. Max Mustermann\nZHAW Life Sciences und Facility Management, Wädenswil\nDr. Anna Beispiel\nETH Zürich, Institut für Umweltingenieurwissenschaften, Zürich\nProf. Dr. Susanne Müller\nUniversität Zürich, Institut für Evolutionsbiologie und Umweltwissenschaften, Zürich"
+    "text": "Zürcher Hochschule für Angewandte WissenschaftenDepartement Life Sciences und Facility ManagementInstitut für Umwelt und Natürliche Ressourcen\nRobuste Regression und Outlier Erkennung\nEinfache Regression\n\nVertraulich\nProjektarbeit 2\nvon\nPeter Rousseeuw\n\nBachelorstudiengang 2009\nAbgabedatum 2024-12-15\nStudienrichtung Umweltingenieurwesen\nBetreuer / Betreuerinnen:\nProf. Dr. Max MustermannZHAW Life Sciences und Facility Management, Wädenswil\nDr. Anna BeispielETH Zürich, Institut für Umweltingenieurwissenschaften, Zürich\nProf. Dr. Susanne MüllerUniversität Zürich, Institut für Evolutionsbiologie und Umweltwissenschaften, Zürich\n\n\n\nImpressum\nZitiervorschlag:\nPeter Rousseeuw (15. Dezember 2024). Robuste Regression und Outlier Erkennung: Einfache Regression. Zürcher Hochschule für Angewandte Wissenschaften, Departement Life Sciences und Facility Management, Institut für Umwelt und Natürliche Ressourcen.\nSchlagworte: Robuste Regression, Ausreisser, Allometrie, Säugetiere, Gehirngrösse, Statistik"
   },
   {
-    "objectID": "template.html#datensatz",
-    "href": "template.html#datensatz",
-    "title": "Robuste Regression und Outlier Erkennung",
-    "section": "3.1 Datensatz",
-    "text": "3.1 Datensatz\nDie Analyse basiert auf dem Animals Datensatz aus dem R-Paket MASS, der Gehirn- und Körpergewichtsdaten für 28 verschiedene Säugetierarten enthält.\n\n3.1.1 Datenquelle und Charakteristika\nDer Datensatz wurde ursprünglich von Weisberg (1980) zusammengestellt und enthält Messungen von verschiedenen Wirbeltierarten. Die Daten umfassen sowohl terrestrische als auch aquatische Säugetiere mit einem breiten Spektrum von Körpergewichten.\n\n\n3.1.2 Datenqualität und Limitationen\nEinige Messungen stammen aus älteren Studien und könnten methodische Ungenauigkeiten aufweisen. Besonders bei sehr grossen Tieren wie Elefanten können die Gehirngewichte schwer präzise zu bestimmen sein."
+    "objectID": "1-zusammenfassung.html",
+    "href": "1-zusammenfassung.html",
+    "title": "Zusammenfassung",
+    "section": "",
+    "text": "Zusammenfassung\n\n\n\n\nDiese Arbeit untersucht die Beziehung zwischen Gehirngröße und Körpergewicht bei verschiedenen Säugetierarten anhand des MASS::Animals Datensatzes. Die Analyse zeigt eine starke positive Korrelation zwischen beiden Variablen, wobei sich jedoch erhebliche Abweichungen von der erwarteten allometrischen Beziehung ergeben. Besonders Primaten zeigen ein überproportional grosses Gehirn-Körper-Verhältnis. Die Ergebnisse bestätigen frühere Erkenntnisse zur Evolution der Gehirngröße und liefern wichtige Einblicke in die Allometrie des Nervensystems."
   },
   {
-    "objectID": "template.html#statistische-analyse",
-    "href": "template.html#statistische-analyse",
-    "title": "Robuste Regression und Outlier Erkennung",
+    "objectID": "2-einleitung.html",
+    "href": "2-einleitung.html",
+    "title": "1  Einleitung",
+    "section": "",
+    "text": "1  Einleitung\n\n\n\nDie Beziehung zwischen Gehirngrösse und Körpergewicht ist ein fundamentaler Aspekt der vergleichenden Neurobiologie und Evolution. Seit den bahnbrechenden Arbeiten zur fossilen Evidenz der menschlichen Gehirnentwicklung (Jerison 1973) ist bekannt, dass die Gehirngrösse nicht linear mit dem Körpergewicht skaliert.\nDiese Studie analysiert die Allometrie von Gehirn- und Körpergewicht anhand eines umfangreichen Datensatzes verschiedener Säugetierarten. Das Ziel ist es, die mathematische Beziehung zwischen diesen Variablen zu quantifizieren und Ausreisser zu identifizieren, die auf besondere evolutionäre Anpassungen hinweisen könnten.\n\n\n\n\nJerison, Harry J. 1973. „Fossil evidence of the evolution of the human brain“. Annual Review of Anthropology 4: 27–58."
+  },
+  {
+    "objectID": "3-literatur.html",
+    "href": "3-literatur.html",
+    "title": "2  Literaturübersicht oder Theorie",
+    "section": "",
+    "text": "2  Literaturübersicht oder Theorie\n\n\n\nDie theoretische Grundlage für Gehirn-Körper-Allometrie basiert auf dem Konzept, dass biologische Strukturen häufig Potenzgesetzen folgen. Die erwartete Beziehung wird typischerweise als:\n\\[\\text{Gehirngewicht} = a \\times \\text{Körpergewicht}^b\\]\nbeschrieben, wobei der Exponent b in der Regel zwischen 0.6 und 0.8 liegt. Jerison (1973) zeigte, dass die Evolution des menschlichen Gehirns erheblich von dieser allgemeinen Regel abweicht.\nStatistische Probleme bei der Analyse solcher Daten wurden von Weisberg (1980) diskutiert, insbesondere bezüglich der Normalitätsannahmen in linearen Regressionsmodellen bei grossen Stichproben.\n\n\n\n\nJerison, Harry J. 1973. „Fossil evidence of the evolution of the human brain“. Annual Review of Anthropology 4: 27–58.\n\n\nWeisberg, Sanford. 1980. „Some large-sample tests for nonnormality in the linear regression model: Comment“. Journal of the American Statistical Association 75 (369): 28–31."
+  },
+  {
+    "objectID": "4-methoden.html",
+    "href": "4-methoden.html",
+    "title": "3  Material und Methoden",
+    "section": "",
+    "text": "3.1 Datensatz\nDie Analyse basiert auf dem Animals Datensatz aus dem R-Paket MASS, der Gehirn- und Körpergewichtsdaten für 28 verschiedene Säugetierarten enthält."
+  },
+  {
+    "objectID": "4-methoden.html#datensatz",
+    "href": "4-methoden.html#datensatz",
+    "title": "3  Material und Methoden",
+    "section": "",
+    "text": "3.1.1 Datenquelle und Charakteristika\nDer Datensatz wurde ursprünglich von Weisberg (1980) zusammengestellt und enthält Messungen von verschiedenen Wirbeltierarten. Die Daten umfassen sowohl terrestrische als auch aquatische Säugetiere mit einem breiten Spektrum von Körpergewichten.\n\n\n3.1.2 Datenqualität und Limitationen\nEinige Messungen stammen aus älteren Studien und könnten methodische Ungenauigkeiten aufweisen. Besonders bei sehr grossen Tieren wie Elefanten können die Gehirngewichte schwer präzise zu bestimmen sein."
+  },
+  {
+    "objectID": "4-methoden.html#statistische-analyse",
+    "href": "4-methoden.html#statistische-analyse",
+    "title": "3  Material und Methoden",
     "section": "3.2 Statistische Analyse",
     "text": "3.2 Statistische Analyse\nDie Daten wurden logarithmisch transformiert, um eine lineare Beziehung zu erhalten:\nlog(Gehirngewicht) = log(a) + b * log(Körpergewicht)\n\n3.2.1 Transformationsverfahren\nDie logarithmische Transformation ist bei allometrischen Beziehungen Standard, da sie Potenzgesetze in lineare Beziehungen überführt. Dies ermöglicht die Anwendung klassischer linearer Regressionsverfahren.\n\n\n3.2.2 Modellvalidierung\nDie Residuen wurden auf Normalität und Homoskedastizität überprüft. Zusätzlich wurden Cook’s Distance und Leverage-Werte berechnet, um einflussreiche Datenpunkte zu identifizieren."
   },
   {
-    "objectID": "template.html#visualisierung",
-    "href": "template.html#visualisierung",
-    "title": "Robuste Regression und Outlier Erkennung",
+    "objectID": "4-methoden.html#visualisierung",
+    "href": "4-methoden.html#visualisierung",
+    "title": "3  Material und Methoden",
     "section": "3.3 Visualisierung",
-    "text": "3.3 Visualisierung\nScatterplots wurden erstellt, um die Beziehung zu visualisieren, sowohl auf ursprünglicher als auch auf logarithmischer Skala.\n\n3.3.1 Graphische Darstellung\nDie Visualisierungen umfassen sowohl die Rohdaten als auch die transformierten Daten mit Regressionsgerade und Konfidenzintervall.\n\n\n3.3.2 Software und Pakete\nAlle Analysen und Visualisierungen wurden in R durchgeführt unter Verwendung der Pakete ggplot2, MASS und dplyr."
+    "text": "3.3 Visualisierung\nScatterplots wurden erstellt, um die Beziehung zu visualisieren, sowohl auf ursprünglicher als auch auf logarithmischer Skala.\n\n3.3.1 Graphische Darstellung\nDie Visualisierungen umfassen sowohl die Rohdaten als auch die transformierten Daten mit Regressionsgerade und Konfidenzintervall.\n\n\n3.3.2 Software und Pakete\nAlle Analysen und Visualisierungen wurden in R durchgeführt unter Verwendung der Pakete ggplot2, MASS und dplyr.\n\n\n\n\nWeisberg, Sanford. 1980. „Some large-sample tests for nonnormality in the linear regression model: Comment“. Journal of the American Statistical Association 75 (369): 28–31."
   },
   {
-    "objectID": "template.html#rohdaten",
-    "href": "template.html#rohdaten",
-    "title": "Robuste Regression und Outlier Erkennung",
-    "section": "6.1 Rohdaten",
-    "text": "6.1 Rohdaten\nDer vollständige MASS::Animals Datensatz mit allen 28 Säugetierarten:\n\n\n\n\nTabelle 3: Vollständige Rohdaten des MASS::Animals Datensatzes\n\n\n\n\n\n\n\n\n\n\n\n\n\nArt\nKörpergewicht_kg\nGehirngewicht_g\nLog_Körpergewicht\nLog_Gehirngewicht\n\n\n\n\nMountain beaver\n1.350\n8.1\n0.130\n0.908\n\n\nCow\n465.000\n423.0\n2.667\n2.626\n\n\nGrey wolf\n36.330\n119.5\n1.560\n2.077\n\n\nGoat\n27.660\n115.0\n1.442\n2.061\n\n\nGuinea pig\n1.040\n5.5\n0.017\n0.740\n\n\nDipliodocus\n11700.000\n50.0\n4.068\n1.699\n\n\nAsian elephant\n2547.000\n4603.0\n3.406\n3.663\n\n\nDonkey\n187.100\n419.0\n2.272\n2.622\n\n\nHorse\n521.000\n655.0\n2.717\n2.816\n\n\nPotar monkey\n10.000\n115.0\n1.000\n2.061\n\n\nCat\n3.300\n25.6\n0.519\n1.408\n\n\nGiraffe\n529.000\n680.0\n2.723\n2.833\n\n\nGorilla\n207.000\n406.0\n2.316\n2.609\n\n\nHuman\n62.000\n1320.0\n1.792\n3.121\n\n\nAfrican elephant\n6654.000\n5712.0\n3.823\n3.757\n\n\nTriceratops\n9400.000\n70.0\n3.973\n1.845\n\n\nRhesus monkey\n6.800\n179.0\n0.833\n2.253\n\n\nKangaroo\n35.000\n56.0\n1.544\n1.748\n\n\nGolden hamster\n0.120\n1.0\n-0.921\n0.000\n\n\nMouse\n0.023\n0.4\n-1.638\n-0.398\n\n\nRabbit\n2.500\n12.1\n0.398\n1.083\n\n\nSheep\n55.500\n175.0\n1.744\n2.243\n\n\nJaguar\n100.000\n157.0\n2.000\n2.196\n\n\nChimpanzee\n52.160\n440.0\n1.717\n2.643\n\n\nRat\n0.280\n1.9\n-0.553\n0.279\n\n\nBrachiosaurus\n87000.000\n154.5\n4.940\n2.189\n\n\nMole\n0.122\n3.0\n-0.914\n0.477\n\n\nPig\n192.000\n180.0\n2.283\n2.255\n\n\n\n\n\n\n\n\n\n6.1.1 Datenquelle und -qualität\nDie Daten stammen aus verschiedenen Quellen und wurden über mehrere Jahrzehnte zusammengetragen. Einige Besonderheiten der Datensammlung:\n\nAfrikanischer Elefant: Mit 6654 kg Körpergewicht und 5712 g Gehirngewicht das grösste Säugetier in der Stichprobe\nSpitzmaus: Das kleinste Säugetier mit nur 0.004 kg Körpergewicht und 0.14 g Gehirngewicht\nMensch: Zeigt mit 1320 g Gehirngewicht bei 62 kg Körpergewicht eine deutliche positive Abweichung von der allometrischen Beziehung\nPrimaten generell: Schimpanse, Gorilla und Rhesusaffe zeigen alle überdurchschnittlich grosse Gehirne\n\n\n\n6.1.2 Ausreisser-Analyse\n\n\n\n\n\n\n\n\nAbbildung 2: Residuen der logarithmischen Regression zur Identifikation von Ausreissern"
-  },
-  {
-    "objectID": "template.html#statistische-outputs",
-    "href": "template.html#statistische-outputs",
-    "title": "Robuste Regression und Outlier Erkennung",
-    "section": "6.2 Statistische Outputs",
-    "text": "6.2 Statistische Outputs\n\n6.2.1 Vollständige Regressionsanalyse\n\n\n\n\nTabelle 4: Detaillierte Regressionsstatistiken\n\n\n\n\n\n\nStatistik\nWert\n\n\n\n\nMultiple R-squared\n0.6076\n\n\nAdjusted R-squared\n0.5925\n\n\nF-statistic\n40.26\n\n\nF p-value\n&lt; 0.001\n\n\nResidual standard error\n1.5316\n\n\nDegrees of freedom\n26 on 2 DF\n\n\n\n\n\n\n\n\n\n\n6.2.2 Koeffizienten mit Konfidenzintervallen\n\n\n\n\nTabelle 5: Regressionskoeffizienten mit 95% Konfidenzintervallen\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\nSchätzung\nStandardfehler\nt_Wert\np_Wert\nCI_2.5\nCI_97.5\n\n\n\n\n(Intercept)\nIntercept (log a)\n2.5549\n0.4131\n6.184\n&lt; 0.001\n1.7057\n3.4041\n\n\nlog(body)\nSteigung (b)\n0.4960\n0.0782\n6.345\n&lt; 0.001\n0.3353\n0.6567\n\n\n\n\n\n\n\n\n\n\n6.2.3 Modelldiagnostik\n\n\n\n\n\n\n\n\nAbbildung 3: Diagnostische Plots für die Regressionsanalyse"
-  },
-  {
-    "objectID": "CLAUDE.html",
-    "href": "CLAUDE.html",
-    "title": "CLAUDE.md",
+    "objectID": "5-ergebnisse.html",
+    "href": "5-ergebnisse.html",
+    "title": "4  Ergebnisse",
     "section": "",
-    "text": "This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.\n\n\nThis is the template repository for the ZHAW LSFM Quarto-Typst template.\nRepository Structure: - Extension (_extensions/zhaw-lsfm/) - Template scaffolding (template.qmd) - Minimal landing page (index.qmd)\nFull documentation is maintained separately at: - Repository: https://github.com/zhaw-lsfm/quarto-thesis-docs - Website: https://zhaw-lsfm.github.io/quarto-thesis-docs\n\n\n\n\n\n# Render template to all formats\nquarto render template.qmd\n\n# Specific formats\nquarto render template.qmd --to zhaw-lsfm-typst\nquarto render template.qmd --to html\n\n# Preview\nquarto preview template.qmd\n\n\n\n# Render landing page and demos\nquarto render index.qmd\nquarto render template.qmd\n\n# Publish to GitHub Pages\nquarto publish gh-pages\n\n\n\n# Test in clean directory\nmkdir ../test-install && cd ../test-install\nquarto use template zhaw-lsfm/quarto-thesis\n\n# Verify installed files\nls -la\n\n\n\n\n\n\nServes two purposes: 1. Quarto Extension - Students install via quarto use template 2. Landing Page - Quick start info at https://zhaw-lsfm.github.io/quarto-thesis\n\n\n\nContains: - Full user manual - ZHAW requirements - Developer guides - Getting started tutorials\n\n\n\n_extensions/zhaw-lsfm/\n├── typst-template.typ     # Main Typst template with ZHAW formatting\n├── typst-show.typ         # YAML metadata mapping to Typst\n├── _extension.yml         # Extension configuration\n├── shortcodes.lua         # Document structure shortcodes\n├── pagebreak-filter.lua   # Automatic page breaks\n└── fonts/                 # Custom font directory\n\n\n\n\nInstitutional branding: Automatic ZHAW headers, title page, and imprint generation\nDocument structure: Shortcodes for TOC, figure/table lists, references\nMetadata-driven: Extensive YAML frontmatter support for thesis information\nLanguage support: German/English automatic text generation\nFont handling: Arial default with fallback cascade and local font support\n\n\n\n\nThe template uses a filter pipeline: 1. pagebreak-filter.lua: Adds page breaks before major sections 2. Quarto’s built-in Typst processing\n\n\n\nUnified `"
+    "text": "4  Ergebnisse\n\n\n\nDie statistische Analyse des MASS::Animals Datensatzes liefert umfassende Einblicke in die Beziehung zwischen Körper- und Gehirngewicht bei Säugetieren. Die deskriptiven Statistiken in Tabelle 4.2 zeigen die erhebliche Variabilität der untersuchten Arten: Das Körpergewicht reicht von kleinen Nagern bis hin zu grossen Säugetieren wie Elefanten, während das Gehirngewicht entsprechend von wenigen Gramm bis zu mehreren Kilogramm variiert.\nDie logarithmische Darstellung in Abbildung 4.1 visualisiert deutlich die allometrische Beziehung zwischen beiden Variablen. Trotz der logarithmischen Transformation zeigen sich einige interessante Abweichungen von der Regressionsgerade, die auf artspezifische Anpassungen hinweisen. Besonders auffällig sind Datenpunkte oberhalb der Regressionslinie, die Arten mit überproportional grossem Gehirn repräsentieren.\n\n\n\n\n\n\n\n\nAbbildung 4.1: Beziehung zwischen Körpergewicht und Gehirngewicht bei Säugetieren\n\n\n\n\n\n\n\n\n\nTabelle 4.1: Statistische Kennwerte der Gehirn-Körper-Beziehung\n\n\n\n\n\n\nParameter\nWert\n\n\n\n\nIntercept (log a)\n2.555\n\n\nSteigung (b)\n0.496\n\n\nR²\n0.608\n\n\np-Wert\n&lt; 0.001\n\n\n\n\n\n\n\n\n\n\n\n\nTabelle 4.2: Deskriptive Statistik der MASS::Animals Daten\n\n\n\n\n\n\nVariable\nMinimum\nMittelwert\nMaximum\nN\n\n\n\n\nKörpergewicht (kg)\n0.023\n4278.4\n87000\n28\n\n\nGehirngewicht (g)\n0.400\n574.5\n5712\n28\n\n\n\n\n\n\n\n\nDie Regressionsanalyse bestätigt die theoretischen Erwartungen zur allometrischen Skalierung. Die statistischen Kennwerte in Tabelle 4.1 zeigen einen Steigungsparameter von 0.75, der optimal in den von der Literatur vorhergesagten Bereich zwischen 0.6 und 0.8 fällt. Das hohe Bestimmtheitsmass (R² = 0.96) belegt die starke lineare Beziehung zwischen logarithmiertem Körper- und Gehirngewicht.\nDer hochsignifikante p-Wert (&lt; 0.001) in Tabelle 4.1 unterstreicht die statistische Robustheit dieser Beziehung. Diese Ergebnisse stehen im Einklang mit der allometrischen Theorie und bestätigen, dass das Gehirngewicht systematisch mit dem Körpergewicht skaliert, jedoch nicht proportional, sondern mit einem reduzierten Exponenten."
   },
   {
-    "objectID": "CLAUDE.html#project-overview",
-    "href": "CLAUDE.html#project-overview",
-    "title": "CLAUDE.md",
+    "objectID": "6-diskussion.html",
+    "href": "6-diskussion.html",
+    "title": "5  Diskussion",
     "section": "",
-    "text": "This is the template repository for the ZHAW LSFM Quarto-Typst template.\nRepository Structure: - Extension (_extensions/zhaw-lsfm/) - Template scaffolding (template.qmd) - Minimal landing page (index.qmd)\nFull documentation is maintained separately at: - Repository: https://github.com/zhaw-lsfm/quarto-thesis-docs - Website: https://zhaw-lsfm.github.io/quarto-thesis-docs"
+    "text": "5  Diskussion\n\n\n\nDie Ergebnisse bestätigen die grundlegende allometrische Beziehung zwischen Gehirn- und Körpergewicht bei Säugetieren. Der ermittelte Exponent von 0.75 liegt im erwarteten Bereich und stimmt mit früheren Studien überein (Jerison 1973).\nBesonders interessant sind die Ausreisser in den Daten: Arten wie der Mensch und andere Primaten zeigen ein überproportional grosses Gehirn, was auf spezielle evolutionäre Anpassungen hinweist. Diese Abweichungen unterstreichen die Bedeutung der Encephalisation in der Primatenevolution.\nDie hohe Korrelation (R² = 0.96) zeigt, dass das Körpergewicht ein starker Prädiktor für das Gehirngewicht ist, auch wenn bedeutsame biologische Variationen existieren.\n\n\n\n\nJerison, Harry J. 1973. „Fossil evidence of the evolution of the human brain“. Annual Review of Anthropology 4: 27–58."
   },
   {
-    "objectID": "CLAUDE.html#common-development-commands",
-    "href": "CLAUDE.html#common-development-commands",
-    "title": "CLAUDE.md",
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "Literaturverzeichnis",
     "section": "",
-    "text": "# Render template to all formats\nquarto render template.qmd\n\n# Specific formats\nquarto render template.qmd --to zhaw-lsfm-typst\nquarto render template.qmd --to html\n\n# Preview\nquarto preview template.qmd\n\n\n\n# Render landing page and demos\nquarto render index.qmd\nquarto render template.qmd\n\n# Publish to GitHub Pages\nquarto publish gh-pages\n\n\n\n# Test in clean directory\nmkdir ../test-install && cd ../test-install\nquarto use template zhaw-lsfm/quarto-thesis\n\n# Verify installed files\nls -la"
+    "text": "Literaturverzeichnis"
   },
   {
-    "objectID": "CLAUDE.html#architecture-overview",
-    "href": "CLAUDE.html#architecture-overview",
-    "title": "CLAUDE.md",
+    "objectID": "7-anhang-rohdaten.html",
+    "href": "7-anhang-rohdaten.html",
+    "title": "Anhang A — Rohdaten",
     "section": "",
-    "text": "Serves two purposes: 1. Quarto Extension - Students install via quarto use template 2. Landing Page - Quick start info at https://zhaw-lsfm.github.io/quarto-thesis\n\n\n\nContains: - Full user manual - ZHAW requirements - Developer guides - Getting started tutorials\n\n\n\n_extensions/zhaw-lsfm/\n├── typst-template.typ     # Main Typst template with ZHAW formatting\n├── typst-show.typ         # YAML metadata mapping to Typst\n├── _extension.yml         # Extension configuration\n├── shortcodes.lua         # Document structure shortcodes\n├── pagebreak-filter.lua   # Automatic page breaks\n└── fonts/                 # Custom font directory\n\n\n\n\nInstitutional branding: Automatic ZHAW headers, title page, and imprint generation\nDocument structure: Shortcodes for TOC, figure/table lists, references\nMetadata-driven: Extensive YAML frontmatter support for thesis information\nLanguage support: German/English automatic text generation\nFont handling: Arial default with fallback cascade and local font support\n\n\n\n\nThe template uses a filter pipeline: 1. pagebreak-filter.lua: Adds page breaks before major sections 2. Quarto’s built-in Typst processing\n\n\n\nUnified `"
+    "text": "A.1 Datenquelle und -qualität\nZusätzliche Materialien und Daten, die nicht im Hauptteil der Arbeit enthalten sind, werden im Anhang aufgeführt.\nDer vollständige MASS::Animals Datensatz mit allen 28 Säugetierarten:\nDie Daten stammen aus verschiedenen Quellen und wurden über mehrere Jahrzehnte zusammengetragen. Einige Besonderheiten der Datensammlung:"
   },
   {
-    "objectID": "Readme.html",
-    "href": "Readme.html",
-    "title": "ZHAW LSFM Thesis Template",
+    "objectID": "7-anhang-rohdaten.html#datenquelle-und--qualität",
+    "href": "7-anhang-rohdaten.html#datenquelle-und--qualität",
+    "title": "Anhang A — Rohdaten",
     "section": "",
-    "text": "A Quarto template implementing ZHAW LSFM thesis formatting guidelines using Typst.\n\n\nquarto use template zhaw-lsfm/quarto-thesis\n\n\n\nFull documentation: https://zhaw-lsfm.github.io/quarto-thesis-docs\n\n\n\n\n_extensions/zhaw-lsfm/ - Quarto extension\ntemplate.qmd - Example thesis document\nSupporting files (bibliography, cover image)\n\n\n\n\n\nLive Demo (PDF)\nLive Demo (HTML)\nDocumentation Site\nDocumentation Repository"
+    "text": "Afrikanischer Elefant: Mit 6654 kg Körpergewicht und 5712 g Gehirngewicht das grösste Säugetier in der Stichprobe\nSpitzmaus: Das kleinste Säugetier mit nur 0.004 kg Körpergewicht und 0.14 g Gehirngewicht\nMensch: Zeigt mit 1320 g Gehirngewicht bei 62 kg Körpergewicht eine deutliche positive Abweichung von der allometrischen Beziehung\nPrimaten generell: Schimpanse, Gorilla und Rhesusaffe zeigen alle überdurchschnittlich grosse Gehirne"
   },
   {
-    "objectID": "Readme.html#installation",
-    "href": "Readme.html#installation",
-    "title": "ZHAW LSFM Thesis Template",
+    "objectID": "7-anhang-rohdaten.html#ausreisser-analyse",
+    "href": "7-anhang-rohdaten.html#ausreisser-analyse",
+    "title": "Anhang A — Rohdaten",
+    "section": "A.2 Ausreisser-Analyse",
+    "text": "A.2 Ausreisser-Analyse\n\n\n\n\n\n\n\n\nAbbildung A.1: Residuen der logarithmischen Regression zur Identifikation von Ausreissern"
+  },
+  {
+    "objectID": "8-anhang-statistik.html",
+    "href": "8-anhang-statistik.html",
+    "title": "Anhang B — Statistische Outputs",
     "section": "",
-    "text": "quarto use template zhaw-lsfm/quarto-thesis"
+    "text": "B.1 Vollständige Regressionsanalyse\nTabelle B.1: Detaillierte Regressionsstatistiken\n\n\n\n\n\n\nStatistik\nWert\n\n\n\n\nMultiple R-squared\n0.6076\n\n\nAdjusted R-squared\n0.5925\n\n\nF-statistic\n40.26\n\n\nF p-value\n&lt; 0.001\n\n\nResidual standard error\n1.5316\n\n\nDegrees of freedom\n26 on 2 DF"
   },
   {
-    "objectID": "Readme.html#documentation",
-    "href": "Readme.html#documentation",
-    "title": "ZHAW LSFM Thesis Template",
-    "section": "",
-    "text": "Full documentation: https://zhaw-lsfm.github.io/quarto-thesis-docs"
+    "objectID": "8-anhang-statistik.html#koeffizienten-mit-konfidenzintervallen",
+    "href": "8-anhang-statistik.html#koeffizienten-mit-konfidenzintervallen",
+    "title": "Anhang B — Statistische Outputs",
+    "section": "B.2 Koeffizienten mit Konfidenzintervallen",
+    "text": "B.2 Koeffizienten mit Konfidenzintervallen\n\n\n\n\nTabelle B.2: Regressionskoeffizienten mit 95% Konfidenzintervallen\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\nSchätzung\nStandardfehler\nt_Wert\np_Wert\nCI_2.5\nCI_97.5\n\n\n\n\n(Intercept)\nIntercept (log a)\n2.5549\n0.4131\n6.184\n&lt; 0.001\n1.7057\n3.4041\n\n\nlog(body)\nSteigung (b)\n0.4960\n0.0782\n6.345\n&lt; 0.001\n0.3353\n0.6567"
   },
   {
-    "objectID": "Readme.html#repository-structure",
-    "href": "Readme.html#repository-structure",
-    "title": "ZHAW LSFM Thesis Template",
-    "section": "",
-    "text": "_extensions/zhaw-lsfm/ - Quarto extension\ntemplate.qmd - Example thesis document\nSupporting files (bibliography, cover image)"
-  },
-  {
-    "objectID": "Readme.html#links",
-    "href": "Readme.html#links",
-    "title": "ZHAW LSFM Thesis Template",
-    "section": "",
-    "text": "Live Demo (PDF)\nLive Demo (HTML)\nDocumentation Site\nDocumentation Repository"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "ZHAW LSFM Thesis Template",
-    "section": "",
-    "text": "Install the template with:\nquarto use template zhaw-lsfm/quarto-thesis\nThis will:\n\nInstall the zhaw-lsfm Quarto extension\nCreate a template document for your thesis\nSet up all required files (bibliography, cover image, etc.)"
-  },
-  {
-    "objectID": "index.html#quick-start",
-    "href": "index.html#quick-start",
-    "title": "ZHAW LSFM Thesis Template",
-    "section": "",
-    "text": "Install the template with:\nquarto use template zhaw-lsfm/quarto-thesis\nThis will:\n\nInstall the zhaw-lsfm Quarto extension\nCreate a template document for your thesis\nSet up all required files (bibliography, cover image, etc.)"
-  },
-  {
-    "objectID": "index.html#features",
-    "href": "index.html#features",
-    "title": "ZHAW LSFM Thesis Template",
-    "section": "Features",
-    "text": "Features\n\nAutomated ZHAW Formatting: Title page, imprint, headers, and margins per ZHAW guidelines\nFast PDF Rendering: Uses Typst typesetting system\nMetadata-Driven: Configure thesis details in YAML frontmatter\nDocument Structure Shortcodes: Easy placement of TOC, figure/table lists, references\nLanguage Support: German and English automatic text generation\nDual Output: High-quality PDF for submission, HTML for development preview"
-  },
-  {
-    "objectID": "index.html#documentation",
-    "href": "index.html#documentation",
-    "title": "ZHAW LSFM Thesis Template",
-    "section": "Documentation",
-    "text": "Documentation\nFull documentation available at: https://zhaw-lsfm.github.io/quarto-thesis-docs\n\nGetting Started Guide\nUser Manual\nZHAW Requirements\nDeveloper Guide"
-  },
-  {
-    "objectID": "index.html#demo",
-    "href": "index.html#demo",
-    "title": "ZHAW LSFM Thesis Template",
-    "section": "Demo",
-    "text": "Demo\nView rendered template examples:\n\nPDF Demo (for submission)\nHTML Demo (for development)"
-  },
-  {
-    "objectID": "index.html#repository",
-    "href": "index.html#repository",
-    "title": "ZHAW LSFM Thesis Template",
-    "section": "Repository",
-    "text": "Repository\n\nTemplate Repository: https://github.com/zhaw-lsfm/quarto-thesis\nDocumentation Repository: https://github.com/zhaw-lsfm/quarto-thesis-docs"
-  },
-  {
-    "objectID": "index.html#support",
-    "href": "index.html#support",
-    "title": "ZHAW LSFM Thesis Template",
-    "section": "Support",
-    "text": "Support\n\nReport Issues\nContribute\nView Documentation"
+    "objectID": "8-anhang-statistik.html#modelldiagnostik",
+    "href": "8-anhang-statistik.html#modelldiagnostik",
+    "title": "Anhang B — Statistische Outputs",
+    "section": "B.3 Modelldiagnostik",
+    "text": "B.3 Modelldiagnostik\n\n\n\n\n\n\n\n\nAbbildung B.1: Diagnostische Plots für die Regressionsanalyse"
   }
 ]

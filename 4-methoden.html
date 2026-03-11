@@ -6,10 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Peter Rousseeuw">
 <meta name="keywords" content="Robuste Regression, Ausreisser, Allometrie, Säugetiere, Gehirngrösse, Statistik">
 
-<title>Robuste Regression und Outlier Erkennung</title>
+<title>3&nbsp; Material und Methoden – Robuste Regression und Outlier Erkennung</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -25,7 +24,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -35,7 +88,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./1-zusammenfassung.pdf" rel="next">
+<link href="./5-ergebnisse.pdf" rel="next">
+<link href="./3-literatur.pdf" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -79,7 +133,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="site_libs/quarto-contrib/quarto-project/zhaw-lsfm/zhaw-html.css">
 </head>
 
-<body class="floating fullcontent quarto-light">
+<body class="floating quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -88,7 +142,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.pdf">Titelseite</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./4-methoden.pdf"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Material und Methoden</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -118,7 +172,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.pdf" class="sidebar-item-text sidebar-link active">
+  <a href="./index.pdf" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Titelseite</span></a>
   </div>
 </li>
@@ -142,7 +196,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./4-methoden.pdf" class="sidebar-item-text sidebar-link">
+  <a href="./4-methoden.pdf" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Material und Methoden</span></span></a>
   </div>
 </li>
@@ -192,42 +246,80 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Inhaltsverzeichnis</h2>
+   
+  <ul>
+  <li><a href="#datensatz" id="toc-datensatz" class="nav-link active" data-scroll-target="#datensatz"><span class="header-section-number">3.1</span> Datensatz</a>
+  <ul class="collapse">
+  <li><a href="#datenquelle-und-charakteristika" id="toc-datenquelle-und-charakteristika" class="nav-link" data-scroll-target="#datenquelle-und-charakteristika"><span class="header-section-number">3.1.1</span> Datenquelle und Charakteristika</a></li>
+  <li><a href="#datenqualität-und-limitationen" id="toc-datenqualität-und-limitationen" class="nav-link" data-scroll-target="#datenqualität-und-limitationen"><span class="header-section-number">3.1.2</span> Datenqualität und Limitationen</a></li>
+  </ul></li>
+  <li><a href="#statistische-analyse" id="toc-statistische-analyse" class="nav-link" data-scroll-target="#statistische-analyse"><span class="header-section-number">3.2</span> Statistische Analyse</a>
+  <ul class="collapse">
+  <li><a href="#transformationsverfahren" id="toc-transformationsverfahren" class="nav-link" data-scroll-target="#transformationsverfahren"><span class="header-section-number">3.2.1</span> Transformationsverfahren</a></li>
+  <li><a href="#modellvalidierung" id="toc-modellvalidierung" class="nav-link" data-scroll-target="#modellvalidierung"><span class="header-section-number">3.2.2</span> Modellvalidierung</a></li>
+  </ul></li>
+  <li><a href="#visualisierung" id="toc-visualisierung" class="nav-link" data-scroll-target="#visualisierung"><span class="header-section-number">3.3</span> Visualisierung</a>
+  <ul class="collapse">
+  <li><a href="#graphische-darstellung" id="toc-graphische-darstellung" class="nav-link" data-scroll-target="#graphische-darstellung"><span class="header-section-number">3.3.1</span> Graphische Darstellung</a></li>
+  <li><a href="#software-und-pakete" id="toc-software-und-pakete" class="nav-link" data-scroll-target="#software-und-pakete"><span class="header-section-number">3.3.2</span> Software und Pakete</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Material und Methoden</span></h1>
 
 
 
-<!-- HTML: render the ZHAW title page here (supervisors, imprint, etc.) -->
-<header id="title-block-header">
-<div class="zhaw-header">Zürcher Hochschule für Angewandte Wissenschaften<br>Departement Life Sciences und Facility Management<br>Institut für Umwelt und Natürliche Ressourcen</div>
-<h1 class="title display-7">Robuste Regression und Outlier Erkennung</h1>
-<p class="subtitle lead">Einfache Regression</p>
-<div class="cover-image"><img src="cover.png" alt="Cover"></div>
-<p class="confidential">Vertraulich</p>
-<p class="thesis-type">Projektarbeit 2</p>
-<div class="author-section"><p class="von">von</p>
-<p class="author">Peter Rousseeuw</p>
+<section id="datensatz" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="datensatz"><span class="header-section-number">3.1</span> Datensatz</h2>
+<p>Die Analyse basiert auf dem <code>Animals</code> Datensatz aus dem R-Paket MASS, der Gehirn- und Körpergewichtsdaten für 28 verschiedene Säugetierarten enthält.</p>
+<section id="datenquelle-und-charakteristika" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="datenquelle-und-charakteristika"><span class="header-section-number">3.1.1</span> Datenquelle und Charakteristika</h3>
+<p>Der Datensatz wurde ursprünglich von <span class="citation" data-cites="weisberg1980">Weisberg (<a href="#ref-weisberg1980" role="doc-biblioref">1980</a>)</span> zusammengestellt und enthält Messungen von verschiedenen Wirbeltierarten. Die Daten umfassen sowohl terrestrische als auch aquatische Säugetiere mit einem breiten Spektrum von Körpergewichten.</p>
+</section>
+<section id="datenqualität-und-limitationen" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="datenqualität-und-limitationen"><span class="header-section-number">3.1.2</span> Datenqualität und Limitationen</h3>
+<p>Einige Messungen stammen aus älteren Studien und könnten methodische Ungenauigkeiten aufweisen. Besonders bei sehr grossen Tieren wie Elefanten können die Gehirngewichte schwer präzise zu bestimmen sein.</p>
+</section>
+</section>
+<section id="statistische-analyse" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="statistische-analyse"><span class="header-section-number">3.2</span> Statistische Analyse</h2>
+<p>Die Daten wurden logarithmisch transformiert, um eine lineare Beziehung zu erhalten:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span>(Gehirngewicht) <span class="ot">=</span> <span class="fu">log</span>(a) <span class="sc">+</span> b <span class="sc">*</span> <span class="fu">log</span>(Körpergewicht)</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="transformationsverfahren" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="transformationsverfahren"><span class="header-section-number">3.2.1</span> Transformationsverfahren</h3>
+<p>Die logarithmische Transformation ist bei allometrischen Beziehungen Standard, da sie Potenzgesetze in lineare Beziehungen überführt. Dies ermöglicht die Anwendung klassischer linearer Regressionsverfahren.</p>
+</section>
+<section id="modellvalidierung" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="modellvalidierung"><span class="header-section-number">3.2.2</span> Modellvalidierung</h3>
+<p>Die Residuen wurden auf Normalität und Homoskedastizität überprüft. Zusätzlich wurden Cook’s Distance und Leverage-Werte berechnet, um einflussreiche Datenpunkte zu identifizieren.</p>
+</section>
+</section>
+<section id="visualisierung" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="visualisierung"><span class="header-section-number">3.3</span> Visualisierung</h2>
+<p>Scatterplots wurden erstellt, um die Beziehung zu visualisieren, sowohl auf ursprünglicher als auch auf logarithmischer Skala.</p>
+<section id="graphische-darstellung" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="graphische-darstellung"><span class="header-section-number">3.3.1</span> Graphische Darstellung</h3>
+<p>Die Visualisierungen umfassen sowohl die Rohdaten als auch die transformierten Daten mit Regressionsgerade und Konfidenzintervall.</p>
+</section>
+<section id="software-und-pakete" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="software-und-pakete"><span class="header-section-number">3.3.2</span> Software und Pakete</h3>
+<p>Alle Analysen und Visualisierungen wurden in R durchgeführt unter Verwendung der Pakete ggplot2, MASS und dplyr.</p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-weisberg1980" class="csl-entry" role="listitem">
+Weisberg, Sanford. 1980. <span>„Some large-sample tests for nonnormality in the linear regression model: Comment“</span>. <em>Journal of the American Statistical Association</em> 75 (369): 28–31.
 </div>
-<p class="degree-type">Bachelorstudiengang 2009</p>
-<p class="submission-date">Abgabedatum 2024-12-15</p>
-<p class="study-direction">Studienrichtung Umweltingenieurwesen</p>
-<div class="supervisors"><p>Betreuer / Betreuerinnen:</p><ul>
-<li>Prof.&nbsp;Dr. Max Mustermann<br>ZHAW Life Sciences und Facility Management, Wädenswil</li>
-<li>Dr. Anna Beispiel<br>ETH Zürich, Institut für Umweltingenieurwissenschaften, Zürich</li>
-<li>Prof.&nbsp;Dr. Susanne Müller<br>Universität Zürich, Institut für Evolutionsbiologie und Umweltwissenschaften, Zürich</li>
-</ul></div>
-</header>
-<section id="imprint" class="imprint-section"><hr>
-<h3 class="imprint-title anchored">Impressum</h3>
-<div class="imprint-citation"><p class="imprint-label">Zitiervorschlag:</p>
-<p class="citation-text">Peter Rousseeuw (15. Dezember 2024). <em>Robuste Regression und Outlier Erkennung: Einfache Regression</em>. Zürcher Hochschule für Angewandte Wissenschaften, Departement Life Sciences und Facility Management, Institut für Umwelt und Natürliche Ressourcen.</p></div>
-<div class="imprint-keywords"><p><strong>Schlagworte:</strong> Robuste Regression, Ausreisser, Allometrie, Säugetiere, Gehirngrösse, Statistik</p></div>
-<hr></section>
-<!-- Typst: render the table of contents here (hidden in HTML, handled by sidebar) -->
-
-
+</div>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -632,10 +724,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./3-literatur.pdf" class="pagination-link" aria-label="Literaturübersicht oder Theorie">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Literaturübersicht oder Theorie</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./1-zusammenfassung.pdf" class="pagination-link" aria-label="Zusammenfassung">
-        <span class="nav-page-text">Zusammenfassung</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./5-ergebnisse.pdf" class="pagination-link" aria-label="Ergebnisse">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Ergebnisse</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

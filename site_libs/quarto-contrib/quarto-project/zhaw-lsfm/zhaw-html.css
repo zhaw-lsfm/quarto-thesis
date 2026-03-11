@@ -93,3 +93,49 @@
 #title-block-header .keywords {
   display: none;
 }
+
+/* Imprint section */
+.imprint-section {
+  /* margin-top: 4rem; */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  font-size: smaller;
+}
+
+.imprint-title {
+  /* font-size: smaller; */
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+}
+
+.imprint-citation {
+  margin-bottom: 2rem;
+}
+
+
+.imprint-label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.citation-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.imprint-keywords {
+  margin-bottom: 2rem;
+}
+
+.imprint-keywords p {
+  line-height: 1.6;
+}
+
+.imprint-institution {
+  margin-top: 2rem;
+}
+
+.imprint-institution p {
+  line-height: 1.6;
+}

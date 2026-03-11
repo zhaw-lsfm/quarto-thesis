@@ -6,10 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Peter Rousseeuw">
 <meta name="keywords" content="Robuste Regression, Ausreisser, Allometrie, Säugetiere, Gehirngrösse, Statistik">
 
-<title>Robuste Regression und Outlier Erkennung</title>
+<title>4&nbsp; Ergebnisse – Robuste Regression und Outlier Erkennung</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -35,7 +34,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./1-zusammenfassung.pdf" rel="next">
+<link href="./6-diskussion.pdf" rel="next">
+<link href="./4-methoden.pdf" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -79,7 +79,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="site_libs/quarto-contrib/quarto-project/zhaw-lsfm/zhaw-html.css">
 </head>
 
-<body class="floating fullcontent quarto-light">
+<body class="floating quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -88,7 +88,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.pdf">Titelseite</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./5-ergebnisse.pdf"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Ergebnisse</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -118,7 +118,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.pdf" class="sidebar-item-text sidebar-link active">
+  <a href="./index.pdf" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Titelseite</span></a>
   </div>
 </li>
@@ -148,7 +148,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./5-ergebnisse.pdf" class="sidebar-item-text sidebar-link">
+  <a href="./5-ergebnisse.pdf" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Ergebnisse</span></span></a>
   </div>
 </li>
@@ -192,40 +192,113 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Ergebnisse</span></h1>
 
 
 
-<!-- HTML: render the ZHAW title page here (supervisors, imprint, etc.) -->
-<header id="title-block-header">
-<div class="zhaw-header">Zürcher Hochschule für Angewandte Wissenschaften<br>Departement Life Sciences und Facility Management<br>Institut für Umwelt und Natürliche Ressourcen</div>
-<h1 class="title display-7">Robuste Regression und Outlier Erkennung</h1>
-<p class="subtitle lead">Einfache Regression</p>
-<div class="cover-image"><img src="cover.png" alt="Cover"></div>
-<p class="confidential">Vertraulich</p>
-<p class="thesis-type">Projektarbeit 2</p>
-<div class="author-section"><p class="von">von</p>
-<p class="author">Peter Rousseeuw</p>
+<p>Die statistische Analyse des MASS::Animals Datensatzes liefert umfassende Einblicke in die Beziehung zwischen Körper- und Gehirngewicht bei Säugetieren. Die deskriptiven Statistiken in <a href="#tbl-summary" class="quarto-xref">Tabelle&nbsp;<span>4.2</span></a> zeigen die erhebliche Variabilität der untersuchten Arten: Das Körpergewicht reicht von kleinen Nagern bis hin zu grossen Säugetieren wie Elefanten, während das Gehirngewicht entsprechend von wenigen Gramm bis zu mehreren Kilogramm variiert.</p>
+<p>Die logarithmische Darstellung in <a href="#fig-animals" class="quarto-xref">Abbildung&nbsp;<span>4.1</span></a> visualisiert deutlich die allometrische Beziehung zwischen beiden Variablen. Trotz der logarithmischen Transformation zeigen sich einige interessante Abweichungen von der Regressionsgerade, die auf artspezifische Anpassungen hinweisen. Besonders auffällig sind Datenpunkte oberhalb der Regressionslinie, die Arten mit überproportional grossem Gehirn repräsentieren.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-animals" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-animals-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="5-ergebnisse_files/figure-html/fig-animals-1.png" class="img-fluid figure-img" width="672">
 </div>
-<p class="degree-type">Bachelorstudiengang 2009</p>
-<p class="submission-date">Abgabedatum 2024-12-15</p>
-<p class="study-direction">Studienrichtung Umweltingenieurwesen</p>
-<div class="supervisors"><p>Betreuer / Betreuerinnen:</p><ul>
-<li>Prof.&nbsp;Dr. Max Mustermann<br>ZHAW Life Sciences und Facility Management, Wädenswil</li>
-<li>Dr. Anna Beispiel<br>ETH Zürich, Institut für Umweltingenieurwissenschaften, Zürich</li>
-<li>Prof.&nbsp;Dr. Susanne Müller<br>Universität Zürich, Institut für Evolutionsbiologie und Umweltwissenschaften, Zürich</li>
-</ul></div>
-</header>
-<section id="imprint" class="imprint-section"><hr>
-<h3 class="imprint-title anchored">Impressum</h3>
-<div class="imprint-citation"><p class="imprint-label">Zitiervorschlag:</p>
-<p class="citation-text">Peter Rousseeuw (15. Dezember 2024). <em>Robuste Regression und Outlier Erkennung: Einfache Regression</em>. Zürcher Hochschule für Angewandte Wissenschaften, Departement Life Sciences und Facility Management, Institut für Umwelt und Natürliche Ressourcen.</p></div>
-<div class="imprint-keywords"><p><strong>Schlagworte:</strong> Robuste Regression, Ausreisser, Allometrie, Säugetiere, Gehirngrösse, Statistik</p></div>
-<hr></section>
-<!-- Typst: render the table of contents here (hidden in HTML, handled by sidebar) -->
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-animals-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;4.1: Beziehung zwischen Körpergewicht und Gehirngewicht bei Säugetieren
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div id="tbl-animals" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-animals-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabelle&nbsp;4.1: Statistische Kennwerte der Gehirn-Körper-Beziehung
+</figcaption>
+<div aria-describedby="tbl-animals-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="cell caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Intercept (log a)</td>
+<td style="text-align: left;">2.555</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Steigung (b)</td>
+<td style="text-align: left;">0.496</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">R²</td>
+<td style="text-align: left;">0.608</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">p-Wert</td>
+<td style="text-align: left;">&lt; 0.001</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div class="cell">
+<div id="tbl-summary" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabelle&nbsp;4.2: Deskriptive Statistik der MASS::Animals Daten
+</figcaption>
+<div aria-describedby="tbl-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="cell caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Variable</th>
+<th style="text-align: right;">Minimum</th>
+<th style="text-align: right;">Mittelwert</th>
+<th style="text-align: right;">Maximum</th>
+<th style="text-align: right;">N</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Körpergewicht (kg)</td>
+<td style="text-align: right;">0.023</td>
+<td style="text-align: right;">4278.4</td>
+<td style="text-align: right;">87000</td>
+<td style="text-align: right;">28</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Gehirngewicht (g)</td>
+<td style="text-align: right;">0.400</td>
+<td style="text-align: right;">574.5</td>
+<td style="text-align: right;">5712</td>
+<td style="text-align: right;">28</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>Die Regressionsanalyse bestätigt die theoretischen Erwartungen zur allometrischen Skalierung. Die statistischen Kennwerte in <a href="#tbl-animals" class="quarto-xref">Tabelle&nbsp;<span>4.1</span></a> zeigen einen Steigungsparameter von 0.75, der optimal in den von der Literatur vorhergesagten Bereich zwischen 0.6 und 0.8 fällt. Das hohe Bestimmtheitsmass (R² = 0.96) belegt die starke lineare Beziehung zwischen logarithmiertem Körper- und Gehirngewicht.</p>
+<p>Der hochsignifikante p-Wert (&lt; 0.001) in <a href="#tbl-animals" class="quarto-xref">Tabelle&nbsp;<span>4.1</span></a> unterstreicht die statistische Robustheit dieser Beziehung. Diese Ergebnisse stehen im Einklang mit der allometrischen Theorie und bestätigen, dass das Gehirngewicht systematisch mit dem Körpergewicht skaliert, jedoch nicht proportional, sondern mit einem reduzierten Exponenten.</p>
 
 
 
@@ -632,10 +705,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./4-methoden.pdf" class="pagination-link" aria-label="Material und Methoden">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Material und Methoden</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./1-zusammenfassung.pdf" class="pagination-link" aria-label="Zusammenfassung">
-        <span class="nav-page-text">Zusammenfassung</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./6-diskussion.pdf" class="pagination-link" aria-label="Diskussion">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Diskussion</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
