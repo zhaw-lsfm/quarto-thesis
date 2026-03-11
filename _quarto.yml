@@ -8,10 +8,10 @@ book:
   author:
     - Peter Rousseeuw
   date: "2024-12-15"
-  downloads: pdf
+  downloads: pdf           # adds a PDF download button to the HTML navbar
   chapters:
     - file: index.qmd
-      text: "Titelseite"
+      text: "Titelseite"   # sidebar label for the title page
     - 1-zusammenfassung.qmd
     - 2-einleitung.qmd
     - 3-literatur.qmd
@@ -24,14 +24,14 @@ book:
     - 8-anhang-statistik.qmd
 
 bibliography: references.bib
-lang: de
+lang: de                   # controls automatic text (e.g. "Abgabedatum" vs "Submission date")
 
 institut: "Institut für Umwelt und Natürliche Ressourcen"
 keywords: "Robuste Regression, Ausreisser, Allometrie, Säugetiere, Gehirngrösse, Statistik"
-confidential: true
+confidential: true         # adds a "Vertraulich" notice on the title page
 zhaw-cover-image:
   src: cover.png
-  max-width: 100%
+  max-width: 100%          # optional, constrains the image on the title page
   max-height: 5cm
 thesis-type: "Projektarbeit 2"
 degree-type: "Bachelorstudiengang"
