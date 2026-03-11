@@ -13,6 +13,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `appendix-filter.lua` for automatic A/B appendix numbering via `file_metadata` API
 - Appendix-aware heading numbering in `typst-template.typ` via `appendix-mode` state
 
+### Fixed
+- Renamed `cover-image` metadata field to `zhaw-cover-image` to avoid conflict with Quarto's built-in `cover-image` book field (which caused `[object Object].png` in HTML output)
+
+### Removed
+- `template.qmd` single-file template (superseded by book chapter files)
+
 ### Changed
 - Font configuration now uses Quarto's standard `mainfont` YAML parameter instead of hardcoded Typst fallback chain
 - Switched project type from single-file to `type: book`

@@ -68,20 +68,20 @@ $for(supervisors)$
 $endfor$
   ),
 $endif$
-$if(cover-image)$
+$if(zhaw-cover-image)$
   cover-image: (
-$if(cover-image.src)$
-    src: "$cover-image.src$",
+$if(zhaw-cover-image.src)$
+    src: "$zhaw-cover-image.src$",
 $else$
-    src: "$cover-image$",
+    src: "$zhaw-cover-image$",
 $endif$
-$if(cover-image.max-width)$
-    max-width: "$cover-image.max-width$",
+$if(zhaw-cover-image.max-width)$
+    max-width: "$zhaw-cover-image.max-width$",
 $else$
     max-width: "100%",
 $endif$
-$if(cover-image.max-height)$
-    max-height: "$cover-image.max-height$",
+$if(zhaw-cover-image.max-height)$
+    max-height: "$zhaw-cover-image.max-height$",
 $else$
     max-height: "5cm",
 $endif$

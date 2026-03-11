@@ -59,7 +59,7 @@ The project uses `type: book` in `_quarto.yml`. Chapter files are in the root di
 
 ```
 _quarto.yml              # Book project config + ZHAW metadata
-index.qmd                # Front matter (Zusammenfassung, TOC, Abkürzungen)
+index.qmd                # Front matter (Zusammenfassung, TOC)
 1-einleitung.qmd         # Chapter 1
 2-literatur.qmd          # Chapter 2
 3-methoden.qmd           # Chapter 3
@@ -213,7 +213,7 @@ The extension uses semantic versioning (MAJOR.MINOR.PATCH). Follow this checklis
 
 ### Class Usage Patterns
 - `.unnumbered .unlisted`: Exclude heading from TOC and numbering
-- `.unnumbered`: Not numbered but appears in TOC (e.g., abbreviations, bibliography)
+- `.unnumbered`: Not numbered but appears in TOC (e.g. bibliography)
 
 ### Appendix Handling
 - Chapters listed under `appendices:` in `_quarto.yml` get A/B numbering
