@@ -59,15 +59,16 @@ The project uses `type: book` in `_quarto.yml`. Chapter files are in the root di
 
 ```
 _quarto.yml              # Book project config + ZHAW metadata
-index.qmd                # Front matter (Zusammenfassung, TOC)
-1-einleitung.qmd         # Chapter 1
-2-literatur.qmd          # Chapter 2
-3-methoden.qmd           # Chapter 3
-4-ergebnisse.qmd         # Chapter 4
-5-diskussion.qmd         # Chapter 5
+index.qmd                # Front matter (TOC, Typst only)
+1-zusammenfassung.qmd    # Abstract / Zusammenfassung
+2-einleitung.qmd         # Chapter 1
+3-literatur.qmd          # Chapter 2
+4-methoden.qmd           # Chapter 3
+5-ergebnisse.qmd         # Chapter 4
+6-diskussion.qmd         # Chapter 5
 references.qmd           # Bibliography
-6-anhang-rohdaten.qmd    # Appendix A (under appendices: key)
-7-anhang-statistik.qmd   # Appendix B
+7-anhang-rohdaten.qmd    # Appendix A (under appendices: key)
+8-anhang-statistik.qmd   # Appendix B
 ```
 
 **Why `index.qmd`?** `index.qmd` is the standard Quarto book entry point and works for both book and website rendering. When students install via `quarto use template`, they receive `index.qmd` plus a renamed copy (e.g., `PA2.qmd`) — the renamed copy can be deleted.
