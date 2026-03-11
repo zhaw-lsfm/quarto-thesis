@@ -10,7 +10,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - PDF download button in HTML output via Quarto's built-in `downloads: pdf` book option
 - `1-zusammenfassung.qmd` as a dedicated abstract chapter (visible as its own page in HTML)
+- `zhaw-title-block` shortcode for rendering the full ZHAW title page in HTML (called from `index.qmd`)
 - Quarto book project support (requires Quarto >= 1.9.18)
+
+### Changed
+- HTML title block (`title-block.html`) now only renders the chapter title for non-index pages; the index title page is handled entirely by the `{{< zhaw-title-block >}}` shortcode
+- `index.qmd` sidebar label set to `"Titelseite"` via `text:` in `_quarto.yml`
 - Multi-chapter structure with numbered chapter files in root directory
 - `appendix-filter.lua` for automatic A/B appendix numbering via `file_metadata` API
 - Appendix-aware heading numbering in `typst-template.typ` via `appendix-mode` state

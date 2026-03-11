@@ -10,7 +10,8 @@ book:
   date: "2024-12-15"
   downloads: pdf
   chapters:
-    - index.qmd
+    - file: index.qmd
+      text: "Titelseite"
     - 1-zusammenfassung.qmd
     - 2-einleitung.qmd
     - 3-literatur.qmd

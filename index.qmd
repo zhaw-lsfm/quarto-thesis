@@ -1,3 +1,14 @@
+---
+is-index: true
+---
+
+::: {.content-visible when-format="html"}
+
+{{< zhaw-title-block >}}
+
+:::
+
+
 ::: {.content-hidden when-format="html"}
 
 # Inhaltsverzeichnis {.unnumbered .unlisted}
