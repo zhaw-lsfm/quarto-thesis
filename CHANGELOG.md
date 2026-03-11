@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - HTML title block (`title-block.html`) now only renders the chapter title for non-index pages; the index title page is handled entirely by the `{{< zhaw-title-block >}}` shortcode
 - `index.qmd` sidebar label set to `"Titelseite"` via `text:` in `_quarto.yml`
+- Removed default `mainfont: Arial` — Typst now uses its built-in default font; Arial can be set optionally via `mainfont` in `_quarto.yml`
 - Multi-chapter structure with numbered chapter files in root directory
 - `appendix-filter.lua` for automatic A/B appendix numbering via `file_metadata` API
 - Appendix-aware heading numbering in `typst-template.typ` via `appendix-mode` state

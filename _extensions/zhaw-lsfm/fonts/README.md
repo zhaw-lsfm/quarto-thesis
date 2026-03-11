@@ -4,23 +4,12 @@ This directory can contain local font files (.ttf or .otf) that will be used by 
 
 ## Font Configuration
 
-The template uses Quarto's standard `mainfont` YAML parameter (set to `Arial` in `_extension.yml`). You can override the font in your `_quarto.yml`:
+The template does not set a default font — Typst will use its built-in default. ZHAW recommends Arial 11pt, but does not require it. To use Arial or another font, set `mainfont` in your `_quarto.yml`:
 
 ```yaml
 format:
   zhaw-lsfm-typst:
-    mainfont: "My Custom Font"
+    mainfont: "Arial"
 ```
 
-## For Arial Font Support
-
-If Arial is not installed on your system, you can place Arial font files here:
-
-- `arial.ttf` - Arial Regular
-- `arialbd.ttf` - Arial Bold
-- `ariali.ttf` - Arial Italic
-- `arialbi.ttf` - Arial Bold Italic
-
-## Usage
-
-Simply place your font files in this directory. Typst will automatically find and use them if they match the configured font name.
+If the font is not installed on your system, place the font files (.ttf or .otf) in this directory and Typst will find them automatically.

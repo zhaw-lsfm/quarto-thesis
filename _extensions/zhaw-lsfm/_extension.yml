@@ -5,7 +5,6 @@ quarto-required: ">=1.9.18"
 contributes:
   formats:
     typst:
-      mainfont: Arial
       fontsize: 11pt
       citeproc: true
       section-numbering: "1.1."

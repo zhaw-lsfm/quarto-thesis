@@ -59,8 +59,8 @@
   set par(justify: true)
   set text(lang: lang,
            region: region,
-           font: font,
-           size: fontsize)
+           size: fontsize,
+           ..if font != () { (font: font) } else { (:) })
   // State to track if we're in appendix mode
   let appendix-mode = state("appendix-mode", false)
 
