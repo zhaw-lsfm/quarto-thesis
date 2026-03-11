@@ -50,5 +50,5 @@ supervisors:
     affiliation: "Universität Zürich, Institut für Evolutionsbiologie und Umweltwissenschaften, Zürich"
 
 format:
-  zhaw-lsfm-typst: default
   zhaw-lsfm-html: default
+  zhaw-lsfm-typst: default
