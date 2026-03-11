@@ -8,6 +8,7 @@ book:
   author:
     - Peter Rousseeuw
   date: "2024-12-15"
+  downloads: pdf
   chapters:
     - index.qmd
     - 1-einleitung.qmd

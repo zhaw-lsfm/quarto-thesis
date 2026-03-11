@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- PDF download button in HTML output via Quarto's built-in `downloads: pdf` book option
 - Quarto book project support (requires Quarto >= 1.9.18)
 - Multi-chapter structure with numbered chapter files in root directory
 - `appendix-filter.lua` for automatic A/B appendix numbering via `file_metadata` API
