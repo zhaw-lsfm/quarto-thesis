@@ -1,3 +1,4 @@
 # Literaturverzeichnis {#sec-refs .unnumbered}
 
-{{< references >}}
+::: {#refs}
+:::

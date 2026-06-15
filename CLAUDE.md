@@ -66,9 +66,9 @@ index.qmd                # Front matter (TOC, Typst only)
 4-methoden.qmd           # Chapter 3
 5-ergebnisse.qmd         # Chapter 4
 6-diskussion.qmd         # Chapter 5
-references.qmd           # Bibliography
-7-anhang-rohdaten.qmd    # Appendix A (under appendices: key)
-8-anhang-statistik.qmd   # Appendix B
+7-references.qmd         # Bibliography
+8-anhang-rohdaten.qmd    # Appendix A (under appendices: key)
+9-anhang-statistik.qmd   # Appendix B
 ```
 
 **Why `index.qmd`?** `index.qmd` is the standard Quarto book entry point and works for both book and website rendering. When students install via `quarto use template`, they receive `index.qmd` plus a renamed copy (e.g., `PA2.qmd`) — the renamed copy can be deleted.

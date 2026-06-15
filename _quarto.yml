@@ -18,10 +18,10 @@ book:
     - 4-methoden.qmd
     - 5-ergebnisse.qmd
     - 6-diskussion.qmd
-    - references.qmd
+    - 7-references.qmd
   appendices:
-    - 7-anhang-rohdaten.qmd
-    - 8-anhang-statistik.qmd
+    - 8-anhang-rohdaten.qmd
+    - 9-anhang-statistik.qmd
 
 bibliography: references.bib
 lang: de                   # controls automatic text (e.g. "Abgabedatum" vs "Submission date")

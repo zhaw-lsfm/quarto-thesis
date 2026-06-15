@@ -1,10 +1,11 @@
 title: zhaw-lsfm
 author: Nils Ratnaweera
-version: 0.3.1
+version: 0.4.0
 quarto-required: ">=1.9.18"
 contributes:
   formats:
     typst:
+      csl: apa-6th-edition.csl
       fontsize: 11pt
       citeproc: true
       section-numbering: "1.1."
@@ -22,6 +23,7 @@ contributes:
         warning: false
         error: true
     html:
+      csl: apa-6th-edition.csl
       filters:
         - html-labels.lua
       template-partials:
