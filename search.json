@@ -24,7 +24,7 @@
     "href": "2-einleitung.html",
     "title": "1  Einleitung",
     "section": "",
-    "text": "1  Einleitung\n\n\n\nDie Beziehung zwischen Gehirngrösse und Körpergewicht ist ein fundamentaler Aspekt der vergleichenden Neurobiologie und Evolution. Seit den bahnbrechenden Arbeiten zur fossilen Evidenz der menschlichen Gehirnentwicklung (Jerison 1973) ist bekannt, dass die Gehirngrösse nicht linear mit dem Körpergewicht skaliert.\nDiese Studie analysiert die Allometrie von Gehirn- und Körpergewicht anhand eines umfangreichen Datensatzes verschiedener Säugetierarten. Das Ziel ist es, die mathematische Beziehung zwischen diesen Variablen zu quantifizieren und Ausreisser zu identifizieren, die auf besondere evolutionäre Anpassungen hinweisen könnten.\n\n\n\n\nJerison, Harry J. 1973. „Fossil evidence of the evolution of the human brain“. Annual Review of Anthropology 4: 27–58.",
+    "text": "1  Einleitung\n\n\n\nDie Beziehung zwischen Gehirngrösse und Körpergewicht ist ein fundamentaler Aspekt der vergleichenden Neurobiologie und Evolution. Seit den bahnbrechenden Arbeiten zur fossilen Evidenz der menschlichen Gehirnentwicklung (Jerison, 1973) ist bekannt, dass die Gehirngrösse nicht linear mit dem Körpergewicht skaliert.\nDiese Studie analysiert die Allometrie von Gehirn- und Körpergewicht anhand eines umfangreichen Datensatzes verschiedener Säugetierarten. Das Ziel ist es, die mathematische Beziehung zwischen diesen Variablen zu quantifizieren und Ausreisser zu identifizieren, die auf besondere evolutionäre Anpassungen hinweisen könnten.\n\n\n\n\nJerison, H. J. (1973). Fossil evidence of the evolution of the human brain. Annual Review of Anthropology, 4, 27–58.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
     ]
@@ -34,7 +34,7 @@
     "href": "3-literatur.html",
     "title": "2  Literaturübersicht oder Theorie",
     "section": "",
-    "text": "2  Literaturübersicht oder Theorie\n\n\n\nDie theoretische Grundlage für Gehirn-Körper-Allometrie basiert auf dem Konzept, dass biologische Strukturen häufig Potenzgesetzen folgen. Die erwartete Beziehung wird typischerweise als:\n\\[\\text{Gehirngewicht} = a \\times \\text{Körpergewicht}^b\\]\nbeschrieben, wobei der Exponent b in der Regel zwischen 0.6 und 0.8 liegt. Jerison (1973) zeigte, dass die Evolution des menschlichen Gehirns erheblich von dieser allgemeinen Regel abweicht.\nStatistische Probleme bei der Analyse solcher Daten wurden von Weisberg (1980) diskutiert, insbesondere bezüglich der Normalitätsannahmen in linearen Regressionsmodellen bei grossen Stichproben.\n\n\n\n\nJerison, Harry J. 1973. „Fossil evidence of the evolution of the human brain“. Annual Review of Anthropology 4: 27–58.\n\n\nWeisberg, Sanford. 1980. „Some large-sample tests for nonnormality in the linear regression model: Comment“. Journal of the American Statistical Association 75 (369): 28–31.",
+    "text": "2  Literaturübersicht oder Theorie\n\n\n\nDie theoretische Grundlage für Gehirn-Körper-Allometrie basiert auf dem Konzept, dass biologische Strukturen häufig Potenzgesetzen folgen. Die erwartete Beziehung wird typischerweise als:\n\\[\\text{Gehirngewicht} = a \\times \\text{Körpergewicht}^b\\]\nbeschrieben, wobei der Exponent b in der Regel zwischen 0.6 und 0.8 liegt. Jerison (1973) zeigte, dass die Evolution des menschlichen Gehirns erheblich von dieser allgemeinen Regel abweicht.\nStatistische Probleme bei der Analyse solcher Daten wurden von Weisberg (1980) diskutiert, insbesondere bezüglich der Normalitätsannahmen in linearen Regressionsmodellen bei grossen Stichproben.\n\n\n\n\nJerison, H. J. (1973). Fossil evidence of the evolution of the human brain. Annual Review of Anthropology, 4, 27–58.\n\n\nWeisberg, S. (1980). Some large-sample tests for nonnormality in the linear regression model: Comment. Journal of the American Statistical Association, 75(369), 28–31.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Literaturübersicht oder Theorie</span>"
     ]
@@ -74,7 +74,7 @@
     "href": "4-methoden.html#visualisierung",
     "title": "3  Material und Methoden",
     "section": "3.3 Visualisierung",
-    "text": "3.3 Visualisierung\nScatterplots wurden erstellt, um die Beziehung zu visualisieren, sowohl auf ursprünglicher als auch auf logarithmischer Skala.\n\n3.3.1 Graphische Darstellung\nDie Visualisierungen umfassen sowohl die Rohdaten als auch die transformierten Daten mit Regressionsgerade und Konfidenzintervall.\n\n\n3.3.2 Software und Pakete\nAlle Analysen und Visualisierungen wurden in R durchgeführt unter Verwendung der Pakete ggplot2, MASS und dplyr.\n\n\n\n\nWeisberg, Sanford. 1980. „Some large-sample tests for nonnormality in the linear regression model: Comment“. Journal of the American Statistical Association 75 (369): 28–31.",
+    "text": "3.3 Visualisierung\nScatterplots wurden erstellt, um die Beziehung zu visualisieren, sowohl auf ursprünglicher als auch auf logarithmischer Skala.\n\n3.3.1 Graphische Darstellung\nDie Visualisierungen umfassen sowohl die Rohdaten als auch die transformierten Daten mit Regressionsgerade und Konfidenzintervall.\n\n\n3.3.2 Software und Pakete\nAlle Analysen und Visualisierungen wurden in R durchgeführt unter Verwendung der Pakete ggplot2, MASS und dplyr.\n\n\n\n\nWeisberg, S. (1980). Some large-sample tests for nonnormality in the linear regression model: Comment. Journal of the American Statistical Association, 75(369), 28–31.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Material und Methoden</span>"
     ]
@@ -94,24 +94,24 @@
     "href": "6-diskussion.html",
     "title": "5  Diskussion",
     "section": "",
-    "text": "5  Diskussion\n\n\n\nDie Ergebnisse bestätigen die grundlegende allometrische Beziehung zwischen Gehirn- und Körpergewicht bei Säugetieren. Der ermittelte Exponent von 0.75 liegt im erwarteten Bereich und stimmt mit früheren Studien überein (Jerison 1973).\nBesonders interessant sind die Ausreisser in den Daten: Arten wie der Mensch und andere Primaten zeigen ein überproportional grosses Gehirn, was auf spezielle evolutionäre Anpassungen hinweist. Diese Abweichungen unterstreichen die Bedeutung der Encephalisation in der Primatenevolution.\nDie hohe Korrelation (R² = 0.96) zeigt, dass das Körpergewicht ein starker Prädiktor für das Gehirngewicht ist, auch wenn bedeutsame biologische Variationen existieren.\n\n\n\n\nJerison, Harry J. 1973. „Fossil evidence of the evolution of the human brain“. Annual Review of Anthropology 4: 27–58.",
+    "text": "5  Diskussion\n\n\n\nDie Ergebnisse bestätigen die grundlegende allometrische Beziehung zwischen Gehirn- und Körpergewicht bei Säugetieren. Der ermittelte Exponent von 0.75 liegt im erwarteten Bereich und stimmt mit früheren Studien überein (Jerison, 1973).\nBesonders interessant sind die Ausreisser in den Daten: Arten wie der Mensch und andere Primaten zeigen ein überproportional grosses Gehirn, was auf spezielle evolutionäre Anpassungen hinweist. Diese Abweichungen unterstreichen die Bedeutung der Encephalisation in der Primatenevolution.\nDie hohe Korrelation (R² = 0.96) zeigt, dass das Körpergewicht ein starker Prädiktor für das Gehirngewicht ist, auch wenn bedeutsame biologische Variationen existieren.\n\n\n\n\nJerison, H. J. (1973). Fossil evidence of the evolution of the human brain. Annual Review of Anthropology, 4, 27–58.",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Diskussion</span>"
     ]
   },
   {
-    "objectID": "references.html",
-    "href": "references.html",
+    "objectID": "7-references.html",
+    "href": "7-references.html",
     "title": "Literaturverzeichnis",
     "section": "",
-    "text": "Literaturverzeichnis",
+    "text": "Literaturverzeichnis\n\n\n\n\n\nJerison, H. J. (1973). Fossil evidence of the evolution of the human\nbrain. Annual Review of Anthropology, 4, 27–58.\n\n\nWeisberg, S. (1980). Some large-sample tests for nonnormality in the\nlinear regression model: comment. Journal of the American\nStatistical Association, 75(369), 28–31.",
     "crumbs": [
       "Literaturverzeichnis"
     ]
   },
   {
-    "objectID": "7-anhang-rohdaten.html",
-    "href": "7-anhang-rohdaten.html",
+    "objectID": "8-anhang-rohdaten.html",
+    "href": "8-anhang-rohdaten.html",
     "title": "Anhang A — Rohdaten",
     "section": "",
     "text": "A.1 Datenquelle und -qualität\nZusätzliche Materialien und Daten, die nicht im Hauptteil der Arbeit enthalten sind, werden im Anhang aufgeführt.\nDer vollständige MASS::Animals Datensatz mit allen 28 Säugetierarten:\nDie Daten stammen aus verschiedenen Quellen und wurden über mehrere Jahrzehnte zusammengetragen. Einige Besonderheiten der Datensammlung:",
@@ -121,8 +121,8 @@
     ]
   },
   {
-    "objectID": "7-anhang-rohdaten.html#datenquelle-und--qualität",
-    "href": "7-anhang-rohdaten.html#datenquelle-und--qualität",
+    "objectID": "8-anhang-rohdaten.html#datenquelle-und--qualität",
+    "href": "8-anhang-rohdaten.html#datenquelle-und--qualität",
     "title": "Anhang A — Rohdaten",
     "section": "",
     "text": "Afrikanischer Elefant: Mit 6654 kg Körpergewicht und 5712 g Gehirngewicht das grösste Säugetier in der Stichprobe\nSpitzmaus: Das kleinste Säugetier mit nur 0.004 kg Körpergewicht und 0.14 g Gehirngewicht\nMensch: Zeigt mit 1320 g Gehirngewicht bei 62 kg Körpergewicht eine deutliche positive Abweichung von der allometrischen Beziehung\nPrimaten generell: Schimpanse, Gorilla und Rhesusaffe zeigen alle überdurchschnittlich grosse Gehirne",
@@ -132,8 +132,8 @@
     ]
   },
   {
-    "objectID": "7-anhang-rohdaten.html#ausreisser-analyse",
-    "href": "7-anhang-rohdaten.html#ausreisser-analyse",
+    "objectID": "8-anhang-rohdaten.html#ausreisser-analyse",
+    "href": "8-anhang-rohdaten.html#ausreisser-analyse",
     "title": "Anhang A — Rohdaten",
     "section": "A.2 Ausreisser-Analyse",
     "text": "A.2 Ausreisser-Analyse\n\n\n\n\n\n\n\n\nAbbildung A.1: Residuen der logarithmischen Regression zur Identifikation von Ausreissern",
@@ -143,8 +143,8 @@
     ]
   },
   {
-    "objectID": "8-anhang-statistik.html",
-    "href": "8-anhang-statistik.html",
+    "objectID": "9-anhang-statistik.html",
+    "href": "9-anhang-statistik.html",
     "title": "Anhang B — Statistische Outputs",
     "section": "",
     "text": "B.1 Vollständige Regressionsanalyse\nTabelle B.1: Detaillierte Regressionsstatistiken\n\n\n\n\n\n\nStatistik\nWert\n\n\n\n\nMultiple R-squared\n0.6076\n\n\nAdjusted R-squared\n0.5925\n\n\nF-statistic\n40.26\n\n\nF p-value\n&lt; 0.001\n\n\nResidual standard error\n1.5316\n\n\nDegrees of freedom\n26 on 2 DF",
@@ -154,8 +154,8 @@
     ]
   },
   {
-    "objectID": "8-anhang-statistik.html#koeffizienten-mit-konfidenzintervallen",
-    "href": "8-anhang-statistik.html#koeffizienten-mit-konfidenzintervallen",
+    "objectID": "9-anhang-statistik.html#koeffizienten-mit-konfidenzintervallen",
+    "href": "9-anhang-statistik.html#koeffizienten-mit-konfidenzintervallen",
     "title": "Anhang B — Statistische Outputs",
     "section": "B.2 Koeffizienten mit Konfidenzintervallen",
     "text": "B.2 Koeffizienten mit Konfidenzintervallen\n\n\n\n\nTabelle B.2: Regressionskoeffizienten mit 95% Konfidenzintervallen\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\nSchätzung\nStandardfehler\nt_Wert\np_Wert\nCI_2.5\nCI_97.5\n\n\n\n\n(Intercept)\nIntercept (log a)\n2.5549\n0.4131\n6.184\n&lt; 0.001\n1.7057\n3.4041\n\n\nlog(body)\nSteigung (b)\n0.4960\n0.0782\n6.345\n&lt; 0.001\n0.3353\n0.6567",
@@ -165,8 +165,8 @@
     ]
   },
   {
-    "objectID": "8-anhang-statistik.html#modelldiagnostik",
-    "href": "8-anhang-statistik.html#modelldiagnostik",
+    "objectID": "9-anhang-statistik.html#modelldiagnostik",
+    "href": "9-anhang-statistik.html#modelldiagnostik",
     "title": "Anhang B — Statistische Outputs",
     "section": "B.3 Modelldiagnostik",
     "text": "B.3 Modelldiagnostik\n\n\n\n\n\n\n\n\nAbbildung B.1: Diagnostische Plots für die Regressionsanalyse",

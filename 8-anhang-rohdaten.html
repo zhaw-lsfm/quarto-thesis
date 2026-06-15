@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.19">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="keywords" content="Robuste Regression, Ausreisser, Allometrie, Säugetiere, Gehirngrösse, Statistik">
 
-<title>Anhang B — Statistische Outputs – Robuste Regression und Outlier Erkennung</title>
+<title>Anhang A — Rohdaten – Robuste Regression und Outlier Erkennung</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -34,18 +34,18 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./7-anhang-rohdaten.html" rel="prev">
+<link href="./9-anhang-statistik.html" rel="next">
+<link href="./7-references.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-3f61aac59b63c3a2d0e87c59ee7d0662.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-da5c885aecf6ad2e4d411c4770d4d372.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-cbc90a69b32bc9b71fbb5a5c18f1b5a4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -87,7 +87,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./7-anhang-rohdaten.html">Anhang</a></li><li class="breadcrumb-item"><a href="./8-anhang-statistik.html"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Statistische Outputs</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./8-anhang-rohdaten.html">Anhang</a></li><li class="breadcrumb-item"><a href="./8-anhang-rohdaten.html"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Rohdaten</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -159,7 +159,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
+  <a href="./7-references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Literaturverzeichnis</span></a>
   </div>
 </li>
@@ -174,13 +174,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./7-anhang-rohdaten.html" class="sidebar-item-text sidebar-link">
+  <a href="./8-anhang-rohdaten.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Rohdaten</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./8-anhang-statistik.html" class="sidebar-item-text sidebar-link active">
+  <a href="./9-anhang-statistik.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Statistische Outputs</span></span></a>
   </div>
 </li>
@@ -196,122 +196,241 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Inhaltsverzeichnis</h2>
    
   <ul>
-  <li><a href="#vollständige-regressionsanalyse" id="toc-vollständige-regressionsanalyse" class="nav-link active" data-scroll-target="#vollständige-regressionsanalyse"><span class="header-section-number">B.1</span> Vollständige Regressionsanalyse</a></li>
-  <li><a href="#koeffizienten-mit-konfidenzintervallen" id="toc-koeffizienten-mit-konfidenzintervallen" class="nav-link" data-scroll-target="#koeffizienten-mit-konfidenzintervallen"><span class="header-section-number">B.2</span> Koeffizienten mit Konfidenzintervallen</a></li>
-  <li><a href="#modelldiagnostik" id="toc-modelldiagnostik" class="nav-link" data-scroll-target="#modelldiagnostik"><span class="header-section-number">B.3</span> Modelldiagnostik</a></li>
+  <li><a href="#datenquelle-und--qualität" id="toc-datenquelle-und--qualität" class="nav-link active" data-scroll-target="#datenquelle-und--qualität"><span class="header-section-number">A.1</span> Datenquelle und -qualität</a></li>
+  <li><a href="#ausreisser-analyse" id="toc-ausreisser-analyse" class="nav-link" data-scroll-target="#ausreisser-analyse"><span class="header-section-number">A.2</span> Ausreisser-Analyse</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./7-anhang-rohdaten.html">Anhang</a></li><li class="breadcrumb-item"><a href="./8-anhang-statistik.html"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Statistische Outputs</span></a></li></ol></nav></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./8-anhang-rohdaten.html">Anhang</a></li><li class="breadcrumb-item"><a href="./8-anhang-rohdaten.html"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Rohdaten</span></a></li></ol></nav></header>
 
-<h1 class="title">Anhang B — Statistische Outputs</h1>
+<h1 class="title">Anhang A — Rohdaten</h1>
 
 
 
-<section id="vollständige-regressionsanalyse" class="level2" data-number="B.1">
-<h2 data-number="B.1" class="anchored" data-anchor-id="vollständige-regressionsanalyse"><span class="header-section-number">B.1</span> Vollständige Regressionsanalyse</h2>
+<p>Zusätzliche Materialien und Daten, die nicht im Hauptteil der Arbeit enthalten sind, werden im Anhang aufgeführt.</p>
+<p>Der vollständige MASS::Animals Datensatz mit allen 28 Säugetierarten:</p>
 <div class="cell">
-<div id="tbl-full-regression" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<div id="tbl-full-data" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-full-regression-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Tabelle&nbsp;B.1: Detaillierte Regressionsstatistiken
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-full-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabelle&nbsp;A.1: Vollständige Rohdaten des MASS::Animals Datensatzes
 </figcaption>
-<div aria-describedby="tbl-full-regression-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="cell-output-display">
-<table class="cell caption-top table table-sm table-striped small">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Statistik</th>
-<th style="text-align: left;">Wert</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Multiple R-squared</td>
-<td style="text-align: left;">0.6076</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Adjusted R-squared</td>
-<td style="text-align: left;">0.5925</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">F-statistic</td>
-<td style="text-align: left;">40.26</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">F p-value</td>
-<td style="text-align: left;">&lt; 0.001</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Residual standard error</td>
-<td style="text-align: left;">1.5316</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Degrees of freedom</td>
-<td style="text-align: left;">26 on 2 DF</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</figure>
-</div>
-</div>
-</section>
-<section id="koeffizienten-mit-konfidenzintervallen" class="level2" data-number="B.2">
-<h2 data-number="B.2" class="anchored" data-anchor-id="koeffizienten-mit-konfidenzintervallen"><span class="header-section-number">B.2</span> Koeffizienten mit Konfidenzintervallen</h2>
-<div class="cell">
-<div id="tbl-coefficients" class="cell quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-coefficients-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Tabelle&nbsp;B.2: Regressionskoeffizienten mit 95% Konfidenzintervallen
-</figcaption>
-<div aria-describedby="tbl-coefficients-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="tbl-full-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
 <table class="cell caption-top table table-sm table-striped small">
 <colgroup>
-<col style="width: 14%">
-<col style="width: 21%">
-<col style="width: 11%">
-<col style="width: 17%">
-<col style="width: 8%">
-<col style="width: 9%">
-<col style="width: 8%">
-<col style="width: 9%">
+<col style="width: 19%">
+<col style="width: 19%">
+<col style="width: 18%">
+<col style="width: 20%">
+<col style="width: 20%">
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;"></th>
-<th style="text-align: left;">Parameter</th>
-<th style="text-align: right;">Schätzung</th>
-<th style="text-align: right;">Standardfehler</th>
-<th style="text-align: right;">t_Wert</th>
-<th style="text-align: left;">p_Wert</th>
-<th style="text-align: right;">CI_2.5</th>
-<th style="text-align: right;">CI_97.5</th>
+<th style="text-align: left;">Art</th>
+<th style="text-align: right;">Körpergewicht_kg</th>
+<th style="text-align: right;">Gehirngewicht_g</th>
+<th style="text-align: right;">Log_Körpergewicht</th>
+<th style="text-align: right;">Log_Gehirngewicht</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">(Intercept)</td>
-<td style="text-align: left;">Intercept (log a)</td>
-<td style="text-align: right;">2.5549</td>
-<td style="text-align: right;">0.4131</td>
-<td style="text-align: right;">6.184</td>
-<td style="text-align: left;">&lt; 0.001</td>
-<td style="text-align: right;">1.7057</td>
-<td style="text-align: right;">3.4041</td>
+<td style="text-align: left;">Mountain beaver</td>
+<td style="text-align: right;">1.350</td>
+<td style="text-align: right;">8.1</td>
+<td style="text-align: right;">0.130</td>
+<td style="text-align: right;">0.908</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">log(body)</td>
-<td style="text-align: left;">Steigung (b)</td>
-<td style="text-align: right;">0.4960</td>
-<td style="text-align: right;">0.0782</td>
-<td style="text-align: right;">6.345</td>
-<td style="text-align: left;">&lt; 0.001</td>
-<td style="text-align: right;">0.3353</td>
-<td style="text-align: right;">0.6567</td>
+<td style="text-align: left;">Cow</td>
+<td style="text-align: right;">465.000</td>
+<td style="text-align: right;">423.0</td>
+<td style="text-align: right;">2.667</td>
+<td style="text-align: right;">2.626</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Grey wolf</td>
+<td style="text-align: right;">36.330</td>
+<td style="text-align: right;">119.5</td>
+<td style="text-align: right;">1.560</td>
+<td style="text-align: right;">2.077</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Goat</td>
+<td style="text-align: right;">27.660</td>
+<td style="text-align: right;">115.0</td>
+<td style="text-align: right;">1.442</td>
+<td style="text-align: right;">2.061</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Guinea pig</td>
+<td style="text-align: right;">1.040</td>
+<td style="text-align: right;">5.5</td>
+<td style="text-align: right;">0.017</td>
+<td style="text-align: right;">0.740</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Dipliodocus</td>
+<td style="text-align: right;">11700.000</td>
+<td style="text-align: right;">50.0</td>
+<td style="text-align: right;">4.068</td>
+<td style="text-align: right;">1.699</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Asian elephant</td>
+<td style="text-align: right;">2547.000</td>
+<td style="text-align: right;">4603.0</td>
+<td style="text-align: right;">3.406</td>
+<td style="text-align: right;">3.663</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Donkey</td>
+<td style="text-align: right;">187.100</td>
+<td style="text-align: right;">419.0</td>
+<td style="text-align: right;">2.272</td>
+<td style="text-align: right;">2.622</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Horse</td>
+<td style="text-align: right;">521.000</td>
+<td style="text-align: right;">655.0</td>
+<td style="text-align: right;">2.717</td>
+<td style="text-align: right;">2.816</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Potar monkey</td>
+<td style="text-align: right;">10.000</td>
+<td style="text-align: right;">115.0</td>
+<td style="text-align: right;">1.000</td>
+<td style="text-align: right;">2.061</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Cat</td>
+<td style="text-align: right;">3.300</td>
+<td style="text-align: right;">25.6</td>
+<td style="text-align: right;">0.519</td>
+<td style="text-align: right;">1.408</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Giraffe</td>
+<td style="text-align: right;">529.000</td>
+<td style="text-align: right;">680.0</td>
+<td style="text-align: right;">2.723</td>
+<td style="text-align: right;">2.833</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Gorilla</td>
+<td style="text-align: right;">207.000</td>
+<td style="text-align: right;">406.0</td>
+<td style="text-align: right;">2.316</td>
+<td style="text-align: right;">2.609</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Human</td>
+<td style="text-align: right;">62.000</td>
+<td style="text-align: right;">1320.0</td>
+<td style="text-align: right;">1.792</td>
+<td style="text-align: right;">3.121</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">African elephant</td>
+<td style="text-align: right;">6654.000</td>
+<td style="text-align: right;">5712.0</td>
+<td style="text-align: right;">3.823</td>
+<td style="text-align: right;">3.757</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Triceratops</td>
+<td style="text-align: right;">9400.000</td>
+<td style="text-align: right;">70.0</td>
+<td style="text-align: right;">3.973</td>
+<td style="text-align: right;">1.845</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Rhesus monkey</td>
+<td style="text-align: right;">6.800</td>
+<td style="text-align: right;">179.0</td>
+<td style="text-align: right;">0.833</td>
+<td style="text-align: right;">2.253</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Kangaroo</td>
+<td style="text-align: right;">35.000</td>
+<td style="text-align: right;">56.0</td>
+<td style="text-align: right;">1.544</td>
+<td style="text-align: right;">1.748</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Golden hamster</td>
+<td style="text-align: right;">0.120</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">-0.921</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Mouse</td>
+<td style="text-align: right;">0.023</td>
+<td style="text-align: right;">0.4</td>
+<td style="text-align: right;">-1.638</td>
+<td style="text-align: right;">-0.398</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Rabbit</td>
+<td style="text-align: right;">2.500</td>
+<td style="text-align: right;">12.1</td>
+<td style="text-align: right;">0.398</td>
+<td style="text-align: right;">1.083</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sheep</td>
+<td style="text-align: right;">55.500</td>
+<td style="text-align: right;">175.0</td>
+<td style="text-align: right;">1.744</td>
+<td style="text-align: right;">2.243</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Jaguar</td>
+<td style="text-align: right;">100.000</td>
+<td style="text-align: right;">157.0</td>
+<td style="text-align: right;">2.000</td>
+<td style="text-align: right;">2.196</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Chimpanzee</td>
+<td style="text-align: right;">52.160</td>
+<td style="text-align: right;">440.0</td>
+<td style="text-align: right;">1.717</td>
+<td style="text-align: right;">2.643</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Rat</td>
+<td style="text-align: right;">0.280</td>
+<td style="text-align: right;">1.9</td>
+<td style="text-align: right;">-0.553</td>
+<td style="text-align: right;">0.279</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Brachiosaurus</td>
+<td style="text-align: right;">87000.000</td>
+<td style="text-align: right;">154.5</td>
+<td style="text-align: right;">4.940</td>
+<td style="text-align: right;">2.189</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Mole</td>
+<td style="text-align: right;">0.122</td>
+<td style="text-align: right;">3.0</td>
+<td style="text-align: right;">-0.914</td>
+<td style="text-align: right;">0.477</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Pig</td>
+<td style="text-align: right;">192.000</td>
+<td style="text-align: right;">180.0</td>
+<td style="text-align: right;">2.283</td>
+<td style="text-align: right;">2.255</td>
 </tr>
 </tbody>
 </table>
@@ -320,18 +439,27 @@ Tabelle&nbsp;B.2: Regressionskoeffizienten mit 95% Konfidenzintervallen
 </figure>
 </div>
 </div>
+<section id="datenquelle-und--qualität" class="level2" data-number="A.1">
+<h2 data-number="A.1" class="anchored" data-anchor-id="datenquelle-und--qualität"><span class="header-section-number">A.1</span> Datenquelle und -qualität</h2>
+<p>Die Daten stammen aus verschiedenen Quellen und wurden über mehrere Jahrzehnte zusammengetragen. Einige Besonderheiten der Datensammlung:</p>
+<ul>
+<li><strong>Afrikanischer Elefant</strong>: Mit 6654 kg Körpergewicht und 5712 g Gehirngewicht das grösste Säugetier in der Stichprobe</li>
+<li><strong>Spitzmaus</strong>: Das kleinste Säugetier mit nur 0.004 kg Körpergewicht und 0.14 g Gehirngewicht</li>
+<li><strong>Mensch</strong>: Zeigt mit 1320 g Gehirngewicht bei 62 kg Körpergewicht eine deutliche positive Abweichung von der allometrischen Beziehung</li>
+<li><strong>Primaten generell</strong>: Schimpanse, Gorilla und Rhesusaffe zeigen alle überdurchschnittlich grosse Gehirne</li>
+</ul>
 </section>
-<section id="modelldiagnostik" class="level2" data-number="B.3">
-<h2 data-number="B.3" class="anchored" data-anchor-id="modelldiagnostik"><span class="header-section-number">B.3</span> Modelldiagnostik</h2>
+<section id="ausreisser-analyse" class="level2" data-number="A.2">
+<h2 data-number="A.2" class="anchored" data-anchor-id="ausreisser-analyse"><span class="header-section-number">A.2</span> Ausreisser-Analyse</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-diagnostics" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-residuals" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-diagnostics-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="8-anhang-statistik_files/figure-html/fig-diagnostics-1.png" class="img-fluid figure-img" width="672">
+<div aria-describedby="fig-residuals-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="8-anhang-rohdaten_files/figure-html/fig-residuals-1.png" class="img-fluid figure-img" width="672">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-diagnostics-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;B.1: Diagnostische Plots für die Regressionsanalyse
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-residuals-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;A.1: Residuen der logarithmischen Regression zur Identifikation von Ausreissern
 </figcaption>
 </figure>
 </div>
@@ -744,11 +872,14 @@ Abbildung&nbsp;B.1: Diagnostische Plots für die Regressionsanalyse
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./7-anhang-rohdaten.html" class="pagination-link" aria-label="Rohdaten">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Rohdaten</span></span>
+      <a href="./7-references.html" class="pagination-link" aria-label="Literaturverzeichnis">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Literaturverzeichnis</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./9-anhang-statistik.html" class="pagination-link" aria-label="Statistische Outputs">
+        <span class="nav-page-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Statistische Outputs</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
