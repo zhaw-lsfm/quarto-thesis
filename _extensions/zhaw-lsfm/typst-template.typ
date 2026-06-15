@@ -306,6 +306,31 @@
     ]
   }
 
+  // ── Consecutive figure/table numbering across chapters ───────────────────
+  // Quarto book output injects counter(...).update(0) at every level-1
+  // heading regardless of crossref.chapters. We track the running totals in
+  // state variables and restore the counter right after each reset, so the
+  // last show rule in the chain wins.
+  let _fig-cumulative = state("_fig-cumulative", 0)
+  let _tbl-cumulative = state("_tbl-cumulative", 0)
+
+  show figure.where(kind: "quarto-float-fig"): it => {
+    it
+    _fig-cumulative.update(n => n + 1)
+  }
+  show figure.where(kind: "quarto-float-tbl"): it => {
+    it
+    _tbl-cumulative.update(n => n + 1)
+  }
+  show heading.where(level: 1): it => {
+    it  // Quarto's reset fires inside here
+    context {
+      counter(figure.where(kind: "quarto-float-fig")).update(_fig-cumulative.get())
+      counter(figure.where(kind: "quarto-float-tbl")).update(_tbl-cumulative.get())
+    }
+  }
+  // ─────────────────────────────────────────────────────────────────────────
+
   if cols == 1 {
     doc
   } else {
