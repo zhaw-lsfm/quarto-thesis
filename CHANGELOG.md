@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.5.0] - 2026-06-16
+
+### Added
+- Landscape page support via `.landscape` div class; wraps content in a Typst `page(flipped: true)` block, reverting automatically to portrait on the next page. Works with both static Markdown tables and code-generated tables.
+
 ## [0.4.0] - 2026-06-15
 
 ### Added
@@ -90,7 +95,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Custom font support via `fonts/` directory
 - Metadata-driven template with 20+ YAML fields
 
-[Unreleased]: https://github.com/zhaw-lsfm/quarto-thesis/compare/v0.4.0...HEAD
+[Unreleased]: https://github.com/zhaw-lsfm/quarto-thesis/compare/v0.5.0...HEAD
+[0.5.0]: https://github.com/zhaw-lsfm/quarto-thesis/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/zhaw-lsfm/quarto-thesis/compare/v0.3.1...v0.4.0
 [0.3.1]: https://github.com/zhaw-lsfm/quarto-thesis/compare/v0.3.0...v0.3.1
 [0.3.0]: https://github.com/zhaw-lsfm/quarto-thesis/compare/v0.2.1...v0.3.0

@@ -1,6 +1,6 @@
 title: zhaw-lsfm
 author: Nils Ratnaweera
-version: 0.4.0
+version: 0.5.0
 quarto-required: ">=1.9.18"
 contributes:
   formats:
@@ -15,6 +15,7 @@ contributes:
       filters:
         - pagebreak-filter.lua
         - appendix-filter.lua
+        - landscape-filter.lua
       template-partials:
         - typst-template.typ
         - typst-show.typ
